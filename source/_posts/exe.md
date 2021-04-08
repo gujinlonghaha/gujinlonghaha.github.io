@@ -3,7 +3,7 @@ title: electron 锁定用户版本
 date: 2018-05-07 16:05:14
 index_img: /img/1617850474933.png
 tags: 谷歌浏览器  electron
-categories:谷歌浏览器  electron
+categories: 谷歌浏览器  electron
 ---
 
 ## 当我们碰到客户环境下谷歌浏览器版本导致我们的问题时怎么办呢?
