@@ -17,6 +17,12 @@ tags: 自己
 
 ![](qk.png)
 
+
+
+自动化部署脚本[查看](https://www.npmjs.com/package/depoly-gjl)
+
+![1617784176762](1617784176762.png)
+
 个人小米自动化抢购脚本  [查看](https://www.cnblogs.com/byksj/p/14504972.html)
 
 ![](1321821-20210309131947639-1780952264.gif)
