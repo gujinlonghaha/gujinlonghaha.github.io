@@ -29,6 +29,31 @@
   
   
   <entry>
+    <title>electron 锁定用户版本</title>
+    <link href="/2018/05/07/exe/"/>
+    <url>/2018/05/07/exe/</url>
+    
+    <content type="html"><![CDATA[<h2 id="当我们碰到客户环境下谷歌浏览器版本导致我们的问题时怎么办呢"><a href="#当我们碰到客户环境下谷歌浏览器版本导致我们的问题时怎么办呢" class="headerlink" title="当我们碰到客户环境下谷歌浏览器版本导致我们的问题时怎么办呢?"></a>当我们碰到客户环境下谷歌浏览器版本导致我们的问题时怎么办呢?</h2><ol><li><p>升级用户浏览器 （备份用户数据 书签收藏夹）</p></li><li><p> 安装便捷版谷歌浏览器 （连个谷歌浏览器同时存在用户电脑  数据独立）</p></li><li><p>  使用electron 包装应用 最简单 便捷 </p></li></ol><h3 id="前两种就不说了-这里介绍下第三种electron"><a href="#前两种就不说了-这里介绍下第三种electron" class="headerlink" title="前两种就不说了 这里介绍下第三种electron"></a>前两种就不说了 这里介绍下第三种electron</h3><p>​    先使用 </p><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata">yarn create electron-<span class="hljs-keyword">app</span> my-<span class="hljs-keyword">app</span><br></code></pre></td></tr></table></figure><p> 然后 </p><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dos"><span class="hljs-built_in">cd</span> my-app<br>yarn <span class="hljs-built_in">start</span><br></code></pre></td></tr></table></figure><p>接着把这里</p><p><img src="/2018/05/07/exe/1617783333020.png" alt="1617783333020"></p><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs processing">  <span class="hljs-keyword">const</span> mainWindow = <span class="hljs-keyword">new</span> BrowserWindow(&#123;<br>    <span class="hljs-built_in">width</span>: <span class="hljs-number">1920</span>,<br>    <span class="hljs-built_in">height</span>: <span class="hljs-number">1080</span>,<br>    fullscreen:<span class="hljs-keyword">true</span>,<span class="hljs-comment">//全屏展示</span><br>    center: <span class="hljs-keyword">true</span>, <span class="hljs-comment">// 窗口居中</span><br>    resizable: <span class="hljs-keyword">true</span>, <span class="hljs-comment">// 窗口大小是否可改变</span><br>    maximizable: <span class="hljs-keyword">true</span>, <span class="hljs-comment">// 窗口是否可以最大化</span><br>    autoHideMenuBar:<span class="hljs-keyword">true</span>  <span class="hljs-comment">//关掉原始操作 重要</span><br>  &#125;);<br><br>  <span class="hljs-comment">// and load the index.html of the app.</span><br>  <span class="hljs-comment">// mainWindow.loadFile(path.join(__dirname, &#x27;index.html&#x27;));</span><br>  mainWindow.loadURL(<span class="hljs-string">&#x27;https://share.arena.360.cn/view/5bb1fbd0a438e17f394e284c2aa0bdac&#x27;</span>)<br><br>  <span class="hljs-comment">// Open the DevTools.  开发者工具</span><br>  <span class="hljs-comment">// mainWindow.webContents.openDevTools();</span><br>&#125;;<br></code></pre></td></tr></table></figure><p>最后打包</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">npm <span class="hljs-builtin-name">run</span> publish<br></code></pre></td></tr></table></figure><p>在目录下exe 就生成了</p><p><img src="/2018/05/07/exe/1617783408979.png" alt="1617783408979"></p><p>看下效果</p><p><img src="/2018/05/07/exe/1.gif" alt="1"></p><p>好处呢 不言而喻 直接给客户exe  </p><ol><li>文件简单直接  </li><li>运行默认全屏 干净整洁</li><li> 同时内核版本自己控制</li><li>不会有其他标签页尤其适合大屏演示</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>谷歌浏览器  electron</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>谷歌浏览器  electron</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>你好,朋友！</title>
     <link href="/2013/07/13/hellow/"/>
     <url>/2013/07/13/hellow/</url>
