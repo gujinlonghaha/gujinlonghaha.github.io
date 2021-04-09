@@ -1,5 +1,5 @@
 ---
-title: 安卓应用控件获取方法
+title: 简易版exe 打包
 date: 2021-04-01 15:23:24
 index_img: img/1617959037857.png
 tags: ahk exe  
