@@ -5,6 +5,31 @@
   
   <entry>
     <title>安卓应用控件获取方法</title>
+    <link href="/2021/04/01/ahk/"/>
+    <url>/2021/04/01/ahk/</url>
+    
+    <content type="html"><![CDATA[<h1 id="AHK自动热键"><a href="#AHK自动热键" class="headerlink" title="AHK自动热键"></a><strong>AHK</strong>自动热键</h1><p>强大的Windows的终极自动化脚本语言。</p><p><a href="https://www.autohotkey.com/docs/Hotkeys.htm#Intro"><img src="/2021/04/01/ahk/features-bootstrap.png" alt="img"></a></p><h3 id="键绑定"><a href="#键绑定" class="headerlink" title="键绑定"></a>键绑定</h3><p>定义鼠标和键盘的热键，重新映射键或按钮以及类似自动更正的替换。创建简单的热键从未如此简单。您只需几行或更少的时间就可以完成！</p><p><a href="https://en.wikipedia.org/wiki/AutoHotkey"><img src="/2021/04/01/ahk/features-blocks.png" alt="img"></a></p><h3 id="什么是自动热键"><a href="#什么是自动热键" class="headerlink" title="什么是自动热键"></a>什么是自动热键</h3><p>AutoHotkey是Windows的一种免费的开放源代码脚本语言，它使用户可以轻松地为各种任务创建小型到复杂的脚本，例如：表格填充，自动单击，宏等</p><p><a href="https://autohotkey.com/download/ahk-install.exe">下载地址</a></p><p>安装完之后 目录有个这个脚本 这是非常有用的脚本 类似手机端的控件选择器</p><p><img src="/2021/04/01/ahk/1617959488146.png" alt="1617959488146"></p><p>窗口的信息会被抓取到我经常使用 （经纬度 标题等 自动化脚本经常会用到）很赞！！！</p><p><img src="/2021/04/01/ahk/1617959539175.png" alt="1617959539175"></p><p>随便编写个脚本如下</p><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs lasso">#z<span class="hljs-type">::Run</span> https:<span class="hljs-comment">//autohotkey.com  ; Win+Z</span><br><br></code></pre></td></tr></table></figure><p><img src="/2021/04/01/ahk/1617959708823.png" alt="1617959708823"></p><p>右键可以编译脚本为exe   如上图</p><p>tets.exe  双击启动 按下winow+z 就会自动打开   <a href="https://autohotkey.com/">https://autohotkey.com</a>    网址 </p><p>其实功能很多 自己可以折腾着玩 很多软件都是ahk 开发的 （如果发给别人exe  对方得安装ahk 才可以    虽然是exe 可能底层还是需要ahk 的运行环境吧）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>ahk exe</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ahk exe</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>安卓应用控件获取方法</title>
     <link href="/2021/03/20/app/"/>
     <url>/2021/03/20/app/</url>
     
