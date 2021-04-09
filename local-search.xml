@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>安卓应用控件获取方法</title>
+    <link href="/2021/03/20/app/"/>
+    <url>/2021/03/20/app/</url>
+    
+    <content type="html"><![CDATA[<h2 id="网上随便搜索都是需要java-sdk-等安卓adb-工具才能实现"><a href="#网上随便搜索都是需要java-sdk-等安卓adb-工具才能实现" class="headerlink" title="网上随便搜索都是需要java sdk  等安卓adb 工具才能实现"></a>网上随便搜索都是需要java sdk  等安卓adb 工具才能实现</h2><h3 id="要不然就是Appium-手机自动化工具"><a href="#要不然就是Appium-手机自动化工具" class="headerlink" title="要不然就是Appium 手机自动化工具"></a>要不然就是Appium 手机自动化工具</h3><p><img src="/2021/03/20/app/1617953614313.png" alt="1617953614313"></p><p><img src="/2021/03/20/app/1617953651490.png" alt="1617953651490"></p><p>不懂的人直接头皮发麻 直接劝退</p><h4 id="而且有效信息只有一页-差点放弃"><a href="#而且有效信息只有一页-差点放弃" class="headerlink" title="而且有效信息只有一页 差点放弃"></a><strong>而且有效信息只有一页 差点放弃</strong></h4><p><img src="/2021/03/20/app/1617953729754.png" alt="1617953729754"></p><p>之前我购买了auto.js 手机付费版本 里面大部分都是基于控件操作 最终实现了手机自动飞书打卡功能 （有的直接通过坐标实现 不是最好方式）</p><p><img src="/2021/03/20/app/1617954307011.png" alt="1617954307011"></p><p>针对前端活着吧小白难道真的没办法实现了吗？这个一度困扰了我几天后来才发现真有小众的东西可以实现</p><h4 id="特此记录-（踏破铁鞋无匿处）-真是难者不会-会者不难-一个知识和工具就是巨大鸿沟"><a href="#特此记录-（踏破铁鞋无匿处）-真是难者不会-会者不难-一个知识和工具就是巨大鸿沟" class="headerlink" title="特此记录 （踏破铁鞋无匿处） 真是难者不会 会者不难  一个知识和工具就是巨大鸿沟"></a><strong>特此记录 （踏破铁鞋无匿处） 真是难者不会 会者不难  一个知识和工具就是巨大鸿沟</strong></h4><p><a href="https://www.coolapk.com/apk/com.toshiba_dealin.developerhelper">1地址</a>      开发者工具简单好用</p><p><img src="/2021/03/20/app/1617953969262.png" alt="1617953969262"></p><p><a href="https://app.mi.com/details?id=com.yichuang.quickerapp&ref=search">地址</a></p><p>效果</p><p><img src="/2021/03/20/app/1617954371068.png" alt="1617954371068"></p><p>2手机版quicker  <img src="/2021/03/20/app/1617954121135.png" alt="1617954121135"></p><p>效果如下</p><p><img src="/2021/03/20/app/1617954143390.png" alt="1617954143390"></p><p>从此以后你就可以编写自动化手机脚本无压力了   解放你的双手</p><ol><li> 自动打卡</li><li> 自动抢购</li><li>自动导航</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>安卓</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>安卓</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Nodejs+Selenium环境搭建以及深坑</title>
     <link href="/2021/03/09/sele/"/>
     <url>/2021/03/09/sele/</url>
