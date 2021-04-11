@@ -1,6 +1,6 @@
 ---
 title: 你好,朋友！
-date: 2013/7/13 20:46:25
+date: 2015/7/13 20:46:25
 categories: 自己
 index_img: /img/self.jpg
 tags: 自己
