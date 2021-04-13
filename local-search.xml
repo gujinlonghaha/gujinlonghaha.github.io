@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>搭建自己的图床</title>
+    <link href="/2021/04/09/imgurl/"/>
+    <url>/2021/04/09/imgurl/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1-什么是图床"><a href="#1-什么是图床" class="headerlink" title="1. 什么是图床"></a>1. 什么是图床</h2><p>简单来说就是存储图片的服务器，将图片上传至该服务器中后，可以在公网中通过指定的URL获取此图片。</p><h2 id="2-图床的意义"><a href="#2-图床的意义" class="headerlink" title="2. 图床的意义"></a>2. 图床的意义</h2><ul><li>减轻服务器带宽压力：图片资源可以由单独的服务器来存储、访问，例如腾讯云的COS、阿里云的OSS、七牛云等产品。</li><li>提供CDN加速：可以通过CDN的就近访问原则加快图片的访问速度。</li><li>第三条也就是最重要的一条，就是方便写文章。</li></ul><h2 id="3-搭建图床"><a href="#3-搭建图床" class="headerlink" title="3. 搭建图床"></a>3. 搭建图床</h2><blockquote><p>这里采用gitee作为图片仓库有两点原因，第一点是因为它是免费的，省去了自己维护服务器的费用。第二是因为它是国内的一个网站，所以相比与github来说，访问速度会更快一些。（后来试了一下github感觉也挺快的，差别并不明显，应该是使用了jsdelivr CDN的缘故）</p></blockquote><h3 id="码云图床限制如下"><a href="#码云图床限制如下" class="headerlink" title="码云图床限制如下"></a>码云图床限制如下</h3><blockquote><table><thead><tr><th align="left">功能特性</th><th align="left">社区版</th><th align="left">企业版</th><th align="left"></th><th align="left"></th></tr></thead><tbody><tr><td align="left">使用场景</td><td align="left">开源项目</td><td align="left">个人私有仓库</td><td align="left">免费版</td><td align="left">协作开发</td></tr><tr><td align="left">总计协作人数</td><td align="left">不限</td><td align="left">≦ 5 人</td><td align="left">≦ 5 人</td><td align="left">20 ~ 100 人+</td></tr><tr><td align="left">仓库总容量</td><td align="left">5G</td><td align="left">5G</td><td align="left">5G</td><td align="left">20 ~ 100G</td></tr><tr><td align="left">单仓库大小</td><td align="left">1G</td><td align="left">500M</td><td align="left">500M</td><td align="left">1 ~ 3G</td></tr><tr><td align="left">单文件大小</td><td align="left">50M</td><td align="left">50M</td><td align="left">50M</td><td align="left">100 ~ 300M</td></tr><tr><td align="left">附件总容量</td><td align="left">3G</td><td align="left">3G</td><td align="left">3G</td><td align="left">10 ~ 50G +</td></tr></tbody></table></blockquote><h3 id="创建图片仓库"><a href="#创建图片仓库" class="headerlink" title="创建图片仓库"></a>创建图片仓库</h3><p><img src="/2021/04/09/imgurl/1618304402333.png" alt="1618304402333"></p><p>大部分是用  <a href="https://github.com/Molunerfinn/PicGo/releases">传送门</a></p><p><img src="/2021/04/09/imgurl/1618304505269.png" alt="1618304505269"></p><p>我用的是utool的图床</p><p><img src="/2021/04/09/imgurl/1618304605851.png" alt="1618304605851"></p><h2 id="从此你就有了自己的图床了"><a href="#从此你就有了自己的图床了" class="headerlink" title="从此你就有了自己的图床了"></a>从此你就有了自己的图床了</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>图床 图片 gitee</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>多端同步验证方案汇总</title>
     <link href="/2021/04/06/chormeText/"/>
     <url>/2021/04/06/chormeText/</url>

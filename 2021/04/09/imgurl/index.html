@@ -18,9 +18,25 @@
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
   
-  <title>归档 - 一直闭眼看世界博客</title>
+  <title>搭建自己的图床 - 一直闭眼看世界博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -48,7 +64,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -159,9 +175,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="归档">
+            <span class="h2" id="subtitle" title="搭建自己的图床">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-04-09 16:53" pubdate>
+        2021年4月9日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      379 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -174,76 +227,150 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 12 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2021</p>
-    
-    <a href="/2021/04/09/imgurl/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">搭建自己的图床</span>
-      <time style="float: right;">04-09</time>
-    </a>
-  
-    
-    <a href="/2021/04/06/chormeText/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">多端同步验证方案汇总</span>
-      <time style="float: right;">04-06</time>
-    </a>
-  
-    
-    <a href="/2021/04/04/docsify/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">公司文档生成利器</span>
-      <time style="float: right;">04-04</time>
-    </a>
-  
-    
-    <a href="/2021/04/01/ahk/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">简易版exe 打包</span>
-      <time style="float: right;">04-01</time>
-    </a>
-  
-    
-    <a href="/2021/03/20/app/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">安卓应用控件获取方法</span>
-      <time style="float: right;">03-20</time>
-    </a>
-  
-    
-    <a href="/2021/03/09/sele/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Nodejs+Selenium环境搭建以及深坑</span>
-      <time style="float: right;">03-09</time>
-    </a>
-  
-    
-    <a href="/2021/02/01/doc/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">文档中操作组件和展示组件源码</span>
-      <time style="float: right;">02-01</time>
-    </a>
-  
-</div>
 
-
-
-
-
-              </div>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">搭建自己的图床</h1>
+            
+            <div class="markdown-body">
+              <h2 id="1-什么是图床"><a href="#1-什么是图床" class="headerlink" title="1. 什么是图床"></a>1. 什么是图床</h2><p>简单来说就是存储图片的服务器，将图片上传至该服务器中后，可以在公网中通过指定的URL获取此图片。</p>
+<h2 id="2-图床的意义"><a href="#2-图床的意义" class="headerlink" title="2. 图床的意义"></a>2. 图床的意义</h2><ul>
+<li>减轻服务器带宽压力：图片资源可以由单独的服务器来存储、访问，例如腾讯云的COS、阿里云的OSS、七牛云等产品。</li>
+<li>提供CDN加速：可以通过CDN的就近访问原则加快图片的访问速度。</li>
+<li>第三条也就是最重要的一条，就是方便写文章。</li>
+</ul>
+<h2 id="3-搭建图床"><a href="#3-搭建图床" class="headerlink" title="3. 搭建图床"></a>3. 搭建图床</h2><blockquote>
+<p>这里采用gitee作为图片仓库有两点原因，第一点是因为它是免费的，省去了自己维护服务器的费用。第二是因为它是国内的一个网站，所以相比与github来说，访问速度会更快一些。（后来试了一下github感觉也挺快的，差别并不明显，应该是使用了jsdelivr CDN的缘故）</p>
+</blockquote>
+<h3 id="码云图床限制如下"><a href="#码云图床限制如下" class="headerlink" title="码云图床限制如下"></a>码云图床限制如下</h3><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">功能特性</th>
+<th align="left">社区版</th>
+<th align="left">企业版</th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">使用场景</td>
+<td align="left">开源项目</td>
+<td align="left">个人私有仓库</td>
+<td align="left">免费版</td>
+<td align="left">协作开发</td>
+</tr>
+<tr>
+<td align="left">总计协作人数</td>
+<td align="left">不限</td>
+<td align="left">≦ 5 人</td>
+<td align="left">≦ 5 人</td>
+<td align="left">20 ~ 100 人+</td>
+</tr>
+<tr>
+<td align="left">仓库总容量</td>
+<td align="left">5G</td>
+<td align="left">5G</td>
+<td align="left">5G</td>
+<td align="left">20 ~ 100G</td>
+</tr>
+<tr>
+<td align="left">单仓库大小</td>
+<td align="left">1G</td>
+<td align="left">500M</td>
+<td align="left">500M</td>
+<td align="left">1 ~ 3G</td>
+</tr>
+<tr>
+<td align="left">单文件大小</td>
+<td align="left">50M</td>
+<td align="left">50M</td>
+<td align="left">50M</td>
+<td align="left">100 ~ 300M</td>
+</tr>
+<tr>
+<td align="left">附件总容量</td>
+<td align="left">3G</td>
+<td align="left">3G</td>
+<td align="left">3G</td>
+<td align="left">10 ~ 50G +</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h3 id="创建图片仓库"><a href="#创建图片仓库" class="headerlink" title="创建图片仓库"></a>创建图片仓库</h3><p><img src="/2021/04/09/imgurl/1618304402333.png" srcset="/img/loading.gif" lazyload alt="1618304402333"></p>
+<p>大部分是用  <a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">传送门</a></p>
+<p><img src="/2021/04/09/imgurl/1618304505269.png" srcset="/img/loading.gif" lazyload alt="1618304505269"></p>
+<p>我用的是utool的图床</p>
+<p><img src="/2021/04/09/imgurl/1618304605851.png" srcset="/img/loading.gif" lazyload alt="1618304605851"></p>
+<h2 id="从此你就有了自己的图床了"><a href="#从此你就有了自己的图床了" class="headerlink" title="从此你就有了自己的图床了"></a>从此你就有了自己的图床了</h2>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9B%BE%E5%BA%8A-%E5%9B%BE%E7%89%87-gitee/">图床 图片 gitee</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/06/chormeText/">
+                        <span class="hidden-mobile">多端同步验证方案汇总</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -324,9 +451,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
