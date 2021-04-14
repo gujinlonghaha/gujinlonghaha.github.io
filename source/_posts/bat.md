@@ -77,3 +77,13 @@ exit
 我也发布到了quicker
 
 ![1618389340230](1618389340230.png)
+
+
+
+
+
+FAQ:  [中文乱码解决方案](https://blog.csdn.net/qq_35038153/article/details/78430359)
+
+
+
+讲解：
