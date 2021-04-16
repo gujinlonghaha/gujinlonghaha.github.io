@@ -18,7 +18,7 @@
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
   
-  <title>探索地铁行程卡快速通过 - 一直闭眼看世界博客</title>
+  <title>修改你的ntp服务器 - 一直闭眼看世界博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="探索地铁行程卡快速通过">
+            <span class="h2" id="subtitle" title="修改你的ntp服务器">
               
             </span>
 
@@ -185,7 +185,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-16 13:57" pubdate>
+      <time datetime="2021-04-16 14:45" pubdate>
         2021年4月16日 下午
       </time>
     </span>
@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      286 字
+      625 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      8
        分钟
     </span>
   
@@ -237,31 +237,37 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">探索地铁行程卡快速通过</h1>
+            <h1 style="display: none">修改你的ntp服务器</h1>
             
             <div class="markdown-body">
-              <h1 id="探索地铁行程卡快速通过"><a href="#探索地铁行程卡快速通过" class="headerlink" title="探索地铁行程卡快速通过"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/byksj/p/14666257.html">探索地铁行程卡快速通过</a></h1><p><img src="/2021/04/16/xingcheng/1321821-20210416111317793-313987114-1618553241009.png" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p> <strong>程序是方法论的流程化 让你流出更多的时间做重要的事 拓展了生命长度</strong></p>
-<p><em><strong>*<img src="/2021/04/16/xingcheng/1321821-20210416112158970-73329117-1618553241027.png" srcset="/img/loading.gif" lazyload alt="img">*</strong></em></p>
-<p><strong>地铁入口前总是一堆人停下脚步做准备：</strong></p>
-<ol>
-<li><strong>低头拿出手机</strong></li>
-<li><strong>找到通信行程卡</strong></li>
-<li><strong>勾选同意授权</strong></li>
-<li><strong>点击查询</strong></li>
-<li><strong>走过去排队</strong></li>
-<li><strong>展示绿色行程卡</strong></li>
-</ol>
-<p><strong>整个过程持续一分钟左右</strong></p>
-<p><strong>有没有更好的办法呢 ？ 效果如下 只点击了一次通行图标（通行是自己写的脚本）其他都是自动化</strong></p>
-<p><strong><img src="/2021/04/16/xingcheng/1321821-20210416112808227-97536646-1618553241067.gif" srcset="/img/loading.gif" lazyload alt="img"></strong></p>
-<p> 这样你只需点一下不需要停下脚步就可以大步流星快速通过安检</p>
-<p><img src="/2021/04/16/xingcheng/1321821-20210416113321539-1341606448-1618553241074.png" srcset="/img/loading.gif" lazyload alt="img"></p>
-<p><strong>方法： 不会编程不要紧</strong></p>
-<p><strong>你可以下载手机版按键精灵 <a target="_blank" rel="noopener" href="http://www.anjian.com/">http://www.anjian.com/</a></strong></p>
-<p><strong>直接把操作录制一遍 就可以播放了</strong></p>
-<p><strong>FAQ: 录制虽然简单但是他是基于坐标（x，y）来确定的 也就是说你要保证你的网络环境和图标位置不变 对于小白来说录制确实十分简单粗暴又友好</strong></p>
-<p><strong>如果会编程以上问题可以忽略</strong></p>
+              <h2 id="一、NTP-是什么？"><a href="#一、NTP-是什么？" class="headerlink" title="一、NTP 是什么？"></a><strong>一、NTP 是什么？</strong></h2><p>网络时间协议，英文名称：Network Time Protocol（NTP）是用来使计算机<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5">时间同步</a>化的一种协议，它可以使<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA/140338">计算机</a>对其<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8/100571">服务器</a>或<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%97%B6%E9%92%9F%E6%BA%90/3219811">时钟源</a>（如石英钟，GPS等等)做同步化，它可以提供高精准度的时间校正（LAN上与标准间差小于1毫秒，WAN上几十毫秒），且可介由加密确认的方式来防止恶毒的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8D%8F%E8%AE%AE/670528">协议</a>攻击。NTP的目的是在无序的Internet环境中提供精确和健壮的时间服务。 </p>
+<h2 id="二、NTP-实现什么目的？"><a href="#二、NTP-实现什么目的？" class="headerlink" title="二、NTP 实现什么目的？"></a>二、NTP 实现什么目的？</h2><p>目的很简单，就是为了提供准确时间。因为我们的手表、手机、电脑等设备，经常会跑着跑着时间就出现了误差，或快或慢的少几秒，时间长了甚至误差过分钟。</p>
+<h2 id="三、NTP-服务器列表"><a href="#三、NTP-服务器列表" class="headerlink" title="三、NTP 服务器列表"></a>三、NTP 服务器列表</h2><p>Windows系统上自带的两个：<code>time.windows.com</code> 和 <code>time.nist.gov</code><br>MacOS上自带的两个：<code>time.apple.com</code> 和 <code>time.asia.apple.com</code><br>NTP授时快速域名服务：<code>cn.ntp.org.cn</code></p>
+<p>但是上面的基本上同步起来很慢，甚至直接同步超时，毕竟国外的服务器。所以推荐大家用国内的服务器同步。</p>
+<h3 id="1、阿里云授时服务器"><a href="#1、阿里云授时服务器" class="headerlink" title="1、阿里云授时服务器"></a>1、阿里云授时服务器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-id">#NTP</span>服务器<br>ntp<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span>             <br>ntp1<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>ntp2<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>ntp3<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>ntp4<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>ntp5<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>ntp6<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>ntp7<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br><br><span class="hljs-selector-id">#Time</span>服务器<br>time1<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>time2<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>time3<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>time4<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>time5<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>time6<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br>time7<span class="hljs-selector-class">.aliyun</span><span class="hljs-selector-class">.com</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2、国内大学授时服务器"><a href="#2、国内大学授时服务器" class="headerlink" title="2、国内大学授时服务器"></a>2、国内大学授时服务器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css">s1c<span class="hljs-selector-class">.time</span><span class="hljs-selector-class">.edu</span><span class="hljs-selector-class">.cn</span>       北京大学 <br>s2m<span class="hljs-selector-class">.time</span><span class="hljs-selector-class">.edu</span><span class="hljs-selector-class">.cn</span>       北京大学<br>s1b<span class="hljs-selector-class">.time</span><span class="hljs-selector-class">.edu</span><span class="hljs-selector-class">.cn</span>       清华大学<br>s1e<span class="hljs-selector-class">.time</span><span class="hljs-selector-class">.edu</span><span class="hljs-selector-class">.cn</span>       清华大学<br>s2a<span class="hljs-selector-class">.time</span><span class="hljs-selector-class">.edu</span><span class="hljs-selector-class">.cn</span>       清华大学<br>s2b<span class="hljs-selector-class">.time</span><span class="hljs-selector-class">.edu</span><span class="hljs-selector-class">.cn</span>       清华大学<br></code></pre></td></tr></table></figure>
+
+<h3 id="3、国外授时服务器"><a href="#3、国外授时服务器" class="headerlink" title="3、国外授时服务器"></a>3、国外授时服务器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs css">#苹果提供的授时服务器   <br>time1<span class="hljs-selector-class">.apple</span><span class="hljs-selector-class">.com</span><br>time2<span class="hljs-selector-class">.apple</span><span class="hljs-selector-class">.com</span><br>time3<span class="hljs-selector-class">.apple</span><span class="hljs-selector-class">.com</span><br>time4<span class="hljs-selector-class">.apple</span><span class="hljs-selector-class">.com</span><br>time5<span class="hljs-selector-class">.apple</span><span class="hljs-selector-class">.com</span><br>time6<span class="hljs-selector-class">.apple</span><span class="hljs-selector-class">.com</span><br>time7<span class="hljs-selector-class">.apple</span><span class="hljs-selector-class">.com</span><br><br><span class="hljs-selector-id">#Google</span>提供的授时服务器   <br>time1<span class="hljs-selector-class">.google</span><span class="hljs-selector-class">.com</span><br>time2<span class="hljs-selector-class">.google</span><span class="hljs-selector-class">.com</span><br>time3<span class="hljs-selector-class">.google</span><span class="hljs-selector-class">.com</span><br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/4dc40848556be9c8d846f17d.html"><strong>window修改ntp 方法 参考百度经验</strong></a></p>
+<p>或者工具直接修 自行搜索</p>
+<p><img src="/2021/04/16/ntp/1618556011733.png" srcset="/img/loading.gif" lazyload alt="1618556011733"></p>
+<p>需要同步系统时间，这里分享两个时间服务器接口api给大家：</p>
+<p>1.淘宝时间服务器时间接口</p>
+<p><a target="_blank" rel="noopener" href="http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp">http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp</a></p>
+<p>返回json数据</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<span class="hljs-attr">&quot;api&quot;</span>:<span class="hljs-string">&quot;mtop.common.getTimestamp&quot;</span>,<span class="hljs-attr">&quot;v&quot;</span>:<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-attr">&quot;ret&quot;</span>:[<span class="hljs-string">&quot;SUCCESS::接口调用成功&quot;</span>],<span class="hljs-attr">&quot;data&quot;</span>:&#123;<span class="hljs-attr">&quot;t&quot;</span>:<span class="hljs-string">&quot;1586519130440&quot;</span>&#125;&#125;<br></code></pre></td></tr></table></figure>
+
+<p>2.苏宁时间服务器接口api：</p>
+<p><a target="_blank" rel="noopener" href="http://quan.suning.com/getSysTime.do">http://quan.suning.com/getSysTime.do</a></p>
+<p>返回json数据</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<span class="hljs-attr">&quot;sysTime2&quot;</span>:<span class="hljs-string">&quot;2020-04-10 19:46:50&quot;</span>,<span class="hljs-attr">&quot;sysTime1&quot;</span>:<span class="hljs-string">&quot;20200410194650&quot;</span>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>demo： 自己修改如下</p>
+<p><img src="/2021/04/16/ntp/1618556100576.png" srcset="/img/loading.gif" lazyload alt="1618556100576"></p>
 
             </div>
             <hr>
@@ -271,7 +277,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E8%A1%8C%E7%A8%8B%E5%8D%A1/">行程卡</a>
+                      <a class="hover-with-bg" href="/categories/ntp/">ntp</a>
                     
                   </div>
                 
@@ -279,7 +285,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E8%A1%8C%E7%A8%8B%E5%8D%A1/">行程卡</a>
+                      <a class="hover-with-bg" href="/tags/ntp/">ntp</a>
                     
                   </div>
                 
@@ -296,18 +302,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/16/ntp/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">修改你的ntp服务器</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/12/bat/">
-                        <span class="hidden-mobile">帮运维快速切换内外网(二网双选一) 另附bat 转exe</span>
+                      <a href="/2021/04/16/xingcheng/">
+                        <span class="hidden-mobile">探索地铁行程卡快速通过</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
