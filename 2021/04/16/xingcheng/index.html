@@ -18,7 +18,7 @@
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
   
-  <title>帮运维快速切换内外网(二网双选一) 另附bat 转exe - 一直闭眼看世界博客</title>
+  <title>探索地铁行程卡快速通过 - 一直闭眼看世界博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="帮运维快速切换内外网(二网双选一) 另附bat 转exe">
+            <span class="h2" id="subtitle" title="探索地铁行程卡快速通过">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-12 15:39" pubdate>
-        2021年4月12日 下午
+      <time datetime="2021-04-16 13:57" pubdate>
+        2021年4月16日 下午
       </time>
     </span>
   
@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      380 字
+      286 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      2
        分钟
     </span>
   
@@ -237,30 +237,31 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">帮运维快速切换内外网(二网双选一) 另附bat 转exe</h1>
+            <h1 style="display: none">探索地铁行程卡快速通过</h1>
             
             <div class="markdown-body">
-              <h2 id="运维同事因为客户环境而发愁"><a href="#运维同事因为客户环境而发愁" class="headerlink" title="运维同事因为客户环境而发愁"></a>运维同事因为客户环境而发愁</h2><ol>
-<li>因为客户(政府 电信等)环境是内网，</li>
-<li>平时通信查问题是外网</li>
-<li>来回切换网线 切换网卡 </li>
+              <h1 id="探索地铁行程卡快速通过"><a href="#探索地铁行程卡快速通过" class="headerlink" title="探索地铁行程卡快速通过"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/byksj/p/14666257.html">探索地铁行程卡快速通过</a></h1><p><img src="/2021/04/16/xingcheng/1321821-20210416111317793-313987114-1618553241009.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p> <strong>程序是方法论的流程化 让你流出更多的时间做重要的事 拓展了生命长度</strong></p>
+<p><em><strong>*<img src="/2021/04/16/xingcheng/1321821-20210416112158970-73329117-1618553241027.png" srcset="/img/loading.gif" lazyload alt="img">*</strong></em></p>
+<p><strong>地铁入口前总是一堆人停下脚步做准备：</strong></p>
+<ol>
+<li><strong>低头拿出手机</strong></li>
+<li><strong>找到通信行程卡</strong></li>
+<li><strong>勾选同意授权</strong></li>
+<li><strong>点击查询</strong></li>
+<li><strong>走过去排队</strong></li>
+<li><strong>展示绿色行程卡</strong></li>
 </ol>
-<p>我想在网上检索个工具应该能解决吧？ 结果却不尽人意  没有合适的工具</p>
-<p><img src="/2021/04/12/bat/1618388010418.png" srcset="/img/loading.gif" lazyload alt="1618388010418"></p>
-<p>不是根本不起作用就是只能切换ip 难道没有办法了吗？</p>
-<h3 id="最终自己编写bat-解决-完美撒花"><a href="#最终自己编写bat-解决-完美撒花" class="headerlink" title="最终自己编写bat 解决 完美撒花"></a><strong>最终自己编写bat 解决 完美撒花</strong></h3><p>汉字 专网  WLAN 分别是是网卡对应名称  记得修改</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs bat"><br>@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">title</span> gjl切换网络脚本<br>:stillAnswer<br><span class="hljs-built_in">set</span> /p switch=<span class="hljs-number">1</span>切换为专网，<span class="hljs-number">2</span>切换为WLAN，<span class="hljs-number">3</span>切换为双网卡，<span class="hljs-number">4</span>退出：<br><span class="hljs-keyword">if</span> <span class="hljs-variable">%switch%</span> == <span class="hljs-number">1</span> (<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;专网&quot; admin=enabled<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;WLAN&quot; admin=disabled<br><br><span class="hljs-built_in">echo</span> -------------------当前网络为专网---------------------<br><span class="hljs-keyword">goto</span> stillAnswer<br>)<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-variable">%switch%</span> == <span class="hljs-number">2</span> (<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;专网&quot; admin=disabled<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;WLAN&quot; admin=enabled<br><span class="hljs-built_in">echo</span> -------------------当前网络为WLAN---------------------<br><span class="hljs-keyword">goto</span> stillAnswer<br>)<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-variable">%switch%</span> == <span class="hljs-number">3</span> (<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;专网&quot; admin=enabled<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;WLAN&quot; admin=enabled<br><span class="hljs-built_in">echo</span> -------------------双网卡同时启动---------------------<br><span class="hljs-keyword">goto</span> stillAnswer<br>)<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-variable">%switch%</span> == <span class="hljs-number">4</span> (<br><span class="hljs-keyword">exit</span><br>)<br><br>::netsh interface <span class="hljs-built_in">set</span> interface name=&quot;WLAN&quot; admin=disabled<br>::netsh interface <span class="hljs-built_in">set</span> interface name=&quot;专网&quot; admin=enabled<br><br>::netsh interface <span class="hljs-built_in">set</span> interface name=&quot;WLAN&quot; admin=enabled<br>::netsh interface <span class="hljs-built_in">set</span> interface name=&quot;专网&quot; admin=disabled<br></code></pre></td></tr></table></figure>
-
-<p>新建bat文件保存后<strong>管理员身份</strong>运行 效果如下：</p>
-<p><img src="/2021/04/12/bat/1618388625946.png" srcset="/img/loading.gif" lazyload alt="1618388625946"></p>
-<p>这样还不够完美 我有用bat 转为exe </p>
-<p><img src="/2021/04/12/bat/1618388732373.png" srcset="/img/loading.gif" lazyload alt="1618388732373"></p>
-<p>如何bat转exe?   工具我上传了</p>
-<p>下载:<a target="_blank" rel="noopener" href="https://wws.lanzous.com/iVXwko1hiqb">https://wws.lanzous.com/iVXwko1hiqb</a> 密码:9qtj</p>
-<p>我也发布到了quicker</p>
-<p><img src="/2021/04/12/bat/1618389340230.png" srcset="/img/loading.gif" lazyload alt="1618389340230"></p>
-<p>FAQ:  <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35038153/article/details/78430359">中文乱码解决方案</a></p>
-<p>讲解：</p>
+<p><strong>整个过程持续一分钟左右</strong></p>
+<p><strong>有没有更好的办法呢 ？ 效果如下 只点击了一次通行图标（通行是自己写的脚本）其他都是自动化</strong></p>
+<p><strong><img src="/2021/04/16/xingcheng/1321821-20210416112808227-97536646-1618553241067.gif" srcset="/img/loading.gif" lazyload alt="img"></strong></p>
+<p> 这样你只需点一下不需要停下脚步就可以大步流星快速通过安检</p>
+<p><img src="/2021/04/16/xingcheng/1321821-20210416113321539-1341606448-1618553241074.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>方法： 不会编程不要紧</strong></p>
+<p><strong>你可以下载手机版按键精灵 <a target="_blank" rel="noopener" href="http://www.anjian.com/">http://www.anjian.com/</a></strong></p>
+<p><strong>直接把操作录制一遍 就可以播放了</strong></p>
+<p><strong>FAQ: 录制虽然简单但是他是基于坐标（x，y）来确定的 也就是说你要保证你的网络环境和图标位置不变 对于小白来说录制确实十分简单粗暴又友好</strong></p>
+<p><strong>如果会编程以上问题可以忽略</strong></p>
 
             </div>
             <hr>
@@ -270,7 +271,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E7%BD%91%E5%8D%A1-bat/">网卡 bat</a>
+                      <a class="hover-with-bg" href="/categories/%E8%A1%8C%E7%A8%8B%E5%8D%A1/">行程卡</a>
                     
                   </div>
                 
@@ -278,7 +279,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E7%BD%91%E5%8D%A1-bat/">网卡 bat</a>
+                      <a class="hover-with-bg" href="/tags/%E8%A1%8C%E7%A8%8B%E5%8D%A1/">行程卡</a>
                     
                   </div>
                 
@@ -295,18 +296,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/16/xingcheng/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">探索地铁行程卡快速通过</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/11/yuming/">
-                        <span class="hidden-mobile">白嫖域名体验之旅</span>
+                      <a href="/2021/04/12/bat/">
+                        <span class="hidden-mobile">帮运维快速切换内外网(二网双选一) 另附bat 转exe</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

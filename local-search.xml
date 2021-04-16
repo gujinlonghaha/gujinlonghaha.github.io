@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>探索地铁行程卡快速通过</title>
+    <link href="/2021/04/16/xingcheng/"/>
+    <url>/2021/04/16/xingcheng/</url>
+    
+    <content type="html"><![CDATA[<h1 id="探索地铁行程卡快速通过"><a href="#探索地铁行程卡快速通过" class="headerlink" title="探索地铁行程卡快速通过"></a><a href="https://www.cnblogs.com/byksj/p/14666257.html">探索地铁行程卡快速通过</a></h1><p><img src="/2021/04/16/xingcheng/1321821-20210416111317793-313987114-1618553241009.png" alt="img"></p><p> <strong>程序是方法论的流程化 让你流出更多的时间做重要的事 拓展了生命长度</strong></p><p><em><strong>*<img src="/2021/04/16/xingcheng/1321821-20210416112158970-73329117-1618553241027.png" alt="img">*</strong></em></p><p><strong>地铁入口前总是一堆人停下脚步做准备：</strong></p><ol><li><strong>低头拿出手机</strong></li><li><strong>找到通信行程卡</strong></li><li><strong>勾选同意授权</strong></li><li><strong>点击查询</strong></li><li><strong>走过去排队</strong></li><li><strong>展示绿色行程卡</strong></li></ol><p><strong>整个过程持续一分钟左右</strong></p><p><strong>有没有更好的办法呢 ？ 效果如下 只点击了一次通行图标（通行是自己写的脚本）其他都是自动化</strong></p><p><strong><img src="/2021/04/16/xingcheng/1321821-20210416112808227-97536646-1618553241067.gif" alt="img"></strong></p><p> 这样你只需点一下不需要停下脚步就可以大步流星快速通过安检</p><p><img src="/2021/04/16/xingcheng/1321821-20210416113321539-1341606448-1618553241074.png" alt="img"></p><p><strong>方法： 不会编程不要紧</strong></p><p><strong>你可以下载手机版按键精灵 <a href="http://www.anjian.com/">http://www.anjian.com/</a></strong></p><p><strong>直接把操作录制一遍 就可以播放了</strong></p><p><strong>FAQ: 录制虽然简单但是他是基于坐标（x，y）来确定的 也就是说你要保证你的网络环境和图标位置不变 对于小白来说录制确实十分简单粗暴又友好</strong></p><p><strong>如果会编程以上问题可以忽略</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>行程卡</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>行程卡</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>帮运维快速切换内外网(二网双选一) 另附bat 转exe</title>
     <link href="/2021/04/12/bat/"/>
     <url>/2021/04/12/bat/</url>
