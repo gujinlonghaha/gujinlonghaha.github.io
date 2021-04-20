@@ -348,6 +348,56 @@
   
   
   <entry>
+    <title>npx和cli的那些事</title>
+    <link href="/2019/04/20/cli/"/>
+    <url>/2019/04/20/cli/</url>
+    
+    <content type="html"><![CDATA[<h3 id="纸上得来终觉浅-绝知此事要躬行"><a href="#纸上得来终觉浅-绝知此事要躬行" class="headerlink" title="纸上得来终觉浅 绝知此事要躬行"></a><strong>纸上得来终觉浅 绝知此事要躬行</strong></h3><p><img src="/2019/04/20/cli/1618902764339.png" alt="1618902764339"></p><p>备注：gjltestcli 是自己写的命令行工具demo</p><ol><li><strong>因为我没有全局安装gjltestcli 所以调用不了命令行</strong></li><li><strong>我使用npx gjltestcli 能成功是因为npx 临时安装gjltestcli （不会出现在当前目录nodemoudle）</strong></li><li><strong>再次使用gjltestcli 可以执行说明npx 是临时安装 没有全局安装所以不能执行</strong></li></ol><p><img src="/2019/04/20/cli/1618903114752.png" alt="1618903114752"></p><ol><li><strong>本地安装gjltestcli</strong> </li><li><strong>因为是本地安装所以调用失效 （可以使用全局安装 -g）</strong>不是环境变量 也可以加入环境变量 也可以使用npm link</li><li><strong>没有全局安装的可以通过 .\node_modules.bin\gjltestcli  执行</strong>  因为安装后在这个目录</li><li><img src="/2019/04/20/cli/1618903384161.png" alt="1618903384161"></li><li><strong>npx gjltestcli 执行成功是因为 npx 会从nodemoudle 或者本地调用 调用不到就会自己临时安装 不会在你的依赖中安装</strong></li></ol><p>上面说明了什么npx的优点：( 当被下载完，则下载的代码会被擦除。 )</p><ul><li><a href="http://nodejs.cn/learn/the-npx-nodejs-package-runner#%E8%BD%BB%E6%9D%BE%E5%9C%B0%E8%BF%90%E8%A1%8C%E6%9C%AC%E5%9C%B0%E5%91%BD%E4%BB%A4">轻松地运行本地命令</a></li><li><a href="http://nodejs.cn/learn/the-npx-nodejs-package-runner#%E6%97%A0%E9%9C%80%E5%AE%89%E8%A3%85%E7%9A%84%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C">无需安装的命令执行</a></li><li><a href="http://nodejs.cn/learn/the-npx-nodejs-package-runner#%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84-nodejs-%E7%89%88%E6%9C%AC%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81">使用不同的 Node.js 版本运行代码</a></li><li><a href="http://nodejs.cn/learn/the-npx-nodejs-package-runner#%E7%9B%B4%E6%8E%A5%E4%BB%8E-url-%E8%BF%90%E8%A1%8C%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">直接从 URL 运行任意代码片段</a></li></ul><p>后面两点可以自行简单测试 最后一点代表不发包（npm publish ）也可以使用</p><h2 id="直接从-URL-运行任意代码片段"><a href="#直接从-URL-运行任意代码片段" class="headerlink" title="直接从 URL 运行任意代码片段"></a>直接从 URL 运行任意代码片段</h2><p><code>npx</code> 并不限制使用 npm 仓库上发布的软件包。</p><p>可以运行位于 GitHub gist 中的代码，例如：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npx https://gist.github.com/zkat/4bc19503fe9e9309e2bfaa2c58074d32<br></code></pre></td></tr></table></figure><p>当然，当运行不受控制的代码时，需要格外小心，因为强大的功能带来了巨大的责任。</p><p><a href="https://www.ruanyifeng.com/blog/2019/02/npx.html">友情链接</a> </p><p><a href="http://nodejs.cn/learn/the-npx-nodejs-package-runner">npx</a> </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>npm cli npx</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>npm cli npx</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>nodecli demo测试</title>
+    <link href="/2019/03/20/nodecli/"/>
+    <url>/2019/03/20/nodecli/</url>
+    
+    <content type="html"><![CDATA[<p>整体流程很简单 但是有几个注意事项：</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-built_in">npm</span> init -y<br></code></pre></td></tr></table></figure><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<br>  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;gjltestcli&quot;</span>,<br>  <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.2&quot;</span>,<br>  <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,<br>  <span class="hljs-attr">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,<br>  <span class="hljs-attr">&quot;bin&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,<br>  <span class="hljs-attr">&quot;scripts&quot;</span>: &#123;<br>  &#125;,<br>  <span class="hljs-attr">&quot;keywords&quot;</span>: [],<br>  <span class="hljs-attr">&quot;author&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,<br>  <span class="hljs-attr">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>,<br>  <span class="hljs-attr">&quot;dependencies&quot;</span>: &#123;<br>    <span class="hljs-attr">&quot;ejs&quot;</span>: <span class="hljs-string">&quot;^3.1.6&quot;</span>,<br>    <span class="hljs-attr">&quot;inquirer&quot;</span>: <span class="hljs-string">&quot;^8.0.0&quot;</span><br>  &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure><ol><li><p><strong>bin 一定要写因为这里写的是命令行程序</strong></p></li><li><p><strong>dependencies 安装依赖 特别是打包后的依赖需要 npm install  包名  -S  （要不然别人安完短依赖）</strong></p></li><li><p><strong>脚本命令前加 相当于跨平台兼容 让机器识别你的代码</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-meta">#!/usr/bin/env node</span><br></code></pre></td></tr></table></figure></li><li><p><strong>当你频繁测试的时候不需要频繁发布包  先进入你的包 npm link (相当于连接到全局)  直接可以执行测试</strong></p></li><li><p><strong>发布可能重名 注意版本号每次更新 和名字不要重复 （可以搜索查询）</strong></p></li><li><p><strong>注册好后登录npm账号。</strong></p><ul><li></li></ul><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-built_in">npm</span> login<br></code></pre></td></tr></table></figure><p><strong>依次输入第二步中第一种方法注册的用户名、密码和邮箱。</strong></p><p><strong>登录成功后执行npm发布命令。</strong></p><ul><li></li></ul><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-built_in">npm</span> publish<br></code></pre></td></tr></table></figure></li></ol><p><img src="/2019/03/20/nodecli/1618905966155.png" alt="1618905966155"></p><p><strong>demo 就成功了</strong></p><p>补充：</p><p>npm link用来在本地项目和本地npm模块之间建立连接，可以在本地进行模块测试</p><p>具体用法：</p><p><strong>1. 项目和模块在同一个目录下，可以使用相对路径</strong></p><p>npm link ../module</p><p><strong>2. 项目和模块不在同一个目录下</strong></p><p>cd到模块目录，npm link，进行全局link</p><p>cd到项目目录，npm link 模块名(package.json中的name)</p><p><strong>3. 解除link</strong></p><p>解除项目和模块link，项目目录下，npm unlink 模块名</p><p>解除模块全局link，模块目录下，npm unlink 模块名</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>npm cli node</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>npm cli node</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>electron 锁定用户版本</title>
     <link href="/2018/05/07/exe/"/>
     <url>/2018/05/07/exe/</url>

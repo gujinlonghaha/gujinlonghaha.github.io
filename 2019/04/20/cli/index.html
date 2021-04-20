@@ -18,7 +18,7 @@
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
   
-  <title>pupeteer自动化加版本测试 - 一直闭眼看世界博客</title>
+  <title>npx和cli的那些事 - 一直闭眼看世界博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="pupeteer自动化加版本测试">
+            <span class="h2" id="subtitle" title="npx和cli的那些事">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-04-08 10:57" pubdate>
-        2020年4月8日 上午
+      <time datetime="2019-04-20 14:58" pubdate>
+        2019年4月20日 下午
       </time>
     </span>
   
@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      527 字
+      405 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      4
        分钟
     </span>
   
@@ -237,31 +237,39 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">pupeteer自动化加版本测试</h1>
+            <h1 style="display: none">npx和cli的那些事</h1>
             
             <div class="markdown-body">
-              <h1 id="多版本谷歌测试如何进行"><a href="#多版本谷歌测试如何进行" class="headerlink" title="多版本谷歌测试如何进行"></a>多版本谷歌测试如何进行</h1><p>没必要不更换谷歌浏览器吧？ 对答案是肯定的！今天主角帮你解决</p>
-<h2 id="puppeteerjs"><a href="#puppeteerjs" class="headerlink" title="puppeteerjs"></a>puppeteerjs</h2><p>你可以在浏览器中手动执行的绝大多数操作都可以使用 Puppeteer 来完成！ 下面是一些示例：</p>
+              <h3 id="纸上得来终觉浅-绝知此事要躬行"><a href="#纸上得来终觉浅-绝知此事要躬行" class="headerlink" title="纸上得来终觉浅 绝知此事要躬行"></a><strong>纸上得来终觉浅 绝知此事要躬行</strong></h3><p><img src="/2019/04/20/cli/1618902764339.png" srcset="/img/loading.gif" lazyload alt="1618902764339"></p>
+<p>备注：gjltestcli 是自己写的命令行工具demo</p>
+<ol>
+<li><strong>因为我没有全局安装gjltestcli 所以调用不了命令行</strong></li>
+<li><strong>我使用npx gjltestcli 能成功是因为npx 临时安装gjltestcli （不会出现在当前目录nodemoudle）</strong></li>
+<li><strong>再次使用gjltestcli 可以执行说明npx 是临时安装 没有全局安装所以不能执行</strong></li>
+</ol>
+<p><img src="/2019/04/20/cli/1618903114752.png" srcset="/img/loading.gif" lazyload alt="1618903114752"></p>
+<ol>
+<li><strong>本地安装gjltestcli</strong> </li>
+<li><strong>因为是本地安装所以调用失效 （可以使用全局安装 -g）</strong>不是环境变量 也可以加入环境变量 也可以使用npm link</li>
+<li><strong>没有全局安装的可以通过 .\node_modules.bin\gjltestcli  执行</strong>  因为安装后在这个目录</li>
+<li><img src="/2019/04/20/cli/1618903384161.png" srcset="/img/loading.gif" lazyload alt="1618903384161"></li>
+<li><strong>npx gjltestcli 执行成功是因为 npx 会从nodemoudle 或者本地调用 调用不到就会自己临时安装 不会在你的依赖中安装</strong></li>
+</ol>
+<p>上面说明了什么npx的优点：( 当被下载完，则下载的代码会被擦除。 )</p>
 <ul>
-<li>生成页面 PDF。</li>
-<li>抓取 SPA（单页应用）并生成预渲染内容（即“SSR”（服务器端渲染））。</li>
-<li>自动提交表单，进行 UI 测试，键盘输入等。</li>
-<li>创建一个时时更新的自动化测试环境。 使用最新的 JavaScript 和浏览器功能直接在最新版本的Chrome中执行测试。</li>
-<li>捕获网站的 <a target="_blank" rel="noopener" href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference">timeline trace</a>，用来帮助分析性能问题。</li>
-<li>测试浏览器扩展。</li>
+<li><a target="_blank" rel="noopener" href="http://nodejs.cn/learn/the-npx-nodejs-package-runner#%E8%BD%BB%E6%9D%BE%E5%9C%B0%E8%BF%90%E8%A1%8C%E6%9C%AC%E5%9C%B0%E5%91%BD%E4%BB%A4">轻松地运行本地命令</a></li>
+<li><a target="_blank" rel="noopener" href="http://nodejs.cn/learn/the-npx-nodejs-package-runner#%E6%97%A0%E9%9C%80%E5%AE%89%E8%A3%85%E7%9A%84%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C">无需安装的命令执行</a></li>
+<li><a target="_blank" rel="noopener" href="http://nodejs.cn/learn/the-npx-nodejs-package-runner#%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84-nodejs-%E7%89%88%E6%9C%AC%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81">使用不同的 Node.js 版本运行代码</a></li>
+<li><a target="_blank" rel="noopener" href="http://nodejs.cn/learn/the-npx-nodejs-package-runner#%E7%9B%B4%E6%8E%A5%E4%BB%8E-url-%E8%BF%90%E8%A1%8C%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5">直接从 URL 运行任意代码片段</a></li>
 </ul>
-<h3 id="他其中有个模块"><a href="#他其中有个模块" class="headerlink" title="他其中有个模块"></a>他其中有个模块</h3><p><img src="/2020/04/08/pup/1617851125113.png" srcset="/img/loading.gif" lazyload alt="1617851125113"></p>
-<p>那个就是版本号 其实你发现和咱们版本号不一样 后来我研究发现是这样的   <a target="_blank" rel="noopener" href="https://omahaproxy.appspot.com/">地址</a>   需要fq</p>
-<p><img src="/2020/04/08/pup/1617851262264.png" srcset="/img/loading.gif" lazyload alt="1617851262264"></p>
-<p>是第二个箭头也就是分支切换出来的版本号码</p>
-<p>那他支持哪些版本呢  <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/chromium-browser-snapshots/Win_x64/">地址</a>   淘宝给出了镜像地址   下面号码拿来直接用</p>
-<p><img src="/2020/04/08/pup/1617851479500.png" srcset="/img/loading.gif" lazyload alt="1617851479500"></p>
-<p>现在谷歌浏览器都是下载安装器然后在线安装有没离线包 </p>
-<p><a target="_blank" rel="noopener" href="https://www.chromedownloads.net/chrome64win-stable/">福利</a></p>
-<p><img src="/2020/04/08/pup/1617851464105.png" srcset="/img/loading.gif" lazyload alt="1617851464105"></p>
-<p>自己写的部分常用脚本 以防忘记</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs awk">const puppeteer = require(<span class="hljs-string">&#x27;puppeteer&#x27;</span>);<br>let operte=async(t) =&gt; &#123;<br><br>    <span class="hljs-regexp">//</span> 开启 browser<br>   const browserFetcher = puppeteer.createBrowserFetcher();<br>   const revisionInfo = await browserFetcher.download(<span class="hljs-string">&#x27;533271&#x27;</span>);  <span class="hljs-regexp">//</span>指定版本<br>    const vesion= await browserFetcher.localRevisions()<br>    console.log(vesion)<br>    let browser = await puppeteer.launch(&#123;<br>        executablePath: revisionInfo.executablePath,<br>        headless: false,<br>        defaultViewport: &#123;<br>            height: <span class="hljs-number">1080</span>,<br>            width: <span class="hljs-number">1920</span><br>        &#125;<br>    &#125;);<br>    <span class="hljs-regexp">//</span> 新增分页<br>    console.log(browser)<br>    let page = await browser.newPage();<br>    <span class="hljs-regexp">//</span> 到自己的网站<br>    await page.goto(`<span class="hljs-variable">$&#123;t&#125;</span>`);<br><br>     <span class="hljs-regexp">//</span> 等待订阅按钮出现<br>    <span class="hljs-regexp">//</span>  await page.waitForSelector(<span class="hljs-string">&quot;button[class=&#x27;subscribe-button pill-button&#x27;]&quot;</span>);<br>    <span class="hljs-regexp">//</span>  page.type(<span class="hljs-string">&#x27;#mytextarea&#x27;</span>, <span class="hljs-string">&#x27;Hello&#x27;</span>, &#123; delay: <span class="hljs-number">100</span> &#125;); <span class="hljs-regexp">//</span> 立即输入<br>    <span class="hljs-regexp">//</span>  page.type(<span class="hljs-string">&#x27;#mytextarea&#x27;</span>, <span class="hljs-string">&#x27;World&#x27;</span>, &#123; delay: <span class="hljs-number">100</span> &#125;); <span class="hljs-regexp">//</span> 输入变慢，像一个用户<br>    <span class="hljs-regexp">//</span>  <span class="hljs-regexp">//</span> 点击订阅按钮<br>    <span class="hljs-regexp">//</span>  await page.click(<span class="hljs-string">&quot;button[class=&#x27;subscribe-button pill-button&#x27;]&quot;</span>);<br>    <span class="hljs-regexp">//</span>   关闭标签页<br>    <span class="hljs-regexp">//</span> page.close()<br>    <span class="hljs-regexp">//</span> 关闭浏览器<br>    <span class="hljs-regexp">//</span> await browser.close();<br>&#125;<br><br>let arr=[<br>    <span class="hljs-string">&#x27;https://www.baidu.com/&#x27;</span>,<br>    <span class="hljs-regexp">//</span> <span class="hljs-string">&#x27;https://cn.bing.com/search?q=b%E6%A1%88&amp;PC=U316&amp;FORM=CHROMN&#x27;</span>,<br>]<br>arr.forEach(t =&gt; &#123;<br>    operte(t)<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p>后面两点可以自行简单测试 最后一点代表不发包（npm publish ）也可以使用</p>
+<h2 id="直接从-URL-运行任意代码片段"><a href="#直接从-URL-运行任意代码片段" class="headerlink" title="直接从 URL 运行任意代码片段"></a>直接从 URL 运行任意代码片段</h2><p><code>npx</code> 并不限制使用 npm 仓库上发布的软件包。</p>
+<p>可以运行位于 GitHub gist 中的代码，例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npx https://gist.github.com/zkat/4bc19503fe9e9309e2bfaa2c58074d32<br></code></pre></td></tr></table></figure>
 
+<p>当然，当运行不受控制的代码时，需要格外小心，因为强大的功能带来了巨大的责任。</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2019/02/npx.html">友情链接</a> </p>
+<p><a target="_blank" rel="noopener" href="http://nodejs.cn/learn/the-npx-nodejs-package-runner">npx</a> </p>
 
             </div>
             <hr>
@@ -271,7 +279,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/pupeteer/">pupeteer</a>
+                      <a class="hover-with-bg" href="/categories/npm-cli-npx/">npm cli npx</a>
                     
                   </div>
                 
@@ -279,7 +287,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/pupeteer/">pupeteer</a>
+                      <a class="hover-with-bg" href="/tags/npm-cli-npx/">npm cli npx</a>
                     
                   </div>
                 
@@ -296,9 +304,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/08/01/vuepress/">
+                      <a href="/2020/04/08/pup/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">小试尤大大vuepress vue 文档神器</span>
+                        <span class="hidden-mobile">pupeteer自动化加版本测试</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -306,8 +314,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2019/04/20/cli/">
-                        <span class="hidden-mobile">npx和cli的那些事</span>
+                      <a href="/2019/03/20/nodecli/">
+                        <span class="hidden-mobile">nodecli demo测试</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
