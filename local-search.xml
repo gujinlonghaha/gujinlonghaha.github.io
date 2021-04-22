@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>破解和逆向生成谷歌拓展ctx</title>
+    <link href="/2021/04/18/ctx/"/>
+    <url>/2021/04/18/ctx/</url>
+    
+    <content type="html"><![CDATA[<h2 id="当你需要给被人ctx谷歌拓展的时候怎么办"><a href="#当你需要给被人ctx谷歌拓展的时候怎么办" class="headerlink" title="当你需要给被人ctx谷歌拓展的时候怎么办"></a><strong>当你需要给被人ctx谷歌拓展的时候怎么办</strong></h2><p>   众所周知原因一般人上不去谷歌商店，同时大家也不会保存ctx原文件怎么办？（大家也可以通过国内镜像网站下载）</p><p>​    其实可以使用谷歌的逆向生成</p><p>先打开谷歌已安装插件目录一般如下：（不对自行按照路径修改）</p><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs taggerscript">C:<span class="hljs-symbol">\U</span>sers<span class="hljs-symbol">\u</span>ser<span class="hljs-symbol">\A</span>ppData<span class="hljs-symbol">\L</span>ocal<span class="hljs-symbol">\G</span>oogle<span class="hljs-symbol">\C</span>hrome<span class="hljs-symbol">\U</span>ser Data<span class="hljs-symbol">\D</span>efault<span class="hljs-symbol">\E</span>xtensions<br></code></pre></td></tr></table></figure><p><img src="/2021/04/18/ctx/1619074387095.png" alt="1619074387095"></p><p>这些不是认识的代码不要怕  用我的为例子</p><p><img src="/2021/04/18/ctx/1619074432211.png" alt="1619074432211"></p><p>其实就是id 代码</p><p><img src="/2021/04/18/ctx/1619074464869.png" alt="1619074464869"></p><p>点击打包程序</p><p><img src="/2021/04/18/ctx/1619074549993.png" alt="1619074549993"></p><p>输入对应拓展目录 点击打包就会生成</p><p>注意：</p><p>目录必须指向内部文件</p><p><img src="/2021/04/18/ctx/1619074634791.png" alt="1619074634791"></p><p>结果</p><p><img src="/2021/04/18/ctx/1619074674643.png" alt="1619074674643"></p><p>上层目录crx 文件生成</p><h2 id="你找到了插件目录其实就可以魔改别人代码-比如去掉广告等"><a href="#你找到了插件目录其实就可以魔改别人代码-比如去掉广告等" class="headerlink" title="你找到了插件目录其实就可以魔改别人代码  比如去掉广告等"></a><strong>你找到了插件目录其实就可以魔改别人代码  比如去掉广告等</strong></h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>chrome crx</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>chrome crx</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>修改你的ntp服务器</title>
     <link href="/2021/04/16/ntp/"/>
     <url>/2021/04/16/ntp/</url>
