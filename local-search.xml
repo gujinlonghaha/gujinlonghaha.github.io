@@ -29,6 +29,31 @@
   
   
   <entry>
+    <title>前端不知道接口就不能爬到数据吗？直接爬html</title>
+    <link href="/2021/04/25/pachong/"/>
+    <url>/2021/04/25/pachong/</url>
+    
+    <content type="html"><![CDATA[<h4 id="一般前端都是调用接口，但是有时候碰到服务端页面一展示就是页面没有接口，怎么办呢？直接爬"><a href="#一般前端都是调用接口，但是有时候碰到服务端页面一展示就是页面没有接口，怎么办呢？直接爬" class="headerlink" title="一般前端都是调用接口，但是有时候碰到服务端页面一展示就是页面没有接口，怎么办呢？直接爬"></a>一般前端都是调用接口，但是有时候碰到服务端页面一展示就是页面没有接口，怎么办呢？直接爬</h4><p>今天的主角</p><p><img src="/2021/04/25/pachong/1619768989419.png" alt="1619768989419"></p><p>比如随便找一个网站测试</p><p><img src="/2021/04/25/pachong/1619769044711.png" alt="1619769044711"></p><p>分析html</p><p><img src="/2021/04/25/pachong/1619769095924.png" alt="1619769095924"></p><p>编写代码</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> axios = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;axios&quot;</span>);<br><span class="hljs-keyword">const</span> cheerio = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;cheerio&quot;</span>);<br><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);<br><br>axios.get(<span class="hljs-string">&#x27;https://www.taptap.com/top/download&#x27;</span>,&#123;<br>&#125;).then(<span class="hljs-function">(<span class="hljs-params">res</span>)=&gt;</span>&#123;<br>    <span class="hljs-comment">// console.log(res.data)</span><br>  <span class="hljs-keyword">const</span> $ = cheerio.load(res.data);<br>  <span class="hljs-keyword">let</span> hotList = [];<br><span class="hljs-comment">//   console.log($(&quot;#topList&quot;))</span><br>  $(<span class="hljs-string">&quot;#topList .taptap-top-card&quot;</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">index</span>) </span>&#123;<br>    <span class="hljs-keyword">if</span> (index !== <span class="hljs-number">0</span>) &#123;<br><br>      <span class="hljs-keyword">const</span> $td = $(<span class="hljs-built_in">this</span>).children(<span class="hljs-string">&#x27;.top-card-middle&#x27;</span>).eq(<span class="hljs-number">0</span>);<br>      <span class="hljs-built_in">console</span>.log($td)<br>      <span class="hljs-keyword">const</span> link = $td.find(<span class="hljs-string">&quot;h4&quot;</span>).text();<br>      <span class="hljs-keyword">const</span> text = $td.find(<span class="hljs-string">&quot;.card-middle-author&quot;</span>).find(<span class="hljs-string">&#x27;a&#x27;</span>).text();<br>      <span class="hljs-keyword">const</span> hotValue = $td.find(<span class="hljs-string">&quot;.card-middle-author&quot;</span>).find(<span class="hljs-string">&#x27;a&#x27;</span>).attr(<span class="hljs-string">&#x27;herf&#x27;</span>);<br>      hotList.push(&#123;<br>        index,<br>        link,<br>        text,<br>        hotValue,<br>      &#125;);<br>    &#125;<br>  &#125;);<br>  fs.writeFileSync(<br>    <span class="hljs-string">`<span class="hljs-subst">$&#123;__dirname&#125;</span>/hotSearch.json`</span>,<br>    <span class="hljs-built_in">JSON</span>.stringify(hotList),<br>    <span class="hljs-string">&quot;utf-8&quot;</span><br>  );<br><br><br>&#125;)<br></code></pre></td></tr></table></figure><p>结果输出</p><p><img src="/2021/04/25/pachong/1619769160692.png" alt="1619769160692"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>cheerio html</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>cheerio html</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>淘宝auto抢购脚本的逆向解析尝试</title>
     <link href="/2021/04/24/autojs/"/>
     <url>/2021/04/24/autojs/</url>
