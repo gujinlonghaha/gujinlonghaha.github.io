@@ -18,7 +18,7 @@
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
   
-  <title>安卓应用控件获取方法 - 一直闭眼看世界博客</title>
+  <title>小记：网页调用app 启动并打开固定地址 - 一直闭眼看世界博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="安卓应用控件获取方法">
+            <span class="h2" id="subtitle" title="小记：网页调用app 启动并打开固定地址">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-20 15:23" pubdate>
-        2021年3月20日 下午
+      <time datetime="2021-03-30 16:46" pubdate>
+        2021年3月30日 下午
       </time>
     </span>
   
@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      264 字
+      725 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      8
        分钟
     </span>
   
@@ -237,30 +237,25 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">安卓应用控件获取方法</h1>
+            <h1 style="display: none">小记：网页调用app 启动并打开固定地址</h1>
             
             <div class="markdown-body">
-              <h2 id="网上随便搜索都是需要java-sdk-等安卓adb-工具才能实现"><a href="#网上随便搜索都是需要java-sdk-等安卓adb-工具才能实现" class="headerlink" title="网上随便搜索都是需要java sdk  等安卓adb 工具才能实现"></a>网上随便搜索都是需要java sdk  等安卓adb 工具才能实现</h2><h3 id="要不然就是Appium-手机自动化工具"><a href="#要不然就是Appium-手机自动化工具" class="headerlink" title="要不然就是Appium 手机自动化工具"></a>要不然就是Appium 手机自动化工具</h3><p><img src="/2021/03/20/app/1617953614313.png" srcset="/img/loading.gif" lazyload alt="1617953614313"></p>
-<p><img src="/2021/03/20/app/1617953651490.png" srcset="/img/loading.gif" lazyload alt="1617953651490"></p>
-<p>不懂的人直接头皮发麻 直接劝退</p>
-<h4 id="而且有效信息只有一页-差点放弃"><a href="#而且有效信息只有一页-差点放弃" class="headerlink" title="而且有效信息只有一页 差点放弃"></a><strong>而且有效信息只有一页 差点放弃</strong></h4><p><img src="/2021/03/20/app/1617953729754.png" srcset="/img/loading.gif" lazyload alt="1617953729754"></p>
-<p>之前我购买了auto.js 手机付费版本 里面大部分都是基于控件操作 最终实现了手机自动飞书打卡功能 （有的直接通过坐标实现 不是最好方式）</p>
-<p><img src="/2021/03/20/app/1617954307011.png" srcset="/img/loading.gif" lazyload alt="1617954307011"></p>
-<p>针对前端活着吧小白难道真的没办法实现了吗？这个一度困扰了我几天后来才发现真有小众的东西可以实现</p>
-<h4 id="特此记录-（踏破铁鞋无匿处）-真是难者不会-会者不难-一个知识和工具就是巨大鸿沟"><a href="#特此记录-（踏破铁鞋无匿处）-真是难者不会-会者不难-一个知识和工具就是巨大鸿沟" class="headerlink" title="特此记录 （踏破铁鞋无匿处） 真是难者不会 会者不难  一个知识和工具就是巨大鸿沟"></a><strong>特此记录 （踏破铁鞋无匿处） 真是难者不会 会者不难  一个知识和工具就是巨大鸿沟</strong></h4><p><a target="_blank" rel="noopener" href="https://www.coolapk.com/apk/com.toshiba_dealin.developerhelper">1地址</a>      开发者工具简单好用</p>
-<p><img src="/2021/03/20/app/1617953969262.png" srcset="/img/loading.gif" lazyload alt="1617953969262"></p>
-<p><a target="_blank" rel="noopener" href="https://app.mi.com/details?id=com.yichuang.quickerapp&ref=search">地址</a></p>
-<p>效果</p>
-<p><img src="/2021/03/20/app/1617954371068.png" srcset="/img/loading.gif" lazyload alt="1617954371068"></p>
-<p>2手机版quicker  <img src="/2021/03/20/app/1617954121135.png" srcset="/img/loading.gif" lazyload alt="1617954121135"></p>
-<p>效果如下</p>
-<p><img src="/2021/03/20/app/1617954143390.png" srcset="/img/loading.gif" lazyload alt="1617954143390"></p>
-<p>从此以后你就可以编写自动化手机脚本无压力了   解放你的双手</p>
-<ol>
-<li> 自动打卡</li>
-<li> 自动抢购</li>
-<li>自动导航</li>
-</ol>
+              <p>我们能在浏览器内跳转网页是http、https协议，能打开本地文件是file协议，调用APP用的是scheme协议或者intent协议，其实都是发送请求，获得响应，只是网页和APP是使用这两个协议通信的。scheme协议不仅仅用于ios端，也适用于安卓。但intent只适用于安卓。</p>
+<h2 id="1、scheme协议"><a href="#1、scheme协议" class="headerlink" title="1、scheme协议"></a>1、scheme协议</h2><p>在 iOS 里，程序之间都是相互隔离，目前并没有一个有效的方式来做程序间通信，幸好 iOS 程序可以很方便的注册自己的 URL Scheme，这样就可以通过打开特定 URL 的方式来传递参数给另外一个程序。原生的APP和网页通过这种协议可以互相通信，safari或者APP的webView都可以识别该协议（一些浏览器如微信内置浏览器和QQ浏览器不支持，据后台技术哥哥介绍这是腾讯有意屏蔽，默认的webview控件是支持的）.</p>
+<p>如果是自己的APP想被网页调用，需要自己在app中注册scheme，这不是我研究的范畴。。。</p>
+<p>我们一般是调用别人的APP，会使用scheme协议就行,其实特简单，<strong>通过链接就可以</strong>。</p>
+<h3 id="常用APP的scheme"><a href="#常用APP的scheme" class="headerlink" title="常用APP的scheme"></a>常用APP的scheme</h3><p>QQ mqq://<br>微信 weixin://<br>淘宝 taobao://<br>大众点评 dianping:// dianping://search<br>新浪微博 sinaweibo://<br>支付宝 alipay://<br>豆瓣fm doubanradio://<br>美团 imeituan://<br>1号店 wccbyihaodian://<br>有道词典yddictproapp://<br>知乎 zhihu://<br>优酷 youku://</p>
+<p>见知乎上的整理：<a target="_blank" rel="noopener" href="http://www.zhihu.com/question/19907735">http://www.zhihu.com/question/19907735</a></p>
+<h2 id="2、intent协议"><a href="#2、intent协议" class="headerlink" title="2、intent协议"></a>2、intent协议</h2><p>“在一个Android应用中，主要是由四种组件组成的，这四种组件可参考“Android应用的构成”。而这四种组件是独立的，它们之间可以互相调用，协调工作，最终组成一个真正的Android应用。在这些组件之间的通讯中，主要是由Intent协助完成的。Intent负责对应用中一次操作的动作、动作涉及数据、附加数据进行描述，Android则根据此Intent的描述，负责找到对应的组件，将Intent传递给调用的组件，并完成组件的调用。因此，Intent在这里起着一个媒体中介的作用，专门提供组件互相调用的相关信息，实现调用者与被调用者之间的解耦。”所以说intent是协议是不准确的，intent实际上是一种在不同组件之间传递的请求信息。</p>
+<h1 id="示例：网页调取百度地图、高德地图"><a href="#示例：网页调取百度地图、高德地图" class="headerlink" title="示例：网页调取百度地图、高德地图"></a>示例：网页调取百度地图、高德地图</h1><p>官方文档：</p>
+<p>1、高德地图：<a target="_blank" rel="noopener" href="http://lbs.amap.com/api/uri-api/ios-uri-explain/">http://lbs.amap.com/api/uri-api/ios-uri-explain/</a></p>
+<p>2、百度地图：<a target="_blank" rel="noopener" href="http://developer.baidu.com/map/index.php?title=uri/api/ios">http://developer.baidu.com/map/index.php?title=uri/api/ios</a></p>
+<p>测试：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-params">&lt;a href=&quot;taobao://detail.m.tmall.com/item.htm?spm=a2141<span class="hljs-number">.8971817</span><span class="hljs-number">.50003458</span><span class="hljs-number">.1</span><span class="hljs-variable">&amp;id</span>=<span class="hljs-number">612053462785</span><span class="hljs-variable">&amp;scm</span>=<span class="hljs-number">1007.15522</span><span class="hljs-number">.117270</span>.cat:<span class="hljs-number">50003458</span>_industry:_cattype:cat_id:<span class="hljs-number">612053462785</span><span class="hljs-variable">&amp;pvid</span>=<span class="hljs-number">0982</span>d09f-d63f<span class="hljs-number">-438</span>f-af91<span class="hljs-number">-5434</span>a11305f4<span class="hljs-variable">&amp;scene</span>=<span class="hljs-number">5522</span>&quot;&gt;</span>大萨达撒<span class="hljs-params">&lt;/a&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>手机端调用页面 </p>
+<p>页面地址获取</p>
+<p><img src="/2021/03/30/qidong/1619772927650.png" srcset="/img/loading.gif" lazyload alt="1619772927650"></p>
 
             </div>
             <hr>
@@ -270,7 +265,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E5%AE%89%E5%8D%93/">安卓</a>
+                      <a class="hover-with-bg" href="/categories/app/">app</a>
                     
                   </div>
                 
@@ -278,7 +273,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%AE%89%E5%8D%93/">安卓</a>
+                      <a class="hover-with-bg" href="/tags/app/">app</a>
                     
                   </div>
                 
@@ -295,9 +290,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/03/30/qidong/">
+                      <a href="/2021/04/01/ahk/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">小记：网页调用app 启动并打开固定地址</span>
+                        <span class="hidden-mobile">简易版exe 打包</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -305,8 +300,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/03/09/sele/">
-                        <span class="hidden-mobile">Nodejs+Selenium环境搭建以及深坑</span>
+                      <a href="/2021/03/20/app/">
+                        <span class="hidden-mobile">安卓应用控件获取方法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
