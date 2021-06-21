@@ -1,6 +1,7 @@
 ---
 title: 亲手搭建node自动发送邮件和祝福语
 index_img: /img/1619757995805.png
+date: 2021-05-20 10:23:24
 tags: nodemailer eamil qq
 categories: nodemailer eamil qq
 ---
