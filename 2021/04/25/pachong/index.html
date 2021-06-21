@@ -27,12 +27,6 @@
   <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
-  
 
   
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -56,7 +50,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.9-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -154,13 +148,13 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
                 class="iconfont icon-search"></i>&nbsp;</a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
+            <a class="nav-link" target="_self">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -247,8 +241,41 @@
 <p>分析html</p>
 <p><img src="/2021/04/25/pachong/1619769095924.png" srcset="/img/loading.gif" lazyload alt="1619769095924"></p>
 <p>编写代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> axios = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;axios&quot;</span>);<br><span class="hljs-keyword">const</span> cheerio = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;cheerio&quot;</span>);<br><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);<br><br>axios.get(<span class="hljs-string">&#x27;https://www.taptap.com/top/download&#x27;</span>,&#123;<br>&#125;).then(<span class="hljs-function">(<span class="hljs-params">res</span>)=&gt;</span>&#123;<br>    <span class="hljs-comment">// console.log(res.data)</span><br>  <span class="hljs-keyword">const</span> $ = cheerio.load(res.data);<br>  <span class="hljs-keyword">let</span> hotList = [];<br><span class="hljs-comment">//   console.log($(&quot;#topList&quot;))</span><br>  $(<span class="hljs-string">&quot;#topList .taptap-top-card&quot;</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">index</span>) </span>&#123;<br>    <span class="hljs-keyword">if</span> (index !== <span class="hljs-number">0</span>) &#123;<br><br>      <span class="hljs-keyword">const</span> $td = $(<span class="hljs-built_in">this</span>).children(<span class="hljs-string">&#x27;.top-card-middle&#x27;</span>).eq(<span class="hljs-number">0</span>);<br>      <span class="hljs-built_in">console</span>.log($td)<br>      <span class="hljs-keyword">const</span> link = $td.find(<span class="hljs-string">&quot;h4&quot;</span>).text();<br>      <span class="hljs-keyword">const</span> text = $td.find(<span class="hljs-string">&quot;.card-middle-author&quot;</span>).find(<span class="hljs-string">&#x27;a&#x27;</span>).text();<br>      <span class="hljs-keyword">const</span> hotValue = $td.find(<span class="hljs-string">&quot;.card-middle-author&quot;</span>).find(<span class="hljs-string">&#x27;a&#x27;</span>).attr(<span class="hljs-string">&#x27;herf&#x27;</span>);<br>      hotList.push(&#123;<br>        index,<br>        link,<br>        text,<br>        hotValue,<br>      &#125;);<br>    &#125;<br>  &#125;);<br>  fs.writeFileSync(<br>    <span class="hljs-string">`<span class="hljs-subst">$&#123;__dirname&#125;</span>/hotSearch.json`</span>,<br>    <span class="hljs-built_in">JSON</span>.stringify(hotList),<br>    <span class="hljs-string">&quot;utf-8&quot;</span><br>  );<br><br><br>&#125;)<br></code></pre></td></tr></table></figure>
+<pre><code class="js">const axios = require(&quot;axios&quot;);
+const cheerio = require(&quot;cheerio&quot;);
+const fs = require(&quot;fs&quot;);
 
+axios.get(&#39;https://www.taptap.com/top/download&#39;,&#123;
+&#125;).then((res)=&gt;&#123;
+    // console.log(res.data)
+  const $ = cheerio.load(res.data);
+  let hotList = [];
+//   console.log($(&quot;#topList&quot;))
+  $(&quot;#topList .taptap-top-card&quot;).each(function (index) &#123;
+    if (index !== 0) &#123;
+
+      const $td = $(this).children(&#39;.top-card-middle&#39;).eq(0);
+      console.log($td)
+      const link = $td.find(&quot;h4&quot;).text();
+      const text = $td.find(&quot;.card-middle-author&quot;).find(&#39;a&#39;).text();
+      const hotValue = $td.find(&quot;.card-middle-author&quot;).find(&#39;a&#39;).attr(&#39;herf&#39;);
+      hotList.push(&#123;
+        index,
+        link,
+        text,
+        hotValue,
+      &#125;);
+    &#125;
+  &#125;);
+  fs.writeFileSync(
+    `$&#123;__dirname&#125;/hotSearch.json`,
+    JSON.stringify(hotList),
+    &quot;utf-8&quot;
+  );
+
+
+&#125;)
+</code></pre>
 <p>结果输出</p>
 <p><img src="/2021/04/25/pachong/1619769160692.png" srcset="/img/loading.gif" lazyload alt="1619769160692"></p>
 
@@ -285,7 +312,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/30/eamil/">
+                      <a href="/2021/05/20/eamil/">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">亲手搭建node自动发送邮件和祝福语</span>
                         <span class="visible-mobile">上一篇</span>
@@ -389,7 +416,6 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
@@ -401,8 +427,6 @@
   
 
 
-
-  
 
 
 
@@ -422,6 +446,10 @@
 
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
 
 
 
@@ -434,21 +462,6 @@
       typing(title)
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
   </script>
 
 

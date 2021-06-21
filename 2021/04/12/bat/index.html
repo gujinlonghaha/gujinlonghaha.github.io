@@ -27,12 +27,6 @@
   <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
-  
 
   
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -56,7 +50,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.9-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -154,13 +148,13 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
                 class="iconfont icon-search"></i>&nbsp;</a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
+            <a class="nav-link" target="_self">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -197,7 +191,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      380 字
+      387 字
     </span>
   
 
@@ -249,8 +243,38 @@
 <p><img src="/2021/04/12/bat/1618388010418.png" srcset="/img/loading.gif" lazyload alt="1618388010418"></p>
 <p>不是根本不起作用就是只能切换ip 难道没有办法了吗？</p>
 <h3 id="最终自己编写bat-解决-完美撒花"><a href="#最终自己编写bat-解决-完美撒花" class="headerlink" title="最终自己编写bat 解决 完美撒花"></a><strong>最终自己编写bat 解决 完美撒花</strong></h3><p>汉字 专网  WLAN 分别是是网卡对应名称  记得修改</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs bat"><br>@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">title</span> gjl切换网络脚本<br>:stillAnswer<br><span class="hljs-built_in">set</span> /p switch=<span class="hljs-number">1</span>切换为专网，<span class="hljs-number">2</span>切换为WLAN，<span class="hljs-number">3</span>切换为双网卡，<span class="hljs-number">4</span>退出：<br><span class="hljs-keyword">if</span> <span class="hljs-variable">%switch%</span> == <span class="hljs-number">1</span> (<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;专网&quot; admin=enabled<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;WLAN&quot; admin=disabled<br><br><span class="hljs-built_in">echo</span> -------------------当前网络为专网---------------------<br><span class="hljs-keyword">goto</span> stillAnswer<br>)<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-variable">%switch%</span> == <span class="hljs-number">2</span> (<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;专网&quot; admin=disabled<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;WLAN&quot; admin=enabled<br><span class="hljs-built_in">echo</span> -------------------当前网络为WLAN---------------------<br><span class="hljs-keyword">goto</span> stillAnswer<br>)<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-variable">%switch%</span> == <span class="hljs-number">3</span> (<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;专网&quot; admin=enabled<br>netsh interface <span class="hljs-built_in">set</span> interface name=&quot;WLAN&quot; admin=enabled<br><span class="hljs-built_in">echo</span> -------------------双网卡同时启动---------------------<br><span class="hljs-keyword">goto</span> stillAnswer<br>)<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-variable">%switch%</span> == <span class="hljs-number">4</span> (<br><span class="hljs-keyword">exit</span><br>)<br><br>::netsh interface <span class="hljs-built_in">set</span> interface name=&quot;WLAN&quot; admin=disabled<br>::netsh interface <span class="hljs-built_in">set</span> interface name=&quot;专网&quot; admin=enabled<br><br>::netsh interface <span class="hljs-built_in">set</span> interface name=&quot;WLAN&quot; admin=enabled<br>::netsh interface <span class="hljs-built_in">set</span> interface name=&quot;专网&quot; admin=disabled<br></code></pre></td></tr></table></figure>
+<pre><code class="bat">
+@echo off
+title gjl切换网络脚本
+:stillAnswer
+set /p switch=1切换为专网，2切换为WLAN，3切换为双网卡，4退出：
+if %switch% == 1 (
+netsh interface set interface name=&quot;专网&quot; admin=enabled
+netsh interface set interface name=&quot;WLAN&quot; admin=disabled
 
+echo -------------------当前网络为专网---------------------
+goto stillAnswer
+)else if %switch% == 2 (
+netsh interface set interface name=&quot;专网&quot; admin=disabled
+netsh interface set interface name=&quot;WLAN&quot; admin=enabled
+echo -------------------当前网络为WLAN---------------------
+goto stillAnswer
+)else if %switch% == 3 (
+netsh interface set interface name=&quot;专网&quot; admin=enabled
+netsh interface set interface name=&quot;WLAN&quot; admin=enabled
+echo -------------------双网卡同时启动---------------------
+goto stillAnswer
+)
+else if %switch% == 4 (
+exit
+)
+
+::netsh interface set interface name=&quot;WLAN&quot; admin=disabled
+::netsh interface set interface name=&quot;专网&quot; admin=enabled
+
+::netsh interface set interface name=&quot;WLAN&quot; admin=enabled
+::netsh interface set interface name=&quot;专网&quot; admin=disabled
+</code></pre>
 <p>新建bat文件保存后<strong>管理员身份</strong>运行 效果如下：</p>
 <p><img src="/2021/04/12/bat/1618388625946.png" srcset="/img/loading.gif" lazyload alt="1618388625946"></p>
 <p>这样还不够完美 我有用bat 转为exe </p>
@@ -399,7 +423,6 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
@@ -411,8 +434,6 @@
   
 
 
-
-  
 
 
 
@@ -432,6 +453,10 @@
 
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
 
 
 
@@ -444,21 +469,6 @@
       typing(title)
       
     })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
   </script>
 
 
