@@ -573,6 +573,31 @@
   
   
   <entry>
+    <title>vue支持可选链操作符</title>
+    <link href="/2019/05/11/kxl/"/>
+    <url>/2019/05/11/kxl/</url>
+    
+    <content type="html"><![CDATA[<h3 id="在开发过程中拿到一个内嵌比较深的值需要做很多的判断，来保证没有数据而报错，比如"><a href="#在开发过程中拿到一个内嵌比较深的值需要做很多的判断，来保证没有数据而报错，比如" class="headerlink" title="在开发过程中拿到一个内嵌比较深的值需要做很多的判断，来保证没有数据而报错，比如"></a>在开发过程中拿到一个内嵌比较深的值需要做很多的判断，来保证没有数据而报错，比如</h3><pre><code> const obj = &#123;            a: &#123;                b: &#123;                    c:&quot;1&quot;                &#125;            &#125;        &#125;取c, 正确的做法是： const cValue = (obj &amp;&amp; obj.a &amp;&amp; obj.a.b &amp;&amp; obj.a.b.c) || &#39;&#39;; // 需要判断4次，每一层是否有值</code></pre><p> 直接在链式调用的时候判断，左侧的对象是否为null或undefined。如果是的，就不再往下运算，而是返回undefined </p><pre><code>取c const cValue = obj?.a?.b?.c  //1 </code></pre><h1 id="如何在项目中支持可选链"><a href="#如何在项目中支持可选链" class="headerlink" title="如何在项目中支持可选链"></a>如何在项目中支持可选链</h1><pre><code>npm install @babel/plugin-proposal-optional-chaining</code></pre><h4 id="添加至项目-babel-config-js文件中："><a href="#添加至项目-babel-config-js文件中：" class="headerlink" title="添加至项目.babel.config.js文件中："></a>添加至项目.babel.config.js文件中：</h4><pre><code>&#123;  &quot;plugins&quot;: [    &quot;@babel/plugin-proposal-optional-chaining&quot;, ]&#125;</code></pre><p>全局函数</p><pre><code>export default function useOptionChain(target) &#123;    return new Proxy(target, &#123;        get:  (target, propKey)=&gt; &#123;            const proKeyArr = propKey.split(&#39;?.&#39;)            return  proKeyArr.reduce((a,b)=&gt;a?.[b],target)        &#125;    &#125;)&#125;</code></pre><pre><code class="xml">&lt;template&gt;  &lt;div id=&quot;app&quot;&gt; //保留可选链的写法，更直观的展示，想要拿数组的元素直接取下标的数字即可，不需要 []    &lt;h1 v-if=&quot;useOptionChain(arr)[&#39;0?.obj?.a?.b&#39;]&quot;&gt;数组对象&lt;/h1&gt;    &lt;h1 v-if=&quot;useOptionChain(obj)[&#39;arr?.0?.a&#39;]&quot;&gt;对象数组&lt;/h1&gt;  &lt;/div&gt;&lt;/template&gt;&lt;script&gt;//引入函数import useOptionChain from &quot;@/utils&quot;;export default &#123;  name: &quot;App&quot;,  components: &#123;&#125;,  data() &#123;    return &#123;      arr: [        &#123;          obj: &#123;            a: &#123;              b: &quot;数组对象&quot;,            &#125;,          &#125;,        &#125;,      ],      obj: &#123;        arr: [          &#123;            a: &quot;对象数组&quot;,          &#125;,        ],      &#125;,    &#125;;  &#125;,  methods: &#123;    useOptionChain,  &#125;,&#125;;&lt;/script&gt;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue js</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue js</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>npx和cli的那些事</title>
     <link href="/2019/04/20/cli/"/>
     <url>/2019/04/20/cli/</url>
