@@ -548,6 +548,31 @@
   
   
   <entry>
+    <title>vue 批量自动化</title>
+    <link href="/2019/10/10/vue/"/>
+    <url>/2019/10/10/vue/</url>
+    
+    <content type="html"><![CDATA[<p>vue 批量注册全局组件 自动全局注册免去手动操作 早点下班</p><p><img src="/2019/10/10/vue/1634618126400.png" alt="1634618126400"></p><p>代码</p><pre><code>// 引入vueimport Vue from &#39;vue&#39;// 引入同目录下的全部组件const requireCom = require.context(&#39;.&#39;, false, /\.vue$/)// 依次进行注册requireCom.keys().forEach(key =&gt; &#123;  //    字符串首字母大写处理  function strUp(str) &#123;    return str.charAt(0).toUpperCase() + str.slice(1)  &#125;  // 获取单个组件内容  const _component = requireCom(key)  // 获取组件名称  const _componentName = strUp(key.replace(/^\.\//, &#39;&#39;).replace(/\.\w+$/, &#39;&#39;))  // 注册在vue上  Vue.component(_componentName, _component.default || _component)&#125;)</code></pre><p>在一个项目中, 某些过滤器全局都有可能用的到, 统一管理并自动化全局注册是很方便的.</p><p>代码如下, 后续只需要在<strong>src/filters/index.js</strong>中添加方法就可以全局使用过滤器了.</p><pre><code>// src/filters/index.js  //  格式化方法  export function formatNull (val) &#123;    return val ? val : &#39;--&#39;  &#125;</code></pre><pre><code>// mian.js  import Vue from &#39;vue&#39;import * as filters from &#39;./filters&#39;// 全局注册过滤器Object.keys(filters).forEach(k =&gt; Vue.filter(k, filters[k]));</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>element</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>element</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>npx和cli的那些事</title>
     <link href="/2019/04/20/cli/"/>
     <url>/2019/04/20/cli/</url>
@@ -565,6 +590,31 @@
     <tags>
       
       <tag>npm cli npx</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>element form 嵌套校验</title>
+    <link href="/2019/04/10/element/"/>
+    <url>/2019/04/10/element/</url>
+    
+    <content type="html"><![CDATA[<h3 id="elementUI对表单的校验有自己的方法，要求传入model的必须为一个对象。但如果数据结构比较复杂，对象里面又嵌套对象，该如何校验？"><a href="#elementUI对表单的校验有自己的方法，要求传入model的必须为一个对象。但如果数据结构比较复杂，对象里面又嵌套对象，该如何校验？" class="headerlink" title="elementUI对表单的校验有自己的方法，要求传入model的必须为一个对象。但如果数据结构比较复杂，对象里面又嵌套对象，该如何校验？"></a>elementUI对表单的校验有自己的方法，要求传入model的必须为一个对象。但如果数据结构比较复杂，对象里面又嵌套对象，该如何校验？</h3><p><img src="/2019/04/10/element/1.png"><br><img src="/2019/04/10/element/3.png"></p><p>效果如下：</p><p><img src="/2019/04/10/element/2.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>element</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>element</tag>
       
     </tags>
     
