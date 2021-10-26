@@ -3,7 +3,7 @@ title: vue支持可选链操作符
 date: 2019-05-11 18:03:50
 tags: vue js
 categories: vue js
-index_img: img/vue.png
+index_img: img/es6.png
 ---
 
 ###  在开发过程中拿到一个内嵌比较深的值需要做很多的判断，来保证没有数据而报错，比如 
