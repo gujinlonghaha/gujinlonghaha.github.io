@@ -448,6 +448,31 @@
   
   
   <entry>
+    <title>不克隆仓库也可以迅速学习 git神技巧</title>
+    <link href="/2021/03/20/git/"/>
+    <url>/2021/03/20/git/</url>
+    
+    <content type="html"><![CDATA[<p>很多人都是在git 找到优秀仓库学习<br>先下载下来<br>但是网络慢不说<br>只是初步浏览没必要</p><p>优秀的人是是装浏览器git 树组件</p><p>但是vscoe + git 才是真香定律</p><p>比如 </p><p><a href="https://github.com/PanJiaChen/vue-element-admin/">这个仓库</a></p><p><img src="/2021/03/20/git/1635234648271.png" alt="1635234648271"></p><p>只需要地址栏加上 1s 就可以欢快学习源码</p><p><img src="/2021/03/20/git/1635234742696.png" alt="1635234742696"></p><p><img src="/2021/03/20/git/1635234797207.png" alt="1635234797207"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Nodejs+Selenium环境搭建以及深坑</title>
     <link href="/2021/03/09/sele/"/>
     <url>/2021/03/09/sele/</url>
@@ -540,6 +565,56 @@
     <tags>
       
       <tag>pupeteer</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>nginx 带/ 的那点事(总是会忘)</title>
+    <link href="/2020/04/01/xiegang/"/>
+    <url>/2020/04/01/xiegang/</url>
+    
+    <content type="html"><![CDATA[<p>注意：当location为正则表达式匹配模式时，proxy_pass中的url末尾是不允许有”/“的，因此正则表达式匹配模式不在讨论范围内。</p><p>proxy_pass配置中url末尾带/时，nginx转发时，会将原uri去除location匹配表达式后的内容拼接在proxy_pass中url之后。</p><p>测试地址：<a href="http://192.168.171.129/test/tes.jsp">http://192.168.171.129/test/tes.jsp</a></p><p>场景一：</p><pre><code>location ^~ /test/ &#123;proxy_pass http://192.168.171.129:8080/server/;&#125;</code></pre><p>代理后实际访问地址：<a href="http://192.168.171.129:8080/server/tes.jsp">http://192.168.171.129:8080/server/tes.jsp</a></p><p>场景二：</p><pre><code>location ^~ /test &#123;proxy_pass http://192.168.171.129:8080/server/;&#125;</code></pre><p>代理后实际访问地址：<a href="http://192.168.171.129:8080/server//tes.jsp">http://192.168.171.129:8080/server//tes.jsp</a></p><p>场景三：</p><pre><code>location ^~ /test/ &#123;proxy_pass http://192.168.171.129:8080/;&#125;</code></pre><p>代理后实际访问地址：<a href="http://192.168.171.129:8080/tes.jsp">http://192.168.171.129:8080/tes.jsp</a></p><p>场景四：</p><pre><code>location ^~ /test &#123;proxy_pass http://192.168.171.129:8080/;&#125;</code></pre><p>代理后实际访问地址：<a href="http://192.168.171.129:8080//tes.jsp">http://192.168.171.129:8080//tes.jsp</a></p><p>proxy_pass配置中url末尾不带/时，如url中不包含path，则直接将原uri拼接在proxy_pass中url之后；如url中包含path，则将原uri去除location匹配表达式后的内容拼接在proxy_pass中的url之后。</p><p>测试地址：<a href="http://192.168.171.129/test/tes.jsp">http://192.168.171.129/test/tes.jsp</a></p><p>场景一：</p><pre><code>location ^~ /test/&#123;proxy_pass http://192.168.171.129:8080/server;&#125;</code></pre><p>代理后实际访问地址：<a href="http://192.168.171.129:8080/servertes.jsp">http://192.168.171.129:8080/servertes.jsp</a></p><p>场景二：</p><p>location ^~ /test {<br>proxy_pass <a href="http://192.168.171.129:8080/server">http://192.168.171.129:8080/server</a>;</p><p>}</p><p>代理后实际访问地址：<a href="http://192.168.171.129:8080/server/tes.jsp">http://192.168.171.129:8080/server/tes.jsp</a></p><p>场景三：</p><p>location ^~ /test/ {<br>proxy_pass <a href="http://192.168.171.129:8080/">http://192.168.171.129:8080</a>;</p><p>}</p><p>代理后实际访问地址：<a href="http://192.168.171.129:8080/test/tes.jsp">http://192.168.171.129:8080/test/tes.jsp</a></p><p>场景四：</p><p>location ^~ /test {<br>proxy_pass <a href="http://192.168.171.129:8080/">http://192.168.171.129:8080</a>;</p><p>}</p><p>代理后实际访问地址：<a href="http://192.168.171.129:8080/test/tes.jsp">http://192.168.171.129:8080/test/tes.jsp</a></p><p>总结：</p><p>如果proxy_pass中配置的地址中带/，不论/在不在末尾(即：不论/是不是最后一个字符)，都会把访问链接uri中匹配到location表达式的部分去掉，然后在拼接到proxy_pass的url之后</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>nginx</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>nginx</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>plop 你值得拥有</title>
+    <link href="/2019/11/20/plop/"/>
+    <url>/2019/11/20/plop/</url>
+    
+    <content type="html"><![CDATA[<p>这时代连ctrl+c  ctrl+v 都已经是工作量了<br>能不能简单点<br>再简单点</p><p><img src="/2019/11/20/plop/1635239022410.png" alt="1635239022410"></p><p>基于 Vscode 的 Snippets 自定义代码块<br>通过 Vscode 的 Snippets 我们可以自定义 Snippets，从而实现快捷生成代码片段。</p><p>打开 Vscode，依次点击文件——首选项——用户代码片段</p><pre><code>prefix: 代码片段名字，即输入此名字就可以调用代码片段body: 这个是代码段的主体.需要编写的代码放在这里    $1: 生成代码后光标的初始位置$2: 生成代码后光标的第二个位置,按 tab 键可进行快速切换,还可以有 $3,$4,$5.....$&#123;1,字符&#125;: 生成代码后光标的初始位置（其中 1 表示光标开始的序号，字符表示生成代码后光标会直接选中字符）description: 代码段描述,输入名字后编辑器显示的提示信息tab键制表符:\t换行: \r 或者\n</code></pre><p>plop 解决了静态和动态模板的问题<br>（常见解决方案 1代码段 比较小   2 node fs 模块写文件  3 vscode 插件 4 历史粘贴板 ）<br>plop 更高级</p><p>在日常开发中，我们需要不停的新建页面和组件。以 Vue 项目为例，我们在新建一个页面的时候，需要经历一遍又一遍重复的过程：</p><p>1、先新建一个文件夹</p><p>2、然后新建一个 .vue 文件，写上 </p><pre><code>&lt;template&gt;、&lt;script&gt;、&lt;style&gt;</code></pre><p>3、如果页面涉及多个组件，还要新建 component 文件夹，并重复以上两个步骤</p><p>4、最后才是我们的业务代码</p><p>开始搞</p><pre><code>npm install --save-dev plop</code></pre><ul><li>项目根目录下新建 <code>plopfile.js</code></li></ul><pre><code>const viewGenerator = require(&#39;./plop-templates/view/prompt&#39;)const componentGenerator = require(&#39;./plop-templates/component/prompt&#39;)const storeGenerator = require(&#39;./plop-templates/store/prompt.js&#39;)module.exports = function(plop) &#123;  plop.setGenerator(&#39;view&#39;, viewGenerator)  plop.setGenerator(&#39;component&#39;, componentGenerator)  plop.setGenerator(&#39;store&#39;, storeGenerator)&#125;</code></pre><p>index.hbs</p><pre><code>&#123;&#123;#if template&#125;&#125;&lt;template&gt;  &lt;div /&gt;&lt;/template&gt;&#123;&#123;/if&#125;&#125;&#123;&#123;#if script&#125;&#125;&lt;script&gt;export default &#123;  name: &#39;&#123;&#123; properCase name &#125;&#125;&#39;,  props: &#123;&#125;,  data() &#123;    return &#123;&#125;  &#125;,  created() &#123;&#125;,  mounted() &#123;&#125;,  methods: &#123;&#125;&#125;&lt;/script&gt;&#123;&#123;/if&#125;&#125;&#123;&#123;#if style&#125;&#125;&lt;style lang=&quot;scss&quot; scoped&gt;&lt;/style&gt;&#123;&#123;/if&#125;&#125;</code></pre><p>prompt.js</p><pre><code>const &#123; notEmpty &#125; = require(&#39;../utils.js&#39;)module.exports = &#123;  description: &#39;generate a view&#39;,  prompts: [&#123;    type: &#39;input&#39;,    name: &#39;name&#39;,    message: &#39;view name please&#39;,    validate: notEmpty(&#39;name&#39;)  &#125;,  &#123;    type: &#39;checkbox&#39;,    name: &#39;blocks&#39;,    message: &#39;Blocks:&#39;,    choices: [&#123;      name: &#39;&lt;template&gt;&#39;,      value: &#39;template&#39;,      checked: true    &#125;,    &#123;      name: &#39;&lt;script&gt;&#39;,      value: &#39;script&#39;,      checked: true    &#125;,    &#123;      name: &#39;style&#39;,      value: &#39;style&#39;,      checked: true    &#125;    ],    validate(value) &#123;      if (value.indexOf(&#39;script&#39;) === -1 &amp;&amp; value.indexOf(&#39;template&#39;) === -1) &#123;        return &#39;View require at least a &lt;script&gt; or &lt;template&gt; tag.&#39;      &#125;      return true    &#125;  &#125;  ],  actions: data =&gt; &#123;    const name = &#39;&#123;&#123;name&#125;&#125;&#39;    const actions = [&#123;      type: &#39;add&#39;,      path: `src/views/$&#123;name&#125;/index.vue`,      templateFile: &#39;plop-templates/view/index.hbs&#39;,      data: &#123;        name: name,        template: data.blocks.includes(&#39;template&#39;),        script: data.blocks.includes(&#39;script&#39;),        style: data.blocks.includes(&#39;style&#39;)      &#125;    &#125;]    return actions  &#125;&#125;</code></pre><p><a href="https://mp.weixin.qq.com/s?src=11&timestamp=1635238049&ver=3397&signature=XhxckxmQJbOV8XfbzjKEKwAUVdLu*q0A0CLP2*Hfez12F27UbOx1JtORtmjkHvZvOzswQSicEne7ipw3XXFZy11KQFltNdsHpVLfNXVgOQQwuzAy6fG5uOLpkE*Gxgdr&new=1">政采云这个写的更不错</a></p><p><img src="/2019/11/20/plop/1635239420430.png" alt="1635239420430"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue  plop</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue  plop</tag>
       
     </tags>
     
@@ -665,6 +740,131 @@
     <tags>
       
       <tag>npm cli node</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>向花裤衩学到的技术(element-admin)</title>
+    <link href="/2019/03/20/hkc/"/>
+    <url>/2019/03/20/hkc/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/2019/03/20/hkc/1635234209361.png" alt="1635234209361"></p><p><strong>str  这么高值得我们很多人学习里边的思想</strong></p><p>突然发现</p><p>本地图标他是如何展示的 ？element 团标呢？</p><p><img src="/2019/03/20/hkc/1635234008077.png" alt="1635234008077"></p><p>查看源码发现</p><p><img src="/2019/03/20/hkc/1635234094248.png" alt="1635234094248"></p><p>element 写死的 也可以理解</p><p><img src="/2019/03/20/hkc/1635234123954.png" alt="1635234123954"></p><p>svg 展示就很优秀了（一般只是注册组件使用没想到还可以这么玩）</p><p><img src="/2019/03/20/hkc/1635234147308.png" alt="1635234147308"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>element table 滚动条原来这么丑</title>
+    <link href="/2018/12/20/scoll/"/>
+    <url>/2018/12/20/scoll/</url>
+    
+    <content type="html"><![CDATA[<h3 id="element-table-滚动条是可以出来-但是有两个问题"><a href="#element-table-滚动条是可以出来-但是有两个问题" class="headerlink" title="element table 滚动条是可以出来 但是有两个问题"></a><strong>element table 滚动条是可以出来 但是有两个问题</strong></h3><p><strong>1样式原生太丑</strong><br><strong>2头部是什么鬼</strong></p><p><img src="/2018/12/20/scoll/1635228628657.png" alt="1635228628657"></p><p>直接在app.vue 中</p><p>原生样式修改 1 滚动条   2 表格头部</p><pre><code>  ::-webkit-scrollbar &#123;    width: 6px;    height: 6px;    background-color: #fff;&#125;::-webkit-scrollbar-thumb &#123;    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);    background-color: rgba(0, 0, 0, .1)&#125;</code></pre><pre><code>.el-table--border th.el-table__cell.gutter:last-of-type&#123;  background-color: rgb(242, 243, 244);  border:0px;&#125; </code></pre><p>效果</p><p><img src="/2018/12/20/scoll/1635228755063.png" alt="1635228755063"></p><p><img src="/2018/12/20/scoll/1635228779784.png" alt="1635228779784"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>element  滚动条</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>element  滚动条</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ele 日历不支持多选？</title>
+    <link href="/2018/11/21/dateLine/"/>
+    <url>/2018/11/21/dateLine/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/1635225291762.png" alt="1635225291762"></p><p><img src="/1635225316911.png" alt="1635225316911"></p><p>胡不多说直接上图</p><p><img src="/1635225779138.png" alt="1635225779138"></p><p>百度一波</p><p><img src="/1635225726023.png" alt="1635225726023"></p><p>确实v-model 是单个日期 但是自己实现还是很简单的 我自己的操作方式是</p><p>1 原理就是不需要用他的v-model  自己写个数组 点击的时候  包含就展示  不包含就取消</p><p>效果如下</p><p><img src="/1635225869758.png" alt="1635225869758"></p><p><img src="/1635225929593.png" alt="1635225929593"></p><p><img src="/1635225946194.png" alt="1635225946194"></p><p>2 按钮移入展示 因为日历官方小不了 弹窗又用户操作太麻烦</p><p><img src="/1635226176677.png" alt="1635226176677"></p><p><img src="/1635226203110.png" alt="1635226203110"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>element  vue</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>element  vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>操作成功提示还在挨个加？</title>
+    <link href="/2018/10/21/sucess/"/>
+    <url>/2018/10/21/sucess/</url>
+    
+    <content type="html"><![CDATA[<p>业务中操作失败加全局提示就ok ，但是操作</p><p>业务中很多页面需要加操作提示成功？</p><p>全局增加？</p><p>但是查询列表和详情又不需要！</p><p>挨个增加又太累!!! 后期修改会流泪</p><p><img src="/2018/10/21/sucess/1635224165558.png" alt="1635224165558"></p><p>再封装个方法？</p><p><img src="/2018/10/21/sucess/1635224205609.png" alt="1635224205609"></p><p>element 已经够简单 还怎么破</p><p><img src="/2018/10/21/sucess/1635224247763.png" alt="1635224247763"></p><p>普通人挨个操作是这样</p><p><img src="/2018/10/21/sucess/1635224482675.png" alt="1635224482675"></p><p>我的方案是这样</p><p>1 在全局请求成功增加判断</p><p><img src="/2018/10/21/sucess/1635224594008.png" alt="1635224594008"></p><p>2在接口定义处增加   而不是使用处  </p><p><strong>这样的好处是</strong> </p><p><strong>改动地方少</strong> </p><p><strong>接口 修改 删除等知道改哪了</strong></p><p><strong>只有加这个才提示避免查询提示成功</strong></p><p><strong>提示信息也可每个自定义 把true 改为 内容</strong>  </p><p><strong>不影响parmas  导致后期人员迷惑</strong></p><p><img src="/2018/10/21/sucess/1635224629306.png" alt="1635224629306"></p><p><img src="/2018/10/21/sucess/1635224933548.png" alt="1635224933548"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>element  vue axios</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>element  vue  axios</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>服务器文件在线编辑</title>
+    <link href="/2018/10/20/serveEdit/"/>
+    <url>/2018/10/20/serveEdit/</url>
+    
+    <content type="html"><![CDATA[<p>突然发现很多人修改服务器文件流程是</p><ol><li>登录服务器下载下来</li><li>本地修改</li><li>上传</li></ol><p>还有些人是使用vim 编辑器 （很多人不会命令，撤销修改，代码提示都是麻烦）</p><p>有没有更好的方法</p><ol><li>不需要下载，在线修改</li><li>有代码提示，高亮，格式化（nginx空格不对会挂掉）</li></ol><p>其实很简单</p><p>使用xhell + vscode 实现</p><p><img src="/2018/10/20/serveEdit/1635154626078.png" alt="1635154626078"></p><p>早早下班 锻炼身体</p><p><img src="/2018/10/20/serveEdit/1635154780722.png" alt="1635154780722"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>服务器  nginx</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>服务器  nginx</tag>
       
     </tags>
     
