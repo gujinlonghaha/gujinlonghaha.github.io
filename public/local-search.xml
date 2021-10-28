@@ -548,6 +548,31 @@
   
   
   <entry>
+    <title>json在线编辑器在字典很适合</title>
+    <link href="/2020/04/23/json/"/>
+    <url>/2020/04/23/json/</url>
+    
+    <content type="html"><![CDATA[<h3 id="有时候字典的业务场景手动录入很麻烦-我们直接当做JSON-字符串来处理好处"><a href="#有时候字典的业务场景手动录入很麻烦-我们直接当做JSON-字符串来处理好处" class="headerlink" title="有时候字典的业务场景手动录入很麻烦  我们直接当做JSON 字符串来处理好处"></a>有时候字典的业务场景手动录入很麻烦  我们直接当做JSON 字符串来处理好处</h3><p><strong>很快录入 不需要1个1个点击页面添加</strong></p><p><strong>坏处 之前有人录入搞进去了/r /n  换车 换行导致 解析错误 json.parse()</strong></p><p><img src="/2020/04/23/json/1635302321909.png" alt="1635302321909"></p><p>原来是这样的   很粗暴</p><p><img src="/2020/04/23/json/1635302347871.png" alt="1635302347871"></p><p>现在增加了 json 编辑器 就可以校验json 了</p><p><img src="/2020/04/23/json/1635302734394.png" alt="1635302734394"></p><p>用法</p><pre><code>npm install vue-json-editor --save</code></pre><p>官方文档不全</p><p><img src="/2020/04/23/json/1635302806720.png" alt="1635302806720"></p><p>真正的配置大全</p><pre><code>&lt;template&gt;  &lt;div&gt;    &lt;p&gt;vue-json-editor&lt;/p&gt;    &lt;vue-json-editor    v-model=&quot;json&quot;     :show-btns=&quot;true&quot;  // 是否显示保存按钮    :mode=&quot;&#39;code&#39;&quot; // 默认编辑模式    lang=&quot;zh&quot;  // 显示中文，默认英文    @json-change=&quot;onJsonChange&quot;  // 数据改变事件    @json-save=&quot;onJsonSave&quot;     @has-error=&quot;onError&quot;&gt;&lt;/vue-json-editor&gt;  &lt;/div&gt;&lt;/template&gt; &lt;script&gt;  import vueJsonEditor from &#39;vue-json-editor&#39;   export default &#123;    data () &#123;      return &#123;        json: &#123;          msg: &#39;demo of jsoneditor&#39;        &#125;      &#125;    &#125;,     components: &#123;      vueJsonEditor    &#125;,     methods: &#123;      onJsonChange (value) &#123;        // 异常时不会打印            console.log(&#39;value:&#39;, value);        &#125;,      onJsonSave (value) &#123;            console.log(&#39;value:&#39;, value);        &#125;,       onError (value) &#123;                       console.log(&#39;value:&#39;, value);        &#125;    &#125;  &#125;&lt;/script&gt;</code></pre><pre><code>model：bind the [json object] :show-btns: boolean, show the save button, default: true :expandedOnStart: boolean, expand the JSON editor on start for the modes &#39;tree&#39;, &#39;view&#39;, and &#39;form&#39;, default: false :mode: string, default: tree :lang: string, default:en @json-change: on json changed@json-save: on json save@has-error: on error</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>js vue json</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>js vue json</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>pupeteer自动化加版本测试</title>
     <link href="/2020/04/08/pup/"/>
     <url>/2020/04/08/pup/</url>
@@ -640,6 +665,31 @@
     <tags>
       
       <tag>element</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>树形数据的方法论</title>
+    <link href="/2019/05/23/tree/"/>
+    <url>/2019/05/23/tree/</url>
+    
+    <content type="html"><![CDATA[<p>数据结构</p><pre><code>var  data2= [         &#123;          id: 1,          label: &#39;一级 1&#39;,          children: [&#123;            id: 4,            label: &#39;二级 1-1&#39;,            children: [&#123;              id: 9,              label: &#39;三级 1-1-1&#39;            &#125;, &#123;              id: 10,              label: &#39;三级 1-1-2&#39;            &#125;]          &#125;]        &#125;,         &#123;          id: 2,          label: &#39;一级 2&#39;,          children: [&#123;            id: 5,            label: &#39;二级 2-1&#39;          &#125;, &#123;            id: 6,            label: &#39;二级 2-2&#39;          &#125;]        &#125;,         &#123;          id: 3,          label: &#39;一级 3&#39;,          children: [&#123;            id: 7,            label: &#39;二级 3-1&#39;          &#125;, &#123;            id: 8,            label: &#39;二级 3-2&#39;          &#125;]        &#125;];    </code></pre><h4 id="根据ID获取该节点的所有父节点的对象"><a href="#根据ID获取该节点的所有父节点的对象" class="headerlink" title="根据ID获取该节点的所有父节点的对象"></a>根据ID获取该节点的所有父节点的对象</h4><pre><code>  function getParentId(list,id) &#123;        for (let i in list) &#123;            if(list[i].id==id)&#123;            return [list[i]]          &#125;          if(list[i].children)&#123;            let node=getParentId(list[i].children,id);            if(node!==undefined)&#123;                return node.concat(list[i])               &#125;          &#125;        &#125;            &#125;           getParentId(data2,10)//打印出来就是想要的数据</code></pre><p><img src="/2019/05/23/tree/1635303387290.png" alt="1635303387290"></p><h4 id="根据ID获取该节点的对象"><a href="#根据ID获取该节点的对象" class="headerlink" title="根据ID获取该节点的对象"></a>根据ID获取该节点的对象</h4><pre><code class="js">function getId(list,id) &#123;        for (let i in list) &#123;            if(list[i].id==id)&#123;            return [list[i]]          &#125;          if(list[i].children)&#123;            let node=getParentId(list[i].children,id);            if(node!==undefined)&#123;                return node;               &#125;          &#125;        &#125;        &#125;      getId(data2,4)//打印出来就是想要的数据</code></pre><p><img src="/2019/05/23/tree/1635303459540.png" alt="1635303459540"></p><h4 id="根据ID获取所有子节点的对象，首先把该节点的对象找出来，上面getId（）这个方法"><a href="#根据ID获取所有子节点的对象，首先把该节点的对象找出来，上面getId（）这个方法" class="headerlink" title="根据ID获取所有子节点的对象，首先把该节点的对象找出来，上面getId（）这个方法"></a>根据ID获取所有子节点的对象，首先把该节点的对象找出来，上面getId（）这个方法</h4><pre><code class="js">  function getNodeId(list,newNodeId=[]) &#123;        for (let i in list) &#123;            newNodeId.push(list[i])          if(list[i].children)&#123;                  getNodeId(list[i].children,newNodeId);            &#125;        &#125;         return newNodeId;          &#125;      //查找id=4的所有子级节点    let objId=getId(data2,4);    let childId=getNodeId(objId);//打印出来就是想要的数据 </code></pre><p><img src="/2019/05/23/tree/1635303550956.png" alt="1635303550956"></p><p><strong>平行结构转树形菜单</strong></p><pre><code class="js">var data = [              &#123;&quot;id&quot;:2,&quot;name&quot;:&quot;第一级1&quot;,&quot;pid&quot;:0&#125;,              &#123;&quot;id&quot;:3,&quot;name&quot;:&quot;第二级1&quot;,&quot;pid&quot;:2&#125;,              &#123;&quot;id&quot;:5,&quot;name&quot;:&quot;第三级1&quot;,&quot;pid&quot;:4&#125;,              &#123;&quot;id&quot;:100,&quot;name&quot;:&quot;第三级2&quot;,&quot;pid&quot;:3&#125;,              &#123;&quot;id&quot;:6,&quot;name&quot;:&quot;第三级2&quot;,&quot;pid&quot;:3&#125;,              &#123;&quot;id&quot;:601,&quot;name&quot;:&quot;第三级2&quot;,&quot;pid&quot;:6&#125;,              &#123;&quot;id&quot;:602,&quot;name&quot;:&quot;第三级2&quot;,&quot;pid&quot;:6&#125;,              &#123;&quot;id&quot;:603,&quot;name&quot;:&quot;第三级2&quot;,&quot;pid&quot;:6&#125;            ];// 数组转树形结构数据（原理即为通过设置id为key值，再通过pid去找这个key是否一样，一样则为这数据的子级数据）            function arrayToJson(treeArray)&#123;                var r = [];                var tmpMap =&#123;&#125;;                for (var i=0, l=treeArray.length; i&lt;l; i++) &#123;                 // 以每条数据的id作为obj的key值，数据作为value值存入到一个临时对象里面                  tmpMap[treeArray[i][&quot;id&quot;]]= treeArray[i];                 &#125;                 console.log(&#39;tmpMap&#39;,tmpMap)                for (i=0, l=treeArray.length; i&lt;l; i++) &#123;                  var key=tmpMap[treeArray[i][&quot;pid&quot;]];                  console.log(&#39;key&#39;,key)                  //循环每一条数据的pid，假如这个临时对象有这个key值，就代表这个key对应的数据有children，需要Push进去                  //如果这一项数据属于哪个数据的子级                  if (key) &#123;                      // 如果这个数据没有children                    if (!key[&quot;children&quot;])&#123;                        key[&quot;children&quot;] = [];                        key[&quot;children&quot;].push(treeArray[i]);                    // 如果这个数据有children                    &#125;else&#123;                      key[&quot;children&quot;].push(treeArray[i]);                    &#125;                         &#125; else &#123;                    //如果没有这个Key值，就代表找不到属于哪个数据，那就代表没有父级,直接放在最外层                    r.push(treeArray[i]);                  &#125;                &#125;                return r               &#125;</code></pre><p> 树形结构数据转单层数组形式数据： </p><pre><code class="js">var jsonarr = [&#123;                id: 1,                name: &#39;北京市&#39;,                ProSort: 1,                remark: &#39;直辖市&#39;,                pid: &#39;&#39;,                isEdit: false,                children: [&#123;                  id: 35,                  name: &#39;朝阳区&#39;,                  pid: 1,                  remark: &#39;&#39;,                  isEdit: false,                  children: []                &#125;, &#123;                  id: 36,                  name: &#39;海淀区&#39;,                  pid: 1,                  remark: &#39;&#39;,                  isEdit: false,                  children: []                &#125;, &#123;                  id: 37,                  name: &#39;房山区&#39;,                  pid: 1,                  remark: &#39;&#39;,                  isEdit: false,                  children: []                &#125;, &#123;                  id: 38,                  name: &#39;丰台区&#39;,                  pid: 1,                  remark: &#39;&#39;,                  isEdit: false,                  children: []                &#125;]              &#125;, &#123;                id: 2,                name: &#39;天津市&#39;,                ProSort: 2,                remark: &#39;直辖市&#39;,                pid: &#39;&#39;,                isEdit: false,                children: [&#123;                  id: 41,                  name: &#39;北辰区&#39;,                  pid: 2,                  remark: &#39;&#39;,                  isEdit: false,                  children: [&#123;                  id: 113,                  name: &#39;天津大道&#39;,                  ProSort: 2,                  remark: &#39;道路&#39;,                  pid: &#39;&#39;,                  isEdit: false,                  children:[]&#125;]                &#125;, &#123;                  id: 42,                  name: &#39;河北区&#39;,                  pid: 2,                  remark: &#39;&#39;,                  isEdit: false,                  children: []                &#125;, &#123;                  id: 43,                  name: &#39;西青区&#39;,                  pid: 2,                  remark: &#39;&#39;,                  isEdit: false,                  children: []                &#125;]              &#125;, &#123;                id: 3,                name: &#39;河北省&#39;,                ProSort: 5,                remark: &#39;省份&#39;,                pid: &#39;&#39;,                isEdit: false,                children: [&#123;                  id: 45,                  name: &#39;衡水市&#39;,                  pid: 3,                  remark: &#39;&#39;,                  isEdit: false,                  children: []                &#125;, &#123;                  id: 46,                  name: &#39;张家口市&#39;,                  pid: 3,                  remark: &#39;&#39;,                  isEdit: false,                  children: []                &#125;]              &#125;]// 树形结构数据转单层数组形式            function jsonToArray(nodes) &#123;              var r=[];              if (Array.isArray(nodes)) &#123;                for (var i=0, l=nodes.length; i&lt;l; i++) &#123;                  r.push(nodes[i]); // 取每项数据放入一个新数组                  if (Array.isArray(nodes[i][&quot;children&quot;])&amp;&amp;nodes[i][&quot;children&quot;].length&gt;0)                   // 若存在children则递归调用，把数据拼接到新数组中，并且删除该children                    r = r.concat(jsonToArray(nodes[i][&quot;children&quot;]));                      delete nodes[i][&quot;children&quot;]                &#125;              &#125;               return r;            &#125;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>js vue json</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>js vue json</tag>
       
     </tags>
     
