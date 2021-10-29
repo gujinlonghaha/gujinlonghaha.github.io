@@ -773,6 +773,31 @@
   
   
   <entry>
+    <title>element树形造成的坑</title>
+    <link href="/2019/04/01/treeCheck/"/>
+    <url>/2019/04/01/treeCheck/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/2019/04/01/treeCheck/1635495503238.png" alt="1635495503238"></p><p>element 树形在做菜单权限逻辑的时候</p><p>1选择一个节点  递归所有父级让其选择上</p><p>2取消一个节点  递归所有子集节点让其取消</p><p>这样方便用户操作</p><p>但是</p><p><img src="/2019/04/01/treeCheck/1635495713367.png" alt="1635495713367"></p><p>我之前也是 用  node-click </p><p><img src="/2019/04/01/treeCheck/1635495744301.png" alt="1635495744301"></p><p>会导致点击checkbox 不触发 node click 事件</p><p>自定义节点 加click 事件也会多次触发（无解）</p><p><img src="/2019/04/01/treeCheck/1635495799374.png" alt="1635495799374"></p><p>最终用checked 事件就好了</p><p>核心代码</p><pre><code>  enableParent(t) &#123;      // 启用所有父级      const arr = this.getParentId(this.Treedata, t.menuId)      arr.forEach(m =&gt; &#123;        if (!that.cloneArr.includes(m)) &#123;          that.cloneArr.push(m)        &#125;      &#125;)    &#125;,    disabledChildren(t) &#123;      // 取消      t.forEach(i =&gt; &#123;        if (that.cloneArr.includes(i.menuId)) &#123;          const num = that.cloneArr.indexOf(i.menuId)          that.cloneArr.splice(num, 1)        &#125;        if (i.children.length &gt; 0) &#123;          that.disabledChildren(i.children)        &#125;      &#125;)    &#125;,    customClick(data) &#123;      if (this.cloneArr.includes(data.menuId)) &#123;        // 包含就取消  所有子集取消        that.disabledChildren([data])      &#125; else &#123;        // 不包含  启用所有父级启用        that.enableParent(data)      &#125;      this.$refs.tree.setCheckedKeys(this.cloneArr)    &#125;,</code></pre><pre><code>  &lt;el-tree      ref=&quot;tree&quot;      node-key=&quot;menuId&quot;      :data=&quot;Treedata&quot;      :props=&quot;&#123;        children: &#39;children&#39;,        label: &#39;menuName&#39;,        id:&#39;menuId&#39;      &#125;&quot;      check-strictly      show-checkbox      @check=&quot;customClick&quot;    /&gt;</code></pre><p>注意父级勾选子集不勾选</p><pre><code>check-strictly</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue element</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue element</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>nodecli demo测试</title>
     <link href="/2019/03/20/nodecli/"/>
     <url>/2019/03/20/nodecli/</url>
@@ -815,6 +840,31 @@
     <tags>
       
       <tag>vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vue 动态菜单那些事</title>
+    <link href="/2019/02/01/menu/"/>
+    <url>/2019/02/01/menu/</url>
+    
+    <content type="html"><![CDATA[<p>自己独立搭建vue 动态菜单逻辑</p><p><img src="/2019/02/01/menu/1635496770668.png" alt="1635496770668"></p><p>先在数据库字段的增删改  </p><p><img src="/2019/02/01/menu/1635496838883.png" alt="1635496838883"></p><p>为角色分配菜单</p><p><img src="/2019/02/01/menu/1635496905871.png" alt="1635496905871"></p><p>配置异步菜单本地为对象  名称唯一</p><pre><code>import &#123; asyncRoutes, constantRoutes &#125; from &#39;@/router&#39;import &#123; fetchRoleMenu &#125; from &#39;@/api/equipment/role&#39;import &#123; fetchDetail &#125; from &#39;@/api/equipment/menu&#39;function initMenufield(arr = [], userMenuId = []) &#123;  arr.forEach((t, i) =&gt; &#123;    t.hidden = !t.visible    t.name = t.menuName    t.component = asyncRoutes[t.component]    t.meta = &#123; title: t.name, icon: t.icon &#125;    if (t.children &amp;&amp; t.children.length &gt; 0) &#123;      initMenufield(t.children, userMenuId)    &#125;  &#125;)&#125;// eslint-disable-next-line no-unused-varsfunction removeMenu(arr = [], userMenuId = []) &#123;  arr.forEach((t, i) =&gt; &#123;    if (userMenuId.includes(t.menuId) &amp;&amp; (t.endable == 1)) &#123;      if (t.children &amp;&amp; t.children.length &gt; 0) &#123;        removeMenu(t.children, userMenuId)      &#125;    &#125; else &#123;      arr.splice(i, 1)    &#125;  &#125;)&#125;export async function filterAsyncRoutes(routes, roles, commit, resolve) &#123;  const &#123; data: allMenu &#125; = await fetchDetail(&#123;&#125;)  const &#123; objs &#125; = await fetchRoleMenu(&#123; roleId: localStorage.getItem(&#39;roleIds&#39;) &#125;)  let userMenuId = []  try &#123;    userMenuId = (JSON.parse(objs.cjson))?.menuids || []  &#125; catch (error) &#123;    console.log(error)  &#125;  removeMenu(allMenu, userMenuId)  // 移除路由 知道路径也进不去  // console.table(allMenu)  initMenufield(allMenu, userMenuId)  // console.table(allMenu)  // 生成路由  allMenu.push(    &#123; path: &#39;*&#39;, redirect: &#39;/dashboard&#39;, hidden: true &#125;  )  let res = []  res = allMenu  commit(&#39;SET_ROUTES&#39;, res)  resolve(res)&#125;const state = &#123;  routes: [],  addRoutes: []&#125;const mutations = &#123;  SET_ROUTES: (state, routes) =&gt; &#123;    state.addRoutes = routes    state.routes = constantRoutes.concat(routes)  &#125;&#125;const actions = &#123;  generateRoutes(&#123; commit &#125;, roles) &#123;    return new Promise(resolve =&gt; &#123;      filterAsyncRoutes(asyncRoutes, roles, commit, resolve)    &#125;)  &#125;&#125;export default &#123;  namespaced: true,  state,  mutations,  actions&#125;</code></pre><p>1内部先拉取全部树形菜单   </p><p>2根据角色拉取自己菜单id</p><p>3 移除无用菜单</p><p>4 把剩余菜单对象转换</p><pre><code> t.hidden = !t.visible    t.name = t.menuName    t.component = asyncRoutes[t.component]    t.meta = &#123; title: t.name, icon: t.icon &#125;    if (t.children &amp;&amp; t.children.length &gt; 0) &#123;      initMenufield(t.children, userMenuId)    &#125;</code></pre><p>不启用代表没有此菜单</p><p>不展示代表菜单不展示可以跳转 比如详情类页面需要id</p><p><img src="/2019/02/01/menu/1635497346785.png" alt="1635497346785"></p><p>1级菜单必须配置</p><p><img src="/2019/02/01/menu/1635497383715.png" alt="1635497383715"></p><p>二级菜单配置自己的组件</p><p>内部要包含</p><pre><code>  &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;  &lt;router-view&gt;&lt;/router-view&gt;</code></pre><p><img src="/2019/02/01/menu/1635497475678.png" alt="1635497475678"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue element</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue element</tag>
       
     </tags>
     
