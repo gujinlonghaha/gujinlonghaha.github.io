@@ -673,6 +673,31 @@
   
   
   <entry>
+    <title>盘点自己发现vscode代码生成插件</title>
+    <link href="/2019/08/01/codeRun/"/>
+    <url>/2019/08/01/codeRun/</url>
+    
+    <content type="html"><![CDATA[<p>这里我发现的是vscode插件   当然插件也可以私有化（复制下来 自定义 然后生成自己的插件包）</p><p>本质就是生成部分模板代码  话不多说上图</p><p>1  自己定义模板  <a href="https://marketplace.visualstudio.com/items?itemName=DengSir.template-generator-vscode">地址</a></p><p><img src="/2019/08/01/codeRun/1635755249606.png" alt="1635755249606"></p><p>window 路径  C:\Users\user.vscode\templates  支持部分变量</p><p><img src="/2019/08/01/codeRun/1635755313132.png" alt="1635755313132"></p><p>2 标准vue 代码  不灵活需要改源码  <a href="https://marketplace.visualstudio.com/items?itemName=polo.vue-generator">地址</a></p><p><img src="/2019/08/01/codeRun/1635755425954.png" alt="1635755425954"></p><p>3 同上 标准vue 源码 不灵活需要源码  <a href="https://marketplace.visualstudio.com/items?itemName=lanzhsh.vue-template">地址</a><img src="/2019/08/01/codeRun/1635755510029.png" alt="1635755510029"></p><p>4 代码段转换 （源生代码段转换太费经 换行和空格）这个挺香</p><p><a href="https://marketplace.visualstudio.com/items?itemName=wenfangdu.snippet-generator">地址</a></p><p><img src="/2019/08/01/codeRun/1635755851065.png" alt="1635755851065"></p><p>5 同上 代码json 生成</p><p><a href="https://marketplace.visualstudio.com/items?itemName=fiore57.snippet-generator">地址</a></p><p><img src="/2019/08/01/codeRun/1635756053916.png" alt="1635756053916"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vscode code</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vscode code</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>树形数据的方法论</title>
     <link href="/2019/05/23/tree/"/>
     <url>/2019/05/23/tree/</url>
