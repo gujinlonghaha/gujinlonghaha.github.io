@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://gujinlonghaha.github.io/2019/02/01/menu/1635497383715.png">
 <meta property="og:image" content="https://gujinlonghaha.github.io/2019/02/01/menu/1635497475678.png">
 <meta property="article:published_time" content="2019-02-01T11:23:24.000Z">
-<meta property="article:modified_time" content="2021-10-29T09:22:58.449Z">
+<meta property="article:modified_time" content="2021-11-01T04:56:33.757Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="vue element">
 <meta name="twitter:card" content="summary_large_image">
@@ -209,7 +209,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.3k 字
+      2.6k 字
     </span>
   
 
@@ -218,7 +218,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7 分钟
+      8 分钟
     </span>
   
 
@@ -273,7 +273,7 @@ function initMenufield(arr = [], userMenuId = []) &#123;
   &#125;)
 &#125;
 // eslint-disable-next-line no-unused-vars
-function removeMenu(arr = [], userMenuId = []) &#123;
+&lt;!-- function removeMenu(arr = [], userMenuId = []) &#123;
   arr.forEach((t, i) =&gt; &#123;
     if (userMenuId.includes(t.menuId) &amp;&amp; (t.endable == 1)) &#123;
       if (t.children &amp;&amp; t.children.length &gt; 0) &#123;
@@ -283,6 +283,19 @@ function removeMenu(arr = [], userMenuId = []) &#123;
       arr.splice(i, 1)
     &#125;
   &#125;)
+&#125; --&gt;
+//动态下标删除问题
+function removeMenu(arr = [], userMenuId = []) &#123;
+  for (let i = 0; i &lt; arr.length; i++) &#123;
+    if (userMenuId.includes(arr[i].menuId) &amp;&amp; (arr[i].endable == 1)) &#123;
+      if (arr[i].children &amp;&amp; arr[i].children.length &gt; 0) &#123;
+        removeMenu(arr[i].children, userMenuId)
+      &#125;
+    &#125; else &#123;
+      arr.splice(i, 1)
+      i--
+    &#125;
+  &#125;
 &#125;
 export async function filterAsyncRoutes(routes, roles, commit, resolve) &#123;
   const &#123; data: allMenu &#125; = await fetchDetail(&#123;&#125;)
@@ -393,9 +406,9 @@ export default &#123;
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2019/03/20/hkc/">
+                      <a href="/2019/02/02/arr/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">向花裤衩学到的技术(element-admin)</span>
+                        <span class="hidden-mobile">数组循环删除引发血案 递归删除</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     

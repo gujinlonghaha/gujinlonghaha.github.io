@@ -748,6 +748,31 @@
   
   
   <entry>
+    <title>别整虚的,跨域拿来就用的全方案</title>
+    <link href="/2019/04/11/cors/"/>
+    <url>/2019/04/11/cors/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/2019/04/11/cors/1635741923432.png" alt="1635741923432"></p><p>直接上手 拿来急用</p><p><img src="/2019/04/11/cors/1635741688753.png" alt="1635741688753"></p><p><img src="/2019/04/11/cors/1635741707584.png" alt="1635741707584"></p><p><img src="/2019/04/11/cors/1635741728340.png" alt="1635741728340"></p><p><img src="/2019/04/11/cors/1635741745712.png" alt="1635741745712"></p><p><a href="https://ask.dcloud.net.cn/article/35267">享用地址</a></p><p><a href="https://juejin.cn/post/6844904063855755271">掘金地址</a></p><p><img src="/2019/04/11/cors/1635741882881.png" alt="1635741882881"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue  unitapp</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue  unitapp</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>element form 嵌套校验</title>
     <link href="/2019/04/10/element/"/>
     <url>/2019/04/10/element/</url>
@@ -848,11 +873,36 @@
   
   
   <entry>
+    <title>数组循环删除引发血案 递归删除</title>
+    <link href="/2019/02/02/arr/"/>
+    <url>/2019/02/02/arr/</url>
+    
+    <content type="html"><![CDATA[<p>循环中删除元素是危险的 更别说递归删除了</p><p><img src="/2019/02/02/arr/1635741289769.png" alt="1635741289769"></p><pre><code>(function () &#123; var arr = [1,2,2,3,4,5]; var len = arr.length; for(var i=0;i&lt;len;i++)&#123; //打印数组中的情况，便于跟踪数组中数据的变化 console.log(i+&quot;=&quot;+arr[i]); //删除掉所有为2的元素 if(arr[i]==2)&#123;  arr.splice(i,1); &#125; &#125; console.log(arr);&#125;)();</code></pre><p>下标会出问题</p><p>我在动态菜单递归中出现此问题  解决方案（不用foeeach   使用for 循环删除时 操作i–）</p><pre><code>&lt;!-- function removeMenu(arr = [], userMenuId = []) &#123;  arr.forEach((t, i) =&gt; &#123;    if (userMenuId.includes(t.menuId) &amp;&amp; (t.endable == 1)) &#123;      if (t.children &amp;&amp; t.children.length &gt; 0) &#123;        removeMenu(t.children, userMenuId)      &#125;    &#125; else &#123;      arr.splice(i, 1)    &#125;  &#125;)&#125; --&gt;//动态下标删除问题function removeMenu(arr = [], userMenuId = []) &#123;  for (let i = 0; i &lt; arr.length; i++) &#123;    if (userMenuId.includes(arr[i].menuId) &amp;&amp; (arr[i].endable == 1)) &#123;      if (arr[i].children &amp;&amp; arr[i].children.length &gt; 0) &#123;        removeMenu(arr[i].children, userMenuId)      &#125;    &#125; else &#123;      arr.splice(i, 1)      i--    &#125;  &#125;&#125;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>js</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>js</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>vue 动态菜单那些事</title>
     <link href="/2019/02/01/menu/"/>
     <url>/2019/02/01/menu/</url>
     
-    <content type="html"><![CDATA[<p>自己独立搭建vue 动态菜单逻辑</p><p><img src="/2019/02/01/menu/1635496770668.png" alt="1635496770668"></p><p>先在数据库字段的增删改  </p><p><img src="/2019/02/01/menu/1635496838883.png" alt="1635496838883"></p><p>为角色分配菜单</p><p><img src="/2019/02/01/menu/1635496905871.png" alt="1635496905871"></p><p>配置异步菜单本地为对象  名称唯一</p><pre><code>import &#123; asyncRoutes, constantRoutes &#125; from &#39;@/router&#39;import &#123; fetchRoleMenu &#125; from &#39;@/api/equipment/role&#39;import &#123; fetchDetail &#125; from &#39;@/api/equipment/menu&#39;function initMenufield(arr = [], userMenuId = []) &#123;  arr.forEach((t, i) =&gt; &#123;    t.hidden = !t.visible    t.name = t.menuName    t.component = asyncRoutes[t.component]    t.meta = &#123; title: t.name, icon: t.icon &#125;    if (t.children &amp;&amp; t.children.length &gt; 0) &#123;      initMenufield(t.children, userMenuId)    &#125;  &#125;)&#125;// eslint-disable-next-line no-unused-varsfunction removeMenu(arr = [], userMenuId = []) &#123;  arr.forEach((t, i) =&gt; &#123;    if (userMenuId.includes(t.menuId) &amp;&amp; (t.endable == 1)) &#123;      if (t.children &amp;&amp; t.children.length &gt; 0) &#123;        removeMenu(t.children, userMenuId)      &#125;    &#125; else &#123;      arr.splice(i, 1)    &#125;  &#125;)&#125;export async function filterAsyncRoutes(routes, roles, commit, resolve) &#123;  const &#123; data: allMenu &#125; = await fetchDetail(&#123;&#125;)  const &#123; objs &#125; = await fetchRoleMenu(&#123; roleId: localStorage.getItem(&#39;roleIds&#39;) &#125;)  let userMenuId = []  try &#123;    userMenuId = (JSON.parse(objs.cjson))?.menuids || []  &#125; catch (error) &#123;    console.log(error)  &#125;  removeMenu(allMenu, userMenuId)  // 移除路由 知道路径也进不去  // console.table(allMenu)  initMenufield(allMenu, userMenuId)  // console.table(allMenu)  // 生成路由  allMenu.push(    &#123; path: &#39;*&#39;, redirect: &#39;/dashboard&#39;, hidden: true &#125;  )  let res = []  res = allMenu  commit(&#39;SET_ROUTES&#39;, res)  resolve(res)&#125;const state = &#123;  routes: [],  addRoutes: []&#125;const mutations = &#123;  SET_ROUTES: (state, routes) =&gt; &#123;    state.addRoutes = routes    state.routes = constantRoutes.concat(routes)  &#125;&#125;const actions = &#123;  generateRoutes(&#123; commit &#125;, roles) &#123;    return new Promise(resolve =&gt; &#123;      filterAsyncRoutes(asyncRoutes, roles, commit, resolve)    &#125;)  &#125;&#125;export default &#123;  namespaced: true,  state,  mutations,  actions&#125;</code></pre><p>1内部先拉取全部树形菜单   </p><p>2根据角色拉取自己菜单id</p><p>3 移除无用菜单</p><p>4 把剩余菜单对象转换</p><pre><code> t.hidden = !t.visible    t.name = t.menuName    t.component = asyncRoutes[t.component]    t.meta = &#123; title: t.name, icon: t.icon &#125;    if (t.children &amp;&amp; t.children.length &gt; 0) &#123;      initMenufield(t.children, userMenuId)    &#125;</code></pre><p>不启用代表没有此菜单</p><p>不展示代表菜单不展示可以跳转 比如详情类页面需要id</p><p><img src="/2019/02/01/menu/1635497346785.png" alt="1635497346785"></p><p>1级菜单必须配置</p><p><img src="/2019/02/01/menu/1635497383715.png" alt="1635497383715"></p><p>二级菜单配置自己的组件</p><p>内部要包含</p><pre><code>  &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;  &lt;router-view&gt;&lt;/router-view&gt;</code></pre><p><img src="/2019/02/01/menu/1635497475678.png" alt="1635497475678"></p>]]></content>
+    <content type="html"><![CDATA[<p>自己独立搭建vue 动态菜单逻辑</p><p><img src="/2019/02/01/menu/1635496770668.png" alt="1635496770668"></p><p>先在数据库字段的增删改  </p><p><img src="/2019/02/01/menu/1635496838883.png" alt="1635496838883"></p><p>为角色分配菜单</p><p><img src="/2019/02/01/menu/1635496905871.png" alt="1635496905871"></p><p>配置异步菜单本地为对象  名称唯一</p><pre><code>import &#123; asyncRoutes, constantRoutes &#125; from &#39;@/router&#39;import &#123; fetchRoleMenu &#125; from &#39;@/api/equipment/role&#39;import &#123; fetchDetail &#125; from &#39;@/api/equipment/menu&#39;function initMenufield(arr = [], userMenuId = []) &#123;  arr.forEach((t, i) =&gt; &#123;    t.hidden = !t.visible    t.name = t.menuName    t.component = asyncRoutes[t.component]    t.meta = &#123; title: t.name, icon: t.icon &#125;    if (t.children &amp;&amp; t.children.length &gt; 0) &#123;      initMenufield(t.children, userMenuId)    &#125;  &#125;)&#125;// eslint-disable-next-line no-unused-vars&lt;!-- function removeMenu(arr = [], userMenuId = []) &#123;  arr.forEach((t, i) =&gt; &#123;    if (userMenuId.includes(t.menuId) &amp;&amp; (t.endable == 1)) &#123;      if (t.children &amp;&amp; t.children.length &gt; 0) &#123;        removeMenu(t.children, userMenuId)      &#125;    &#125; else &#123;      arr.splice(i, 1)    &#125;  &#125;)&#125; --&gt;//动态下标删除问题function removeMenu(arr = [], userMenuId = []) &#123;  for (let i = 0; i &lt; arr.length; i++) &#123;    if (userMenuId.includes(arr[i].menuId) &amp;&amp; (arr[i].endable == 1)) &#123;      if (arr[i].children &amp;&amp; arr[i].children.length &gt; 0) &#123;        removeMenu(arr[i].children, userMenuId)      &#125;    &#125; else &#123;      arr.splice(i, 1)      i--    &#125;  &#125;&#125;export async function filterAsyncRoutes(routes, roles, commit, resolve) &#123;  const &#123; data: allMenu &#125; = await fetchDetail(&#123;&#125;)  const &#123; objs &#125; = await fetchRoleMenu(&#123; roleId: localStorage.getItem(&#39;roleIds&#39;) &#125;)  let userMenuId = []  try &#123;    userMenuId = (JSON.parse(objs.cjson))?.menuids || []  &#125; catch (error) &#123;    console.log(error)  &#125;  removeMenu(allMenu, userMenuId)  // 移除路由 知道路径也进不去  // console.table(allMenu)  initMenufield(allMenu, userMenuId)  // console.table(allMenu)  // 生成路由  allMenu.push(    &#123; path: &#39;*&#39;, redirect: &#39;/dashboard&#39;, hidden: true &#125;  )  let res = []  res = allMenu  commit(&#39;SET_ROUTES&#39;, res)  resolve(res)&#125;const state = &#123;  routes: [],  addRoutes: []&#125;const mutations = &#123;  SET_ROUTES: (state, routes) =&gt; &#123;    state.addRoutes = routes    state.routes = constantRoutes.concat(routes)  &#125;&#125;const actions = &#123;  generateRoutes(&#123; commit &#125;, roles) &#123;    return new Promise(resolve =&gt; &#123;      filterAsyncRoutes(asyncRoutes, roles, commit, resolve)    &#125;)  &#125;&#125;export default &#123;  namespaced: true,  state,  mutations,  actions&#125;</code></pre><p>1内部先拉取全部树形菜单   </p><p>2根据角色拉取自己菜单id</p><p>3 移除无用菜单</p><p>4 把剩余菜单对象转换</p><pre><code> t.hidden = !t.visible    t.name = t.menuName    t.component = asyncRoutes[t.component]    t.meta = &#123; title: t.name, icon: t.icon &#125;    if (t.children &amp;&amp; t.children.length &gt; 0) &#123;      initMenufield(t.children, userMenuId)    &#125;</code></pre><p>不启用代表没有此菜单</p><p>不展示代表菜单不展示可以跳转 比如详情类页面需要id</p><p><img src="/2019/02/01/menu/1635497346785.png" alt="1635497346785"></p><p>1级菜单必须配置</p><p><img src="/2019/02/01/menu/1635497383715.png" alt="1635497383715"></p><p>二级菜单配置自己的组件</p><p>内部要包含</p><pre><code>  &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;  &lt;router-view&gt;&lt;/router-view&gt;</code></pre><p><img src="/2019/02/01/menu/1635497475678.png" alt="1635497475678"></p>]]></content>
     
     
     <categories>
