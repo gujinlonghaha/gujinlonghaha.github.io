@@ -37,7 +37,7 @@ function initMenufield(arr = [], userMenuId = []) {
   })
 }
 // eslint-disable-next-line no-unused-vars
-function removeMenu(arr = [], userMenuId = []) {
+<!-- function removeMenu(arr = [], userMenuId = []) {
   arr.forEach((t, i) => {
     if (userMenuId.includes(t.menuId) && (t.endable == 1)) {
       if (t.children && t.children.length > 0) {
@@ -47,6 +47,19 @@ function removeMenu(arr = [], userMenuId = []) {
       arr.splice(i, 1)
     }
   })
+} -->
+//动态下标删除问题
+function removeMenu(arr = [], userMenuId = []) {
+  for (let i = 0; i < arr.length; i++) {
+    if (userMenuId.includes(arr[i].menuId) && (arr[i].endable == 1)) {
+      if (arr[i].children && arr[i].children.length > 0) {
+        removeMenu(arr[i].children, userMenuId)
+      }
+    } else {
+      arr.splice(i, 1)
+      i--
+    }
+  }
 }
 export async function filterAsyncRoutes(routes, roles, commit, resolve) {
   const { data: allMenu } = await fetchDetail({})
