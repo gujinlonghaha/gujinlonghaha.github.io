@@ -548,6 +548,56 @@
   
   
   <entry>
+    <title>快速删除nodemoudles</title>
+    <link href="/2020/06/01/delte/"/>
+    <url>/2020/06/01/delte/</url>
+    
+    <content type="html"><![CDATA[<p>删除nodemoudles 文件又大又碎 怎么办呢  ？</p><p>不要用delete 删除了 太慢了</p><p><img src="/2020/06/01/delte/1635839100525.png" alt="1635839100525"></p><pre><code>  cnpm install rimraf -g   rimraf node_modules</code></pre><p><img src="/2020/06/01/delte/1635839243450.png" alt="1635839243450"></p><p>如果是固态 你的删除速度超快的</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>node</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>node</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>单屏变双屏 vscode 内置浏览器可更换网页地址</title>
+    <link href="/2020/05/01/preview/"/>
+    <url>/2020/05/01/preview/</url>
+    
+    <content type="html"><![CDATA[<p>大部分都知道用liveserve 实时保存页面就会更新（不允许随便修改地址）</p><p>如果双屏电脑还好 但是单屏电脑想要写代码 或者看别的网页怎么办</p><p><img src="/2020/05/01/preview/1635838128970.png" alt="1635838128970"></p><p>hbuliter 就有此功能</p><p><img src="/2020/05/01/preview/1635838171770.png" alt="1635838171770"></p><p>强大的vscode 就没有办法了吗 我找了一下还真有 特此记录</p><p>地址 <a href="https://marketplace.visualstudio.com/items?itemName=auchenberg.vscode-browser-preview">https://marketplace.visualstudio.com/items?itemName=auchenberg.vscode-browser-preview</a></p><p><img src="/2020/05/01/preview/1635838351517.png" alt="1635838351517"></p><p>配置项 地址可以更改 也可以有默认地址    也可以执行对应脚本</p><p>这样就省去了买双屏幕得钱了</p><p><img src="/2020/05/01/preview/1635838412327.png" alt="1635838412327"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vscode vue</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vscode vue</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>json在线编辑器在字典很适合</title>
     <link href="/2020/04/23/json/"/>
     <url>/2020/04/23/json/</url>
