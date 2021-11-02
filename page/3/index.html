@@ -514,6 +514,76 @@ locati
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/03/13/devtool/" target="_self">
+          <img src="/img/devtool.png" srcset="/img/loading.gif" lazyload alt="生产环境启用devtool调方法论试">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/03/13/devtool/" target="_self">
+          生产环境启用devtool调方法论试
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/03/13/devtool/" target="_self">
+          
+          
+            
+          
+          大家开发都适用vue devtool  但是线上临时调试怎办呢
+
+自己的代码可以启用后重新打包 记得在new 之前赋值
+
+如果是别人的代码如何热操作呢？
+
+1 先打开网站 
+f12 打开来源
+ctrl+p 搜索app.js 
+然后格式化
+
+2 搜索 el: “#app”
+在new 处打断点（i[“default”].config.devtools=flase 默认）
+
+3刷新页面 进入断点后 控制
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-13 14:27" pubdate>
+              2020-03-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/vue-js/">vue js</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/vue-js/">vue js</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2019/11/20/plop/" target="_self">
           <img src="/img/plop.png" srcset="/img/loading.gif" lazyload alt="plop 你值得拥有">
         </a>
@@ -758,69 +828,6 @@ var  data2= [
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/js-vue-json/">js vue json</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/05/11/kxl/" target="_self">
-          <img src="/img/es6.png" srcset="/img/loading.gif" lazyload alt="vue支持可选链操作符">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/05/11/kxl/" target="_self">
-          vue支持可选链操作符
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/05/11/kxl/" target="_self">
-          
-          
-            
-          
-          在开发过程中拿到一个内嵌比较深的值需要做很多的判断，来保证没有数据而报错，比如 const obj = &#123;
-            a: &#123;
-                b: &#123;
-                    c:&quot;1&quot;
-                &#125;
-            &#125;
-        &#125;
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-05-11 18:03" pubdate>
-              2019-05-11
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/vue-js/">vue js</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/vue-js/">vue js</a>
             
           </div>
         

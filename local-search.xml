@@ -623,6 +623,31 @@
   
   
   <entry>
+    <title>生产环境启用devtool调方法论试</title>
+    <link href="/2020/03/13/devtool/"/>
+    <url>/2020/03/13/devtool/</url>
+    
+    <content type="html"><![CDATA[<p>大家开发都适用vue devtool  但是线上临时调试怎办呢</p><p><img src="/2020/03/13/devtool/1635826701342.png" alt="1635826701342"></p><p>自己的代码可以启用后重新打包 记得在new 之前赋值</p><p><img src="/2020/03/13/devtool/1635826816232.png" alt="1635826816232"></p><p>如果是别人的代码如何热操作呢？</p><p><img src="/2020/03/13/devtool/1635826893932.png" alt="1635826893932"></p><p>1 先打开网站 </p><p>f12 打开来源</p><p>ctrl+p 搜索app.js </p><p>然后格式化</p><p><img src="/2020/03/13/devtool/1635826993030.png" alt="1635826993030"></p><p>2 搜索 el: “#app”</p><p>在new 处打断点（i[“default”].config.devtools=flase 默认）</p><p><img src="/2020/03/13/devtool/1635827098751.png" alt="1635827098751"></p><p>3刷新页面 进入断点后 控制台输入 i[“default”].config.devtools=true 回车 </p><p>跳过断点</p><p><img src="/2020/03/13/devtool/1635827241539.png" alt="1635827241539"></p><p>4 f12 关掉控制台   f12  再次打开控制台 就有了vue devtool </p><p><img src="/2020/03/13/devtool/1635827325490.png" alt="1635827325490"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue js</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue js</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>plop 你值得拥有</title>
     <link href="/2019/11/20/plop/"/>
     <url>/2019/11/20/plop/</url>
