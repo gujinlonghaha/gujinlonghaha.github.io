@@ -498,6 +498,31 @@
   
   
   <entry>
+    <title>vacode让表单更简单</title>
+    <link href="/2021/03/01/form/"/>
+    <url>/2021/03/01/form/</url>
+    
+    <content type="html"><![CDATA[<p>大多数开发无非就是表格 表单怎删改 </p><p>很多时候就是去element  官方文档 挨个加属性  搬砖</p><p><img src="/2021/03/01/form/1635906947657.png" alt="1635906947657"></p><p>如何降本增效 方法论流程化工具化</p><p> Element UI表单设计及代码生成器，可将生成的代码直接运行在基于Element的vue项目中；也可导出JSON表单，使用配套的解析器将JSON解析成真实的表单。 </p><p>网页地址</p><p><a href="https://mrhj.gitee.io/form-generator/#/">https://mrhj.gitee.io/form-generator/#/</a></p><p><img src="/2021/03/01/form/1635907010952.png" alt="1635907010952"></p><p>但是每次开网页也很烦</p><p>可以更简单</p><p>能在vscode 中坚决不出去</p><p>用插件</p><p>地址<a href="https://marketplace.visualstudio.com/items?itemName=jakHuang.form-generator-plugin!%5B1635907058620%5D(1635907058620.png)">https://marketplace.visualstudio.com/items?itemName=jakHuang.form-generator-plugin![1635907058620](1635907058620.png)</a></p><p>效果</p><p><img src="/2021/03/01/form/1635907094438.png" alt="1635907094438"></p><p>等下班</p><p><img src="/2021/03/01/form/1635907131273.png" alt="1635907131273"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>form   vacode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>form  vacode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>文档中代码编辑加预览</title>
     <link href="/2020/10/13/code/"/>
     <url>/2020/10/13/code/</url>

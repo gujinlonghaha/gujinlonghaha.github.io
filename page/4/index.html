@@ -202,6 +202,70 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/10/10/vue/" target="_self">
+          <img src="/img/vue.png" srcset="/img/loading.gif" lazyload alt="vue 批量自动化">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/10/10/vue/" target="_self">
+          vue 批量自动化
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/10/10/vue/" target="_self">
+          
+          
+            
+          
+          vue 批量注册全局组件 自动全局注册免去手动操作 早点下班
+
+代码
+// 引入vue
+import Vue from &#39;vue&#39;
+// 引入同目录下的全部组件
+const requireCom = require.context(&#39;.&#39;, false, /\.vue$/)
+// 依次进行注册
+requireCom.keys().forEach(key =&gt; 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-10 18:03" pubdate>
+              2019-10-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/element/">element</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/element/">element</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2019/08/01/codeRun/" target="_self">
           <img src="/img/codeRun.png" srcset="/img/loading.gif" lazyload alt="盘点自己发现vscode代码生成插件">
         </a>
@@ -773,70 +837,6 @@ svg 展示就很优秀了（一般只是注册组件使用没想到还可以这�
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/vue/">vue</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/02/02/arr/" target="_self">
-          <img src="/img/arr.png" srcset="/img/loading.gif" lazyload alt="数组循环删除引发血案 递归删除">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/02/02/arr/" target="_self">
-          数组循环删除引发血案 递归删除
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/02/02/arr/" target="_self">
-          
-          
-            
-          
-          循环中删除元素是危险的 更别说递归删除了
-
-(function () &#123;
- var arr = [1,2,2,3,4,5];
- var len = arr.length;
- for(var i=0;i&lt;len;i++)&#123;
- //打印数组中的情况，便于跟踪数组中数据的变化
- console.log(i+&quot;=&quot;+arr[i]);
- //删除掉所有为2的元素
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-02-02 16:13" pubdate>
-              2019-02-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/js/">js</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/js/">js</a>
             
           </div>
         
