@@ -798,6 +798,31 @@
   
   
   <entry>
+    <title>记录一次单页面优化</title>
+    <link href="/2019/08/01/speed/"/>
+    <url>/2019/08/01/speed/</url>
+    
+    <content type="html"><![CDATA[<p>朋友说他的首页需要20s 才能加载完 ， 我说怎么可能？</p><p><img src="/2019/08/01/speed/1636001144066.png" alt="1636001144066"></p><p>有图有真相</p><p><img src="/2019/08/01/speed/1636001165505.png" alt="1636001165505"></p><p><img src="/2019/08/01/speed/1636001212826.png" alt="1636001212826"></p><p>开搞</p><p>1现在白屏期间增加loading 增加好感不会让人感觉漫长（自我催眠）</p><p><img src="/2019/08/01/speed/1636001281138.png" alt="1636001281138"></p><p><img src="/2019/08/01/speed/1636001439190.png" alt="1636001439190"></p><p>源码</p><pre><code> &lt;div class=&quot;first-loading-wrp&quot;&gt;        &lt;div class=&quot;loading-wrp&quot;&gt;          &lt;span class=&quot;dot dot-spin&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/span&gt;        &lt;/div&gt;      &lt;/div&gt;</code></pre><pre><code>    &lt;style&gt;.first-loading-wrp&#123;display:flex;justify-content:center;align-items:center;flex-direction:column;min-height:420px;height:100%&#125;.first-loading-wrp&gt;h1&#123;font-size:128px&#125;.first-loading-wrp .loading-wrp&#123;padding:98px;display:flex;justify-content:center;align-items:center&#125;.dot&#123;animation:antRotate 1.2s infinite linear;transform:rotate(45deg);position:relative;display:inline-block;font-size:32px;width:32px;height:32px;box-sizing:border-box&#125;.dot i&#123;width:14px;height:14px;position:absolute;display:block;background-color:#1890ff;border-radius:100%;transform:scale(.75);transform-origin:50% 50%;opacity:.3;animation:antSpinMove 1s infinite linear alternate&#125;.dot i:nth-child(1)&#123;top:0;left:0&#125;.dot i:nth-child(2)&#123;top:0;right:0;-webkit-animation-delay:.4s;animation-delay:.4s&#125;.dot i:nth-child(3)&#123;right:0;bottom:0;-webkit-animation-delay:.8s;animation-delay:.8s&#125;.dot i:nth-child(4)&#123;bottom:0;left:0;-webkit-animation-delay:1.2s;animation-delay:1.2s&#125;@keyframes antRotate&#123;to&#123;-webkit-transform:rotate(405deg);transform:rotate(405deg)&#125;&#125;@-webkit-keyframes antRotate&#123;to&#123;-webkit-transform:rotate(405deg);transform:rotate(405deg)&#125;&#125;@keyframes antSpinMove&#123;to&#123;opacity:1&#125;&#125;@-webkit-keyframes antSpinMove&#123;to&#123;opacity:1&#125;&#125;&lt;/style&gt;</code></pre><p>效果：</p><p><img src="/2019/08/01/speed/1636001548554.png" alt="1636001548554"></p><p>停用缓存切换3g 效果更明显</p><p><img src="/2019/08/01/speed/1636001578906.png" alt="1636001578906"></p><p>2 增加cdn  js css</p><pre><code> &lt;% for (var i in htmlWebpackPlugin.options.cdn &amp;&amp; htmlWebpackPlugin.options.cdn.js) &#123; %&gt;      &lt;script type=&quot;text/javascript&quot; src=&quot;&lt;%= htmlWebpackPlugin.options.cdn.js[i] %&gt;&quot;&gt;&lt;/script&gt;      &lt;% &#125; %&gt;</code></pre><pre><code> &lt;% for (var i in htmlWebpackPlugin.options.cdn &amp;&amp; htmlWebpackPlugin.options.cdn.css) &#123; %&gt;      &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%= htmlWebpackPlugin.options.cdn.css[i] %&gt;&quot; /&gt;      &lt;% &#125; %&gt;</code></pre><p>切记js 要在body 之前 因为打包后appjs 也会插入页面 使用vue 变量时找不到你的变量  顺序问题 </p><p>配置</p><pre><code></code></pre><p><img src="/2019/08/01/speed/1636001770542.png" alt="1636001770542"></p><pre><code>const isProd = process.env.NODE_ENV === &#39;production&#39;const assetsCDN = &#123;  // webpack build externals  externals: &#123;    vue: &#39;Vue&#39;,    &#39;vue-router&#39;: &#39;VueRouter&#39;,    vuex: &#39;Vuex&#39;,    axios: &#39;axios&#39;  &#125;,  css: [],  // https://unpkg.com/browse/vue@2.6.10/  js: [    &#39;//cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js&#39;,    &#39;//cdn.jsdelivr.net/npm/vue-router@3.5.1/dist/vue-router.min.js&#39;,    &#39;//cdn.jsdelivr.net/npm/vuex@3.1.1/dist/vuex.min.js&#39;,    &#39;//cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js&#39;  ]&#125;</code></pre><p><img src="/2019/08/01/speed/1636001853392.png" alt="1636001853392"></p><pre><code> externals: isProd ? assetsCDN.externals : &#123;&#125;   if (isProd) &#123;      config.plugin(&#39;html&#39;).tap(args =&gt; &#123;        args[0].cdn = assetsCDN        return args      &#125;)    &#125;</code></pre><p>判断是否生产环境 （本地使用依赖 线上使用cdn ）</p><p>这就大功告成了（本身页面就是动态路由  图片也压缩过  js 用压缩文件）看效果</p><p><img src="/2019/08/01/speed/1636002175817.png" alt="1636002175817"></p><p>注意 知识点</p><h2 id="在项目-js-中引入"><a href="#在项目-js-中引入" class="headerlink" title="在项目 js 中引入"></a>在项目 js 中引入</h2><pre><code class="javascript"># webpack 会检测这些组件是否在 externals 中注册# 如果注册则不会将其打包到 app.js 中import Vue from &#39;vue&#39;import VueRouter from &#39;vue-router&#39;import $ from &#39;jquery&#39;</code></pre><p>这样配置的话 webpack 在 dev 运行或 build 打包时，就不会去本地组件包中查找这些在 externals 中注册的组件了（自然也不会将他们打包到一个 app.js 中去），而是会去 window 域下直接调用 Vue, VueRouter, $ 等对象。</p><p>当然有时候也可能是你服务器的原因 可以使用ip 测速 排查</p><p><img src="/2019/08/01/speed/1636002443044.png" alt="1636002443044"></p><p>地址<a href="https://ping.chinaz.com/47.110.250.226">https://ping.chinaz.com/47.110.250.226</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue webpack</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue webpack</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>树形数据的方法论</title>
     <link href="/2019/05/23/tree/"/>
     <url>/2019/05/23/tree/</url>
