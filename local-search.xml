@@ -523,6 +523,31 @@
   
   
   <entry>
+    <title>elementPlus 图标改版</title>
+    <link href="/2021/02/01/icon/"/>
+    <url>/2021/02/01/icon/</url>
+    
+    <content type="html"><![CDATA[<p>文档是这样写的</p><p><img src="/2021/02/01/icon/1636700368157.png" alt="1636700368157"></p><p>比以前需要多装依赖  即使这样还是不显示（以前不需要多余标签包裹）</p><p>需要当做组件引入  文档不知为啥没写</p><p><img src="/2021/02/01/icon/1636700431635.png" alt="1636700431635"></p><p>全部名称地址 <a href="https://unpkg.com/browse/@element-plus/icons@0.0.11/lib/">https://unpkg.com/browse/@element-plus/icons@0.0.11/lib/</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vue elementPlus</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue elementPlus</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>文档中代码编辑加预览</title>
     <link href="/2020/10/13/code/"/>
     <url>/2020/10/13/code/</url>
