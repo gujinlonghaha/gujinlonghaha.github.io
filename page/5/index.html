@@ -202,6 +202,135 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/04/10/element/" target="_self">
+          <img src="/img/element.png" srcset="/img/loading.gif" lazyload alt="element form 嵌套校验">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/04/10/element/" target="_self">
+          element form 嵌套校验
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/04/10/element/" target="_self">
+          
+          
+            
+          
+          elementUI对表单的校验有自己的方法，要求传入model的必须为一个对象。但如果数据结构比较复杂，对象里面又嵌套对象，该如何校验？
+效果如下：
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-04-10 18:03" pubdate>
+              2019-04-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/element/">element</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/element/">element</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/04/01/treeCheck/" target="_self">
+          <img src="/img/treeold.png" srcset="/img/loading.gif" lazyload alt="element树形造成的坑">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/04/01/treeCheck/" target="_self">
+          element树形造成的坑
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/04/01/treeCheck/" target="_self">
+          
+          
+            
+          
+          
+element 树形在做菜单权限逻辑的时候
+1选择一个节点  递归所有父级让其选择上
+2取消一个节点  递归所有子集节点让其取消
+这样方便用户操作
+但是
+
+我之前也是 用  node-click 
+
+会导致点击checkbox 不触发 node click 事件
+自定义节点 加click 事件也会多次触发（无解）
+
+最终用checked 事件就好了
+核心代码
+  enableParent(t) 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-04-01 15:23" pubdate>
+              2019-04-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/vue-element/">vue element</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/vue-element/">vue element</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2019/03/23/unitapp/" target="_self">
           <img src="/img/unitapp.png" srcset="/img/loading.gif" lazyload alt="unitapp 代理的二次验证">
         </a>
@@ -720,147 +849,6 @@ element 已经够简单 还怎么破
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/element-vue-axios/">element  vue  axios</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2018/10/20/serveEdit/" target="_self">
-          <img src="/img/fwq.png" srcset="/img/loading.gif" lazyload alt="服务器文件在线编辑">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2018/10/20/serveEdit/" target="_self">
-          服务器文件在线编辑
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2018/10/20/serveEdit/" target="_self">
-          
-          
-            
-          
-          突然发现很多人修改服务器文件流程是
-
-登录服务器下载下来
-本地修改
-上传
-
-还有些人是使用vim 编辑器 （很多人不会命令，撤销修改，代码提示都是麻烦）
-有没有更好的方法
-
-不需要下载，在线修改
-有代码提示，高亮，格式化（nginx空格不对会挂掉）
-
-其实很简单
-使用xhell + vscode 实现
-
-早早下班 锻炼身体
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2018-10-20 15:23" pubdate>
-              2018-10-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8-nginx/">服务器  nginx</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8-nginx/">服务器  nginx</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2018/05/07/exe/" target="_self">
-          <img src="/img/1617850474933.png" srcset="/img/loading.gif" lazyload alt="electron 锁定用户版本">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2018/05/07/exe/" target="_self">
-          electron 锁定用户版本
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2018/05/07/exe/" target="_self">
-          
-          
-            
-          
-          当我们碰到客户环境下谷歌浏览器版本导致我们的问题时怎么办呢?
-升级用户浏览器 （备份用户数据 书签收藏夹）
-
- 安装便捷版谷歌浏览器 （连个谷歌浏览器同时存在用户电脑  数据独立）
-
-  使用electron 包装应用 最简单 便捷 
-
-
-前两种就不说了 这里介绍下第三种electron​    先使用 
-yarn create electron-app my-app
-
- 然后 
-cd my-ap
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2018-05-07 16:05" pubdate>
-              2018-05-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8-electron/">谷歌浏览器  electron</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8-electron/">谷歌浏览器  electron</a>
             
           </div>
         
