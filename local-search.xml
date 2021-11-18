@@ -848,6 +848,31 @@
   
   
   <entry>
+    <title>egg集成swagger</title>
+    <link href="/2019/06/24/eggswagger/"/>
+    <url>/2019/06/24/eggswagger/</url>
+    
+    <content type="html"><![CDATA[<p>传统老牌接口调试都是swagger </p><p>egg 集成 swagger  其实还是挺简单的</p><p><a href="https://github.com/Yanshijie-EL/egg-swagger-doc">https://github.com/Yanshijie-EL/egg-swagger-doc</a></p><p>安装插件</p><pre><code>$ npm i egg-swagger-doc --save</code></pre><p>配置</p><pre><code>// &#123;app_root&#125;/config/plugin.jsexports.swaggerdoc = &#123;  enable: true,  package: &#39;egg-swagger-doc&#39;,&#125;;</code></pre><p>定制配置</p><pre><code>// &#123;app_root&#125;/config/config.default.jsexports.swaggerdoc = &#123;  dirScanner: &#39;./app/controller&#39;,  apiInfo: &#123;    title: &#39;egg-swagger&#39;,    description: &#39;swagger-ui for egg&#39;,    version: &#39;1.0.0&#39;,  &#125;,  schemes: [&#39;http&#39;, &#39;https&#39;],  consumes: [&#39;application/json&#39;],  produces: [&#39;application/json&#39;],  securityDefinitions: &#123;    // apikey: &#123;    //   type: &#39;apiKey&#39;,    //   name: &#39;clientkey&#39;,    //   in: &#39;header&#39;,    // &#125;,    // oauth2: &#123;    //   type: &#39;oauth2&#39;,    //   tokenUrl: &#39;http://petstore.swagger.io/oauth/dialog&#39;,    //   flow: &#39;password&#39;,    //   scopes: &#123;    //     &#39;write:access_token&#39;: &#39;write access_token&#39;,    //     &#39;read:access_token&#39;: &#39;read access_token&#39;,    //   &#125;,    // &#125;,  &#125;,  enableSecurity: false,  // enableValidate: true,  routerMap: false,  enable: true,&#125;;</code></pre><p>注意必须配置文件</p><pre><code>/* egg_folder/app/contract/format.js */const JsonBody = &#123;  code: &#123; type: &#39;number&#39;, required: true, example: 0 &#125;,  message: &#123; type: &#39;string&#39;, required: true, example: &#39;success&#39; &#125;,  data: &#123; type: &#39;Enum&#39;, required: true, example: [] &#125;,&#125;module.exports = &#123;  indexJsonBody: &#123;    ...JsonBody,    data: &#123; type: &#39;string&#39;, example: &#39;test&#39; &#125;,  &#125;,&#125;;</code></pre><p>页面配置</p><p><img src="/2019/06/24/eggswagger/1637220105068.png" alt="1637220105068"></p><p>本地启动测试地址 <a href="http://127.0.0.1:7002/swagger-ui.html">http://127.0.0.1:7002/swagger-ui.html</a></p><p>在线测试都是可以的 </p><p><img src="/2019/06/24/eggswagger/1637220150307.png" alt="1637220150307"></p><p>编写文档还是有些麻烦  不过可以使用apifox 或者apipost 更简单些 </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>egg js</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>egg js</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>egg 定时任务手动开启和关闭实现(全网都很少见 )</title>
     <link href="/2019/06/24/egg/"/>
     <url>/2019/06/24/egg/</url>
