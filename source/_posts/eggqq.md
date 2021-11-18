@@ -140,7 +140,9 @@ post json 和 post form （无文件 ）egg 获取参数无差异 前端需要�
 
 如果包含文件   请求数据格式就必须以 [multipart/form-data](http://tools.ietf.org/html/rfc2388) 进行提交了。 
 
-egg 服务端需要配置 不是流的格式  接收直接看上面代码 upload
+egg 服务端需要配置 不是流的格式  接收直接看上面代码 upload 
+取值ctx.request.files
+普通字段都在ctx.request.body 上
 
 ```
   config.multipart = {
