@@ -16,25 +16,25 @@
   <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="运维同事因为客户环境而发愁 因为客户(政府 电信等)环境是内网， 平时通信查问题是外网 来回切换网线 切换网卡   我想在网上检索个工具应该能解决吧？ 结果却不尽人意  没有合适的工具  不是根本不起作用就是只能切换ip 难道没有办法了吗？ 最终自己编写bat 解决 完美撒花汉字 专网  WLAN 分别是是网卡对应名称  记得修改  @echo off title gjl切换网络脚本 :still">
+  <meta name="description" content="官网看的有点绕其实不用这么复杂  这玩意其实感觉作用不大 梳理如下 实现model 的依赖 npm install --save egg-sequelize mysql2  配置 &#x2F;* egg_folder&#x2F;config&#x2F;config.default.js *&#x2F;   exports.sequelize &#x3D; &amp;#123;     dialect: &quot;mysql&quot;, &#x2F;&#x2F; 数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="帮运维快速切换内外网(二网双选一) 另附bat 转exe">
-<meta property="og:url" content="https://gujinlonghaha.github.io/2021/04/12/bat/index.html">
+<meta property="og:title" content="egg sequelize实现和自动从数据库生成model">
+<meta property="og:url" content="https://gujinlonghaha.github.io/2019/06/24/eggorm/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
-<meta property="og:description" content="运维同事因为客户环境而发愁 因为客户(政府 电信等)环境是内网， 平时通信查问题是外网 来回切换网线 切换网卡   我想在网上检索个工具应该能解决吧？ 结果却不尽人意  没有合适的工具  不是根本不起作用就是只能切换ip 难道没有办法了吗？ 最终自己编写bat 解决 完美撒花汉字 专网  WLAN 分别是是网卡对应名称  记得修改  @echo off title gjl切换网络脚本 :still">
+<meta property="og:description" content="官网看的有点绕其实不用这么复杂  这玩意其实感觉作用不大 梳理如下 实现model 的依赖 npm install --save egg-sequelize mysql2  配置 &#x2F;* egg_folder&#x2F;config&#x2F;config.default.js *&#x2F;   exports.sequelize &#x3D; &amp;#123;     dialect: &quot;mysql&quot;, &#x2F;&#x2F; 数据库">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/04/12/bat/1618388010418.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/04/12/bat/1618388625946.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/04/12/bat/1618388732373.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/04/12/bat/1618389340230.png">
-<meta property="article:published_time" content="2021-04-12T07:39:41.000Z">
-<meta property="article:modified_time" content="2021-11-18T09:19:20.205Z">
+<meta property="og:image" content="https://gujinlonghaha.github.io/2019/06/24/eggorm/1637222436107.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/2019/06/24/eggorm/1637222776962.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/2019/06/24/eggorm/1637223892096.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/2019/06/24/eggorm/1637223920935.png">
+<meta property="article:published_time" content="2019-06-24T07:39:41.000Z">
+<meta property="article:modified_time" content="2021-11-18T09:19:20.261Z">
 <meta property="article:author" content="gjl">
-<meta property="article:tag" content="网卡 bat">
+<meta property="article:tag" content="egg js">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2021/04/12/bat/1618388010418.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/2019/06/24/eggorm/1637222436107.png">
   
-  <title>帮运维快速切换内外网(二网双选一) 另附bat 转exe - 一直闭眼看世界博客</title>
+  <title>egg sequelize实现和自动从数据库生成model - 一直闭眼看世界博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -186,7 +186,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="帮运维快速切换内外网(二网双选一) 另附bat 转exe">
+            <span class="h2" id="subtitle" title="egg sequelize实现和自动从数据库生成model">
               
             </span>
 
@@ -196,8 +196,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-12 15:39" pubdate>
-        2021年4月12日 下午
+      <time datetime="2019-06-24 15:39" pubdate>
+        2019年6月24日 下午
       </time>
     </span>
   
@@ -207,7 +207,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.2k 字
+      2.3k 字
     </span>
   
 
@@ -216,7 +216,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      7 分钟
     </span>
   
 
@@ -245,60 +245,116 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">帮运维快速切换内外网(二网双选一) 另附bat 转exe</h1>
+            <h1 style="display: none">egg sequelize实现和自动从数据库生成model</h1>
             
             <div class="markdown-body">
-              <h2 id="运维同事因为客户环境而发愁"><a href="#运维同事因为客户环境而发愁" class="headerlink" title="运维同事因为客户环境而发愁"></a>运维同事因为客户环境而发愁</h2><ol>
-<li>因为客户(政府 电信等)环境是内网，</li>
-<li>平时通信查问题是外网</li>
-<li>来回切换网线 切换网卡 </li>
-</ol>
-<p>我想在网上检索个工具应该能解决吧？ 结果却不尽人意  没有合适的工具</p>
-<p><img src="/2021/04/12/bat/1618388010418.png" srcset="/img/loading.gif" lazyload alt="1618388010418"></p>
-<p>不是根本不起作用就是只能切换ip 难道没有办法了吗？</p>
-<h3 id="最终自己编写bat-解决-完美撒花"><a href="#最终自己编写bat-解决-完美撒花" class="headerlink" title="最终自己编写bat 解决 完美撒花"></a><strong>最终自己编写bat 解决 完美撒花</strong></h3><p>汉字 专网  WLAN 分别是是网卡对应名称  记得修改</p>
-<pre><code class="bat">
-@echo off
-title gjl切换网络脚本
-:stillAnswer
-set /p switch=1切换为专网，2切换为WLAN，3切换为双网卡，4退出：
-if %switch% == 1 (
-netsh interface set interface name=&quot;专网&quot; admin=enabled
-netsh interface set interface name=&quot;WLAN&quot; admin=disabled
-
-echo -------------------当前网络为专网---------------------
-goto stillAnswer
-)else if %switch% == 2 (
-netsh interface set interface name=&quot;专网&quot; admin=disabled
-netsh interface set interface name=&quot;WLAN&quot; admin=enabled
-echo -------------------当前网络为WLAN---------------------
-goto stillAnswer
-)else if %switch% == 3 (
-netsh interface set interface name=&quot;专网&quot; admin=enabled
-netsh interface set interface name=&quot;WLAN&quot; admin=enabled
-echo -------------------双网卡同时启动---------------------
-goto stillAnswer
-)
-else if %switch% == 4 (
-exit
-)
-
-::netsh interface set interface name=&quot;WLAN&quot; admin=disabled
-::netsh interface set interface name=&quot;专网&quot; admin=enabled
-
-::netsh interface set interface name=&quot;WLAN&quot; admin=enabled
-::netsh interface set interface name=&quot;专网&quot; admin=disabled
+              <p> 官网看的有点绕其实不用这么复杂</p>
+<p><img src="/2019/06/24/eggorm/1637222436107.png" srcset="/img/loading.gif" lazyload alt="1637222436107"></p>
+<p>这玩意其实感觉作用不大</p>
+<p>梳理如下</p>
+<p>实现model 的依赖</p>
+<pre><code>npm install --save egg-sequelize mysql2
 </code></pre>
-<p>新建bat文件保存后<strong>管理员身份</strong>运行 效果如下：</p>
-<p><img src="/2021/04/12/bat/1618388625946.png" srcset="/img/loading.gif" lazyload alt="1618388625946"></p>
-<p>这样还不够完美 我有用bat 转为exe </p>
-<p><img src="/2021/04/12/bat/1618388732373.png" srcset="/img/loading.gif" lazyload alt="1618388732373"></p>
-<p>如何bat转exe?   工具我上传了</p>
-<p>下载:<a target="_blank" rel="noopener" href="https://wws.lanzous.com/iVXwko1hiqb">https://wws.lanzous.com/iVXwko1hiqb</a> 密码:9qtj</p>
-<p>我也发布到了quicker</p>
-<p><img src="/2021/04/12/bat/1618389340230.png" srcset="/img/loading.gif" lazyload alt="1618389340230"></p>
-<p>FAQ:  <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35038153/article/details/78430359">中文乱码解决方案</a></p>
-<p>讲解：</p>
+<p>配置 /* egg_folder/config/config.default.js */</p>
+<pre><code>  exports.sequelize = &#123;
+    dialect: &quot;mysql&quot;, // 数据库类型，支持 mysql，sqlite,mssql,pgsql,oracle。
+    host: &quot;127.0.0.1&quot;, // 数据库服务器地址。
+    port: 3306, // 数据库连接端口号。
+    database: &quot;sys&quot;, // 数据库名称。
+    username: &quot;root&quot;, // 数据库登录用户名。
+    password: &quot;123456&quot;, // 数据库登录密码。
+    define: &#123;
+      freezeTableName: true, // Model 对应的表名将与model名相同。
+      timestamps: false, // 默认情况下，Sequelize会将createdAt和updatedAt的属性添加到模型中，以便您可以知道数据库条目何时进入数据库以及何时被更新
+    &#125;,
+    app: true, // 是否挂载app 上
+  &#125;;
+</code></pre>
+<p>配置 /* egg_folder/config/plugin.js */</p>
+<pre><code>// 配置 egg-sequelize 插件信息。
+ // 配置 egg-sequelize 插件信息。
+  sequelize:&#123;
+    enable: true, // 是否启用。
+    package: &#39;egg-sequelize&#39;, // 指定包名称。
+  &#125;,
+</code></pre>
+<p><strong>自动重要生成model</strong>  的依赖</p>
+<pre><code>npm install egg-sequelize-auto --save-dev // 对照数据库自动生成相应的 models 减少了对数据库进行增删改查时的 sql 语句的编写。
+</code></pre>
+<p>packjson </p>
+<pre><code>数据库生成 models 的命令（ -o 表示生成 models 的路径，-h 表示主机，-p 表示端口，-d 表示数据库， -u 表示用户名，-x 表示密码
+</code></pre>
+<pre><code> &quot;dbload&quot;: &quot;egg-sequelize-auto -o ./app/model -h localhost -p 3344 -d database -u username -x password&quot;   
+</code></pre>
+<p>执行 npm run  dbload</p>
+<p><img src="/2019/06/24/eggorm/1637222776962.png" srcset="/img/loading.gif" lazyload alt="1637222776962"></p>
+<p>model 已经自动生成</p>
+<p>启动报错 Sequelize  找不到  自己排查 原来是model</p>
+<p><img src="/2019/06/24/eggorm/1637223892096.png" srcset="/img/loading.gif" lazyload alt="1637223892096"></p>
+<p>app 下找不到 </p>
+<p>自己仿照mysql 配置成功</p>
+<p><img src="/2019/06/24/eggorm/1637223920935.png" srcset="/img/loading.gif" lazyload alt="1637223920935"></p>
+<p>然后直接复制官网的改下对应model  就好了</p>
+<pre><code>&quot;use strict&quot;;
+
+const Controller = require(&quot;egg&quot;).Controller;
+function toInt(str) &#123;
+  if (typeof str === &#39;number&#39;) return str;
+  if (!str) return str;
+  return parseInt(str, 10) || 0;
+&#125;
+
+class SeqController extends Controller &#123;
+  async index() &#123;
+    const ctx = this.ctx;
+    const query = &#123; limit: toInt(ctx.query.limit), offset: toInt(ctx.query.offset) &#125;;
+    ctx.body = await ctx.model.News.findAll(query);
+  &#125;
+
+  async show() &#123;
+    const ctx = this.ctx;
+    ctx.body = await ctx.model.News.findByPk(toInt(ctx.params.id));
+  &#125;
+
+  async create() &#123;
+    const ctx = this.ctx;
+    const &#123; name, age &#125; = ctx.request.body;
+    const user = await ctx.model.News.create(&#123; name, age &#125;);
+    ctx.status = 201;
+    ctx.body = user;
+  &#125;
+
+  async update() &#123;
+    const ctx = this.ctx;
+    const id = toInt(ctx.params.id);
+    const user = await ctx.model.News.findByPk(id);
+    if (!user) &#123;
+      ctx.status = 404;
+      return;
+    &#125;
+
+    const &#123; name, age &#125; = ctx.request.body;
+    await user.update(&#123; name, age &#125;);
+    ctx.body = user;
+  &#125;
+
+  async destroy() &#123;
+    const ctx = this.ctx;
+    const id = toInt(ctx.params.id);
+    const user = await ctx.model.News.findByPk(id);
+    if (!user) &#123;
+      ctx.status = 404;
+      return;
+    &#125;
+
+    await user.destroy();
+    ctx.status = 200;
+  &#125;
+ 
+&#125;
+module.exports = SeqController;
+</code></pre>
+<p>复杂语法还得看外网地址  <a target="_blank" rel="noopener" href="https://sequelize.org/master/manual/raw-queries.html">https://sequelize.org/master/manual/raw-queries.html</a></p>
 
             </div>
             <hr>
@@ -308,7 +364,7 @@ exit
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E7%BD%91%E5%8D%A1-bat/">网卡 bat</a>
+                      <a class="hover-with-bg" href="/categories/egg-js/">egg js</a>
                     
                   </div>
                 
@@ -316,7 +372,7 @@ exit
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E7%BD%91%E5%8D%A1-bat/">网卡 bat</a>
+                      <a class="hover-with-bg" href="/tags/egg-js/">egg js</a>
                     
                   </div>
                 
@@ -333,9 +389,9 @@ exit
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/16/xingcheng/">
+                      <a href="/2019/06/24/egg/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">探索地铁行程卡快速通过</span>
+                        <span class="hidden-mobile">egg 定时任务手动开启和关闭实现(全网都很少见 )</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -343,8 +399,8 @@ exit
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/11/yuming/">
-                        <span class="hidden-mobile">白嫖域名体验之旅</span>
+                      <a href="/2019/06/23/eggqq/">
+                        <span class="hidden-mobile">自己搭建服务端egg请求那些事</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
