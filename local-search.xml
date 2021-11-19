@@ -848,6 +848,31 @@
   
   
   <entry>
+    <title>redis mongdb 安装和操作 egg</title>
+    <link href="/2019/06/25/redis/"/>
+    <url>/2019/06/25/redis/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/2019/06/25/redis/1637312809603.png" alt="1637312809603"></p><p>redis 下载安装地址</p><p><img src="/2019/06/25/redis/1637312827039.png" alt="1637312827039"></p><p> <strong><a href="https://github.com/tporadowski/releases%E3%80%82">https://github.com/tporadowski/releases。</a></strong> </p><p>安装时最后勾选环境变量</p><p>进入他的安装目录</p><pre><code>C:\Program Files\Redis</code></pre><p>执行命令 </p><pre><code>redis-cli.exe -h 127.0.0.1 -p 6379</code></pre><p>设置数据 和获取数据效果如下</p><p><img src="/2019/06/25/redis/1637312179874.png" alt="1637312179874"></p><p>下面是 egg 操作</p><pre><code>npm i egg-redis --save</code></pre><pre><code>//Change $&#123;app_root&#125;/config/plugin.js to enable redis plugin:exports.redis = &#123;  enable: true,  package: &#39;egg-redis&#39;,&#125;;</code></pre><pre><code>config.redis = &#123;  client: &#123;    port: 6379,          // Redis port    host: &#39;127.0.0.1&#39;,   // Redis host    password: &#39;null&#39;, // 没有密码也得写null    db: 0, //默认心苦都是0  &#125;,&#125;</code></pre><p>控制器语法</p><pre><code>  async get() &#123;    const &#123; ctx,app &#125; = this;    ctx.logger.warn(ctx.query); //有    const list = await app.redis.get(&#39;foo&#39;);    ctx.body = list;  &#125;  async post() &#123;    const &#123; ctx,app &#125; = this;    const list = await app.redis.set(&#39;foo&#39;, &#39;bar&#39;)    ctx.body = list;  &#125;</code></pre><p>就大功告成了</p><p>mongdb</p><p>下载地址</p><pre><code>https://www.mongodb.com/try/download/community</code></pre><p><img src="/2019/06/25/redis/1637312442087.png" alt="1637312442087"></p><p>一直下一步安装完成</p><p>进入安装目录</p><pre><code>C:\Program Files\MongoDB\Server\5.0\data</code></pre><p>默认没有数据db 文件</p><p>新建文件夹db</p><p><img src="/2019/06/25/redis/1637312606618.png" alt="1637312606618"></p><p>双击目录下exe 就可以下面操作了</p><p><img src="/2019/06/25/redis/1637312681198.png" alt="1637312681198"></p><p>egg 操作</p><pre><code>npm i egg-mongodb --save</code></pre><pre><code>  exports.mongodb = &#123;        enable: true,        // feel free to make some local change, and require it like this.        // path: your_local_folder_path        package: &#39;egg-mongodb&#39;    &#125;;</code></pre><pre><code> config.mongodb = &#123;            app: true,            agent: false,            username: &#39;&#39;,            password: &#39;&#39;,            hosts: &#39;127.0.0.1:27017&#39;,            db: &#39;test&#39;,            query: &#39;&#39;,            // defalut: &#123;            //     username: &#39;&#39;,            //     password: &#39;&#39;,            //     hosts: &#39;127.0.0.1:27017&#39;,            //     db: &#39;test&#39;,            //     query: &#39;&#39;            // &#125;,            // client: &#123;            //     username: &#39;&#39;,            //     password: &#39;&#39;,            //     hosts: &#39;127.0.0.1:27017&#39;,            //     db: &#39;test&#39;,            //     query: &#39;&#39;            // &#125;        &#125;;</code></pre><pre><code> async getmongdb() &#123;    const &#123; ctx,app &#125; = this;    let db = this.app.mongodb;    let User = db.collection(&#39;user&#39;);    const list = await User.insertOne(&#123;      name: &#39;zhang san&#39;,      phone: &#39;177xxxxxxxx&#39;  &#125;);    ctx.body = list;  &#125;  async postmongdb() &#123;    const &#123; ctx,app &#125; = this;    let db = this.app.mongodb;    let User = db.collection(&#39;user&#39;);    const list = await User.findOne(&#123;      name: &#39;zhang san&#39;  &#125;);    ctx.body = list;  &#125;</code></pre><p>基本搭建就完成了</p><p>redis mongdb 命令地址<br><a href="https://www.runoob.com/redis/redis-tutorial.html">https://www.runoob.com/redis/redis-tutorial.html</a><br><a href="https://www.runoob.com/mongodb/mongodb-tutorial.html">https://www.runoob.com/mongodb/mongodb-tutorial.html</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>egg js</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>egg js</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>梳理极简egg socket</title>
     <link href="/2019/06/25/scokit/"/>
     <url>/2019/06/25/scokit/</url>
