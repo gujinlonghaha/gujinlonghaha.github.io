@@ -263,6 +263,67 @@ body: 这个是代码段的主体.需要编写的
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/11/10/vuepackage/" target="_self">
+          <img src="/img/db.png" srcset="/img/loading.gif" lazyload alt="打包筛选无用文件和依赖">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/11/10/vuepackage/" target="_self">
+          打包筛选无用文件和依赖
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/11/10/vuepackage/" target="_self">
+          
+          
+            
+          
+          如果是二次改造项目或者历史项目会出现无用文件和项目部依赖如何清理呢1 无用文件可以使用
+npm i useless-files-webpack-plugin -S
+
+//vue.config.js
+const UselessFile = require(&#39;useless-files-webpack-plugin&#39;)
+chainWebpack: config =&gt; &#123;
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-10 18:03" pubdate>
+              2019-11-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/vue/">vue</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/vue/">vue</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2019/10/10/vue/" target="_self">
           <img src="/img/vue.png" srcset="/img/loading.gif" lazyload alt="vue 批量自动化">
         </a>
@@ -460,42 +521,34 @@ window 路径  C:\Users\user.vscode\templates  支持部分变量
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/06/25/redis/" target="_self">
-          <img src="/img/sjk.png" srcset="/img/loading.gif" lazyload alt="redis mongdb 安装和操作 egg">
+        <a href="/2019/06/25/scokit/" target="_self">
+          <img src="/img/egg.png" srcset="/img/loading.gif" lazyload alt="梳理极简egg socket">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/06/25/redis/" target="_self">
-          redis mongdb 安装和操作 egg
+        <a href="/2019/06/25/scokit/" target="_self">
+          梳理极简egg socket
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2019/06/25/redis/" target="_self">
+        <a href="/2019/06/25/scokit/" target="_self">
           
           
             
           
-          
-redis 下载安装地址
+          egg 上的socket 包含了redis和房间 功能复杂 乍一看还是有点绕的
+我梳理了极其简单demo 
+自己实测梳理逻辑如下
+$ npm i egg-socket.io --save
 
- https://github.com/tporadowski/releases。 
-安装时最后勾选环境变量
-进入他的安装目录
-C:\Program Files\Redis
-
-执行命令 
-redis-cli.exe -h 127.0.0.1 -p 6379
-
-设置数据 和获取数据效果如下
-
-下面是 egg 操作
-npm i egg-redis --save
-
-//Ch
+// &#123;app_root&#125;/config/plugin.js
+exports.io = &#123;
+  enable: true,
+  package: &#39;egg-socket.i
         </a>
       </p>
 
@@ -532,34 +585,42 @@ npm i egg-redis --save
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/06/25/scokit/" target="_self">
-          <img src="/img/egg.png" srcset="/img/loading.gif" lazyload alt="梳理极简egg socket">
+        <a href="/2019/06/25/redis/" target="_self">
+          <img src="/img/sjk.png" srcset="/img/loading.gif" lazyload alt="redis mongdb 安装和操作 egg">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/06/25/scokit/" target="_self">
-          梳理极简egg socket
+        <a href="/2019/06/25/redis/" target="_self">
+          redis mongdb 安装和操作 egg
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2019/06/25/scokit/" target="_self">
+        <a href="/2019/06/25/redis/" target="_self">
           
           
             
           
-          egg 上的socket 包含了redis和房间 功能复杂 乍一看还是有点绕的
-我梳理了极其简单demo 
-自己实测梳理逻辑如下
-$ npm i egg-socket.io --save
+          
+redis 下载安装地址
 
-// &#123;app_root&#125;/config/plugin.js
-exports.io = &#123;
-  enable: true,
-  package: &#39;egg-socket.i
+ https://github.com/tporadowski/releases。 
+安装时最后勾选环境变量
+进入他的安装目录
+C:\Program Files\Redis
+
+执行命令 
+redis-cli.exe -h 127.0.0.1 -p 6379
+
+设置数据 和获取数据效果如下
+
+下面是 egg 操作
+npm i egg-redis --save
+
+//Ch
         </a>
       </p>
 
@@ -773,71 +834,6 @@ ALTER USER ‘root‘@’localhost’ IDENTIFIED WITH mysql_native_password BY �
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/egg-js/">egg js</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/05/23/tree/" target="_self">
-          <img src="/img/tree.png" srcset="/img/loading.gif" lazyload alt="树形数据的方法论">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/05/23/tree/" target="_self">
-          树形数据的方法论
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/05/23/tree/" target="_self">
-          
-          
-            
-          
-          数据结构
-var  data2= [
-         &#123;
-          id: 1,
-          label: &#39;一级 1&#39;,
-          children: [&#123;
-            id: 4,
-            label: &#39;二级 1-1&#39;,
-            children: [&#123;
- 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-05-23 14:40" pubdate>
-              2019-05-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/js-vue-json/">js vue json</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/js-vue-json/">js vue json</a>
             
           </div>
         
