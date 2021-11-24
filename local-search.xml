@@ -4,6 +4,106 @@
   
   
   <entry>
+    <title>直接在vscode 中内网穿透不香吗</title>
+    <link href="/2021/11/24/ngrok/"/>
+    <url>/2021/11/24/ngrok/</url>
+    
+    <content type="html"><![CDATA[<p>别人想看你的本地网页 不需要远程 当然也不需要付费 很多之前的软件都凉了（安全问题） 再次默哀</p><p>如果在vscode 中 能否直接实现  我本人查了很多插件 挨个测试目前还真有 都不要自己的key </p><p><img src="/2021/11/24/ngrok/1637744349159.png" alt="1637744349159"></p><p>地址 <a href="https://marketplace.visualstudio.com/items?itemName=ceyhunkeklik.vscode-ngrok-client">https://marketplace.visualstudio.com/items?itemName=ceyhunkeklik.vscode-ngrok-client</a></p><p>使用</p><p><img src="/2021/11/24/ngrok/1637744370268.png" alt="1637744370268"></p><p> 只需要单击下面就可以了  还有一个插件测试不通过不知道啥原因 ngrok for VSCode  （这个需要key 但是设置后还是不管用）</p><p>效果如下</p><p><img src="/2021/11/24/ngrok/1637744389738.png" alt="1637744389738"></p><p> 这个本质都是基于ngrok 的集成</p><p>自己也可以直接去ngrok 注册使用更丰富配置 </p><p>商业付费如下</p><p><img src="/2021/11/24/ngrok/1637744411630.png" alt="1637744411630"></p><p>地址：<a href="https://dashboard.ngrok.com/billing/plan">https://dashboard.ngrok.com/billing/plan</a></p><p>当然还有这个也能实现 </p><p><img src="/2021/11/24/ngrok/1637744435350.png" alt="1637744435350"></p><p> 地址 <a href="https://natapp.cn/">https://natapp.cn/</a> </p><p><img src="/2021/11/24/ngrok/1637744462134.png" alt="1637744462134"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vscode ngrok</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vscode ngrok</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>团队代码段整合工具(国外) chacher</title>
+    <link href="/2021/11/24/coder/"/>
+    <url>/2021/11/24/coder/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/2021/11/24/coder/1637745334948.png" alt="1637745334948"></p><p>地址需要fq 是国外的 </p><p>自己使用github 注册 效果如下</p><p><img src="/2021/11/24/coder/1637745354893.png" alt="1637745354893"></p><p> 生态链包含 subline vscode idea 的插件 也包含客户端exe 浏览器插件cache  </p><p> 商业付费方案 </p><p><img src="/2021/11/24/coder/1637745384290.png" alt="1637745384290"></p><p><img src="/2021/11/24/coder/1637745401629.png" alt="1637745401629"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>youtube</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>youtube</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>还在为youtube 英文看不懂发愁吗？</title>
+    <link href="/2021/11/24/youtube/"/>
+    <url>/2021/11/24/youtube/</url>
+    
+    <content type="html"><![CDATA[<p>英文视频看的昏昏欲睡和头大</p><p>作为头部视频公司youtube 早就做了解决方案 但是很多人还是不知道</p><p>再次记录下来</p><p><img src="/2021/11/24/youtube/1637744719191.png" alt="1637744719191"></p><p> 默认都是转换为英文但是你可以选择自动翻译 然后找到中文 </p><p><img src="/2021/11/24/youtube/1637744739623.png" alt="1637744739623"></p><p> 这样就打开了你的新世界  字母变为中文</p><p>当然有些人也可以使用第三方插件集成</p><p><img src="/2021/11/24/youtube/1637744762144.png" alt="1637744762144"></p><p><img src="/2021/11/24/youtube/1637744773315.png" alt="1637744773315"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>youtube</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>youtube</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>同步配置到国内 而不是github</title>
+    <link href="/2021/11/24/gitee/"/>
+    <url>/2021/11/24/gitee/</url>
+    
+    <content type="html"><![CDATA[<p>vscode 中都知道同步配置的插件 Settings Sync</p><p>核心能力包含 插件 按键映射 配置文件 代码段 甚至工作空间配置</p><pre><code>All extensions and complete User Folder that Contains1. Settings File2. Keybinding File3. Launch File4. Snippets Folder5. VSCode Extensions &amp; Extensions Configurations6. Workspaces Folder</code></pre><pre><code>但是有时候网络原因导致不是很好使用</code></pre><p><img src="/2021/11/24/gitee/1637745101443.png" alt="1637745101443"></p><p> 于是就有了国内版 基于码云 </p><p><img src="/2021/11/24/gitee/1637745120070.png" alt="1637745120070"></p><p><img src="/2021/11/24/gitee/1637745131057.png" alt="1637745131057"></p><p> 这两个实测都是可以的</p><p>效果如下 下面就是分别的配置文件</p><p><img src="/2021/11/24/gitee/1637745152285.png" alt="1637745152285"></p><p>拓展</p><p>gitlab 也有代码段配置</p><p><img src="/2021/11/24/gitee/1637745186441.png" alt="1637745186441"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>gitee vscode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>gitee vscode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>人生的思考+追更（2021/8/4）+结更（2021/9/9）</title>
     <link href="/2021/06/21/yudong/"/>
     <url>/2021/06/21/yudong/</url>

@@ -202,6 +202,266 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/06/25/redis/" target="_self">
+          <img src="/img/sjk.png" srcset="/img/loading.gif" lazyload alt="redis mongdb 安装和操作 egg">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/06/25/redis/" target="_self">
+          redis mongdb 安装和操作 egg
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/06/25/redis/" target="_self">
+          
+          
+            
+          
+          
+redis 下载安装地址
+
+ https://github.com/tporadowski/releases。 
+安装时最后勾选环境变量
+进入他的安装目录
+C:\Program Files\Redis
+
+执行命令 
+redis-cli.exe -h 127.0.0.1 -p 6379
+
+设置数据 和获取数据效果如下
+
+下面是 egg 操作
+npm i egg-redis --save
+
+//Ch
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-06-25 15:39" pubdate>
+              2019-06-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/egg-js/">egg js</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/egg-js/">egg js</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/06/24/eggswagger/" target="_self">
+          <img src="/img/swagger.png" srcset="/img/loading.gif" lazyload alt="egg集成swagger">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/06/24/eggswagger/" target="_self">
+          egg集成swagger
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/06/24/eggswagger/" target="_self">
+          
+          
+            
+          
+          传统老牌接口调试都是swagger 
+egg 集成 swagger  其实还是挺简单的
+https://github.com/Yanshijie-EL/egg-swagger-doc
+安装插件
+$ npm i egg-swagger-doc --save
+
+配置
+// &#123;app_root&#125;/config/plugin.js
+exports.swaggerdoc = &#123;
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-06-24 17:30" pubdate>
+              2019-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/egg-js/">egg js</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/egg-js/">egg js</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/06/24/eggorm/" target="_self">
+          <img src="/img/egg.png" srcset="/img/loading.gif" lazyload alt="egg sequelize实现和自动从数据库生成model">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/06/24/eggorm/" target="_self">
+          egg sequelize实现和自动从数据库生成model
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/06/24/eggorm/" target="_self">
+          
+          
+            
+          
+           官网看的有点绕其实不用这么复杂
+
+这玩意其实感觉作用不大
+梳理如下
+实现model 的依赖
+npm install --save egg-sequelize mysql2
+
+配置 /* egg_folder/config/config.default.js */
+  exports.sequelize = &#123;
+    dialect: &quot;mysql&quot;, // 数据库
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-06-24 15:39" pubdate>
+              2019-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/egg-js/">egg js</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/egg-js/">egg js</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/06/23/eggqq/" target="_self">
+          <img src="/img/egg.png" srcset="/img/loading.gif" lazyload alt="自己搭建服务端egg请求那些事">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/06/23/eggqq/" target="_self">
+          自己搭建服务端egg请求那些事
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/06/23/eggqq/" target="_self">
+          
+          
+            
+          
+          自己安装window mysql 和取款机一样next新建表 右键设计表 主键设置自增 这样post 新增请求就不用写唯一值了
+mysql8 navcat 连接不上
+ALTER USER ‘root‘@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘password’flush privileges执行这个就好了
+当你手动还在增删改的时候
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-06-23 16:39" pubdate>
+              2019-06-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/egg-js/">egg js</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/egg-js/">egg js</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2019/05/23/tree/" target="_self">
           <img src="/img/tree.png" srcset="/img/loading.gif" lazyload alt="树形数据的方法论">
         </a>
@@ -585,265 +845,11 @@ element 树形在做菜单权限逻辑的时候
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/03/23/unitapp/" target="_self">
-          <img src="/img/unitapp.png" srcset="/img/loading.gif" lazyload alt="unitapp 代理的二次验证">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/03/23/unitapp/" target="_self">
-          unitapp 代理的二次验证
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/03/23/unitapp/" target="_self">
-          
-          
-            
-          
-          在开发unitapp  特别是app 是不需要反向代理的
-跨域的本质是浏览器的拦截 但是hbuliter开发中内置浏览器 做了处理  普通浏览器安装插件也可以完成（Chrome插件名称：Allow-Control-Allow-Origin: *）
-开发中配置代理测试  （这个肯定只是开发环境生效） vue.config.js
-// vue.config.js
-module.exports = &#
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-03-23 14:40" pubdate>
-              2019-03-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/js-vue-json/">js vue json</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/js-vue-json/">js vue json</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/03/20/nodecli/" target="_self">
-          <img src="/img/1618904854392.png" srcset="/img/loading.gif" lazyload alt="nodecli demo测试">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/03/20/nodecli/" target="_self">
-          nodecli demo测试
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/03/20/nodecli/" target="_self">
-          
-          
-            
-          
-          整体流程很简单 但是有几个注意事项：
-npm init -y
-
-&#123;
-  &quot;name&quot;: &quot;gjltestcli&quot;,
-  &quot;version&quot;: &quot;1.0.2&quot;,
-  &quot;description&quot;: &quot;&quot;,
-  &quot;main&quot;: &quot;index.js
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-03-20 16:58" pubdate>
-              2019-03-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/npm-cli-node/">npm cli node</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/npm-cli-node/">npm cli node</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/03/20/hkc/" target="_self">
-          <img src="/img/hkc.png" srcset="/img/loading.gif" lazyload alt="向花裤衩学到的技术(element-admin)">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/03/20/hkc/" target="_self">
-          向花裤衩学到的技术(element-admin)
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/03/20/hkc/" target="_self">
-          
-          
-            
-          
-          
-str  这么高值得我们很多人学习里边的思想
-突然发现
-本地图标他是如何展示的 ？element 团标呢？
-
-查看源码发现
-
-element 写死的 也可以理解
-
-svg 展示就很优秀了（一般只是注册组件使用没想到还可以这么玩）
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-03-20 15:23" pubdate>
-              2019-03-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/vue/">vue</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/vue/">vue</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/02/02/arr/" target="_self">
-          <img src="/img/arr.png" srcset="/img/loading.gif" lazyload alt="数组循环删除引发血案 递归删除">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/02/02/arr/" target="_self">
-          数组循环删除引发血案 递归删除
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/02/02/arr/" target="_self">
-          
-          
-            
-          
-          循环中删除元素是危险的 更别说递归删除了
-
-(function () &#123;
- var arr = [1,2,2,3,4,5];
- var len = arr.length;
- for(var i=0;i&lt;len;i++)&#123;
- //打印数组中的情况，便于跟踪数组中数据的变化
- console.log(i+&quot;=&quot;+arr[i]);
- //删除掉所有为2的元素
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-02-02 16:13" pubdate>
-              2019-02-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/js/">js</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/js/">js</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#board">6</a><a class="extend next" rel="next" href="/page/6/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><a class="extend next" rel="next" href="/page/6/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
