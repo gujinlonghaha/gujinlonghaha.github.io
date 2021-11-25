@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "push":"git p&&git pgitee",
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo clean&&hexo deploy",
