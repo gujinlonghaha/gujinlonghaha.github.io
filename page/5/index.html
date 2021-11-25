@@ -274,6 +274,70 @@ npm i egg-redis --save
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/06/25/scokit/" target="_self">
+          <img src="/img/egg.png" srcset="/img/loading.gif" lazyload alt="梳理极简egg socket">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/06/25/scokit/" target="_self">
+          梳理极简egg socket
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/06/25/scokit/" target="_self">
+          
+          
+            
+          
+          egg 上的socket 包含了redis和房间 功能复杂 乍一看还是有点绕的
+我梳理了极其简单demo 
+自己实测梳理逻辑如下
+$ npm i egg-socket.io --save
+
+// &#123;app_root&#125;/config/plugin.js
+exports.io = &#123;
+  enable: true,
+  package: &#39;egg-socket.i
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-06-25 15:39" pubdate>
+              2019-06-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/egg-js/">egg js</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/egg-js/">egg js</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2019/06/24/eggswagger/" target="_self">
           <img src="/img/swagger.png" srcset="/img/loading.gif" lazyload alt="egg集成swagger">
         </a>
@@ -768,76 +832,6 @@ var  data2= [
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/element/">element</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/04/01/treeCheck/" target="_self">
-          <img src="/img/treeold.png" srcset="/img/loading.gif" lazyload alt="element树形造成的坑">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/04/01/treeCheck/" target="_self">
-          element树形造成的坑
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/04/01/treeCheck/" target="_self">
-          
-          
-            
-          
-          
-element 树形在做菜单权限逻辑的时候
-1选择一个节点  递归所有父级让其选择上
-2取消一个节点  递归所有子集节点让其取消
-这样方便用户操作
-但是
-
-我之前也是 用  node-click 
-
-会导致点击checkbox 不触发 node click 事件
-自定义节点 加click 事件也会多次触发（无解）
-
-最终用checked 事件就好了
-核心代码
-  enableParent(t) 
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-04-01 15:23" pubdate>
-              2019-04-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/vue-element/">vue element</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/vue-element/">vue element</a>
             
           </div>
         
