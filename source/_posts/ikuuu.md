@@ -2,11 +2,11 @@
 title: 记一次实现帮朋友ikuuu自动签到脚本
 date: 2021-11-26 11:15:10
 index_img: /img/ikuuu.png
-tags: ikuuu 
-categories: ikuuu
+tags:  
+categories: 
 ---
 
-**朋友需要每天登陆签到获取免费流量 我用自己界面打开如下**
+**朋友需要每天登陆  签到  获取免费流量 我用自己界面打开如下**
 
 ![1637908245040](1637908245040.png)
 
@@ -14,13 +14,14 @@ categories: ikuuu
 
 1 打开浏览器 进入网站
 
-2 输入账号密码
+2 输入账号  密码
 
 3 登陆
 
 4 签到
 
 5 关闭浏览器
+
 
 直接用puppeteer 就可以实现
 
