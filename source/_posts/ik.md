@@ -1,5 +1,5 @@
 ---
-title: 记一次实现帮朋友ik自动签到脚本
+title: 记一次实现帮朋友ik签到
 date: 2021-11-26 11:15:10
 index_img: /img/iks.png
 tags:  
