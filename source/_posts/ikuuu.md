@@ -1,9 +1,9 @@
 ---
-title: 记一次实现帮朋友vpn自动签到脚本
+title: 记一次实现帮朋友ikuuu自动签到脚本
 date: 2021-11-26 11:15:10
-index_img: /img/vpn.png
-tags: vpn 
-categories: vpn
+index_img: /img/ikuuu.png
+tags: ikuuu 
+categories: ikuuu
 ---
 
 **朋友需要每天登陆签到获取免费流量 我用自己界面打开如下**
