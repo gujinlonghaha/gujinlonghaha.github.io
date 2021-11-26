@@ -1,5 +1,5 @@
 ---
-title: 团队代码段整合工具(国外) chacher
+title: 团队代码段整合工具 chacher
 date: 2021-11-24 10:20:00
 index_img: img/code.png
 tags: youtube 
@@ -8,7 +8,7 @@ categories: youtube
 
 ![1637745334948](1637745334948.png)
 
-地址需要  是国外的 
+地址需要  
 
 自己使用github 注册 效果如下
 
