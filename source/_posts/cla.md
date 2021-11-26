@@ -1,16 +1,16 @@
 ---
-title: clash git下载地址 汉化文件配置
+title:  clagit下载地址 汉化文件配置
 date: 2021-11-26 19:20:00
 index_img: img/suidao.png
 tags:  
 categories:  
 ---
 
-
+由于某种原因 cla 后面加sh  大家懂得
 
 直接github 走起
 
-https://github.com/Fndroid/clash_for_windows_pkg/releases
+https://github.com/Fndroid/cla_for_windows_pkg/releases
 
 
 
@@ -18,7 +18,9 @@ https://github.com/Fndroid/clash_for_windows_pkg/releases
 
 汉化包地址
 
-![1637910239956](1637910239956.png)https://github.com/BoyceLig/Clash_Chinese_Patch/releases
+![1637910239956](1637910239956.png)
+
+https://github.com/BoyceLig/Cla_Chinese_Patch/releases
 
 
 ### 注意一个是window 安装包 一个是汉化文件   汉化我当时不知道搜了半天 原来才知道就在这

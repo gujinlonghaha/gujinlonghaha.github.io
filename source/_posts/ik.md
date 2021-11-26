@@ -1,7 +1,7 @@
 ---
-title: 记一次实现帮朋友ikuuu自动签到脚本
+title: 记一次实现帮朋友ik自动签到脚本
 date: 2021-11-26 11:15:10
-index_img: /img/ikuuu.png
+index_img: /img/iks.png
 tags:  
 categories: 
 ---
@@ -45,7 +45,7 @@ let { config } = require('./config.js');
         }
     );
     const page = await browser.newPage();
-    await page.goto('https://ikuuu.co/user#', {
+    await page.goto('https://ik.co/user#', {
         waitUntil: 'domcontentloaded'
     });
     await page.waitForSelector('input[name="email"]');
