@@ -29,23 +29,23 @@
   
   
   <entry>
-    <title>记一次实现帮朋友vpn自动签到脚本</title>
-    <link href="/2021/11/26/vpn/"/>
-    <url>/2021/11/26/vpn/</url>
+    <title>记一次实现帮朋友ikuuu自动签到脚本</title>
+    <link href="/2021/11/26/ikuuu/"/>
+    <url>/2021/11/26/ikuuu/</url>
     
-    <content type="html"><![CDATA[<p><strong>朋友需要每天登陆签到获取免费流量 我用自己界面打开如下</strong></p><p><img src="/2021/11/26/vpn/1637908245040.png" alt="1637908245040"></p><p>很简单</p><p>1 打开浏览器 进入网站</p><p>2 输入账号密码</p><p>3 登陆</p><p>4 签到</p><p>5 关闭浏览器</p><p>直接用puppeteer 就可以实现</p><p><img src="/2021/11/26/vpn/1637908391124.png" alt="1637908391124"></p><p>核心代码如下</p><pre><code>const puppeteer = require(&#39;puppeteer&#39;);let &#123; config &#125; = require(&#39;./config.js&#39;); var init=async () =&gt; &#123;    const browser = await puppeteer.launch(        &#123;            headless: false,            args: [&#39;--start-maximized&#39;],            defaultViewport: &#123;                width: 1920,                height: 1080            &#125;        &#125;    );    const page = await browser.newPage();    await page.goto(&#39;https://ikuuu.co/user#&#39;, &#123;        waitUntil: &#39;domcontentloaded&#39;    &#125;);    await page.waitForSelector(&#39;input[name=&quot;email&quot;]&#39;);    await page.type(&#39;input[name=&quot;email&quot;]&#39;, config.email);    await page.type(&#39;input[name=&quot;password&quot;]&#39;, config.password);    await page.click(&#39;button[type = &quot;submit&quot;]&#39;);    await page.waitForSelector(&#39;#checkin-div&#39;);    let content = await page.$eval(&#39;#checkin-div a&#39;, el =&gt; el.textContent);    console.log(content);    if (content.includes(&quot;明日再来&quot;)) &#123;        page.on(&#39;dialog&#39;, async dialog =&gt; &#123;            console.log(dialog.message());            await page.waitFor(3000);            await dialog.dismiss();        &#125;)        await page.evaluate(() =&gt; alert(&#39;已经签到请明日再来,我将自动关闭&#39;));    &#125; else &#123;        await page.click(&#39;#checkin-div&#39;);        page.on(&#39;dialog&#39;, async dialog =&gt; &#123;            await page.waitFor(3000);            await dialog.dismiss();        &#125;)        await page.evaluate(() =&gt; alert(&#39;签到成功,我将自动关闭&#39;));    &#125;    await page.waitFor(3000);    await browser.close();&#125;exports.init=init;</code></pre><pre><code>let config=&#123;    email: &quot;你的邮箱&quot;,    password: &quot;你的密码&quot;,&#125;exports.config=config;</code></pre><pre><code>const schedule = require(&#39;node-schedule&#39;);let &#123; init &#125; = require(&#39;./index.js&#39;);/* // 每分钟第30秒执行 schedule.scheduleJob(&#39;30 * * * * *&#39;,()=&gt;&#123;    init()&#125;); */console.log(process.argv.slice(-1)[0])try &#123;    if (process.argv.slice(-1)[0] == &#39;task&#39;) &#123;        // 每周-到周五 9:30执行        var rule = new schedule.RecurrenceRule();        rule.dayOfWeek = [0, new schedule.Range(1, 6)];        rule.hour = 9;        rule.minute = 30;        schedule.scheduleJob(rule, function () &#123;            init()        &#125;);    &#125;    if (process.argv.slice(-1)[0] == &#39;init&#39;) &#123;        init()    &#125;&#125; catch (error) &#123;        console.error(error)&#125;</code></pre><p><a href="https://github.com/gujinlonghaha/pupdaka">https://github.com/gujinlonghaha/pupdaka</a></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>朋友需要每天登陆签到获取免费流量 我用自己界面打开如下</strong></p><p><img src="/1637908245040.png" alt="1637908245040"></p><p>很简单</p><p>1 打开浏览器 进入网站</p><p>2 输入账号密码</p><p>3 登陆</p><p>4 签到</p><p>5 关闭浏览器</p><p>直接用puppeteer 就可以实现</p><p><img src="/1637908391124.png" alt="1637908391124"></p><p>核心代码如下</p><pre><code>const puppeteer = require(&#39;puppeteer&#39;);let &#123; config &#125; = require(&#39;./config.js&#39;); var init=async () =&gt; &#123;    const browser = await puppeteer.launch(        &#123;            headless: false,            args: [&#39;--start-maximized&#39;],            defaultViewport: &#123;                width: 1920,                height: 1080            &#125;        &#125;    );    const page = await browser.newPage();    await page.goto(&#39;https://ikuuu.co/user#&#39;, &#123;        waitUntil: &#39;domcontentloaded&#39;    &#125;);    await page.waitForSelector(&#39;input[name=&quot;email&quot;]&#39;);    await page.type(&#39;input[name=&quot;email&quot;]&#39;, config.email);    await page.type(&#39;input[name=&quot;password&quot;]&#39;, config.password);    await page.click(&#39;button[type = &quot;submit&quot;]&#39;);    await page.waitForSelector(&#39;#checkin-div&#39;);    let content = await page.$eval(&#39;#checkin-div a&#39;, el =&gt; el.textContent);    console.log(content);    if (content.includes(&quot;明日再来&quot;)) &#123;        page.on(&#39;dialog&#39;, async dialog =&gt; &#123;            console.log(dialog.message());            await page.waitFor(3000);            await dialog.dismiss();        &#125;)        await page.evaluate(() =&gt; alert(&#39;已经签到请明日再来,我将自动关闭&#39;));    &#125; else &#123;        await page.click(&#39;#checkin-div&#39;);        page.on(&#39;dialog&#39;, async dialog =&gt; &#123;            await page.waitFor(3000);            await dialog.dismiss();        &#125;)        await page.evaluate(() =&gt; alert(&#39;签到成功,我将自动关闭&#39;));    &#125;    await page.waitFor(3000);    await browser.close();&#125;exports.init=init;</code></pre><pre><code>let config=&#123;    email: &quot;你的邮箱&quot;,    password: &quot;你的密码&quot;,&#125;exports.config=config;</code></pre><pre><code>const schedule = require(&#39;node-schedule&#39;);let &#123; init &#125; = require(&#39;./index.js&#39;);/* // 每分钟第30秒执行 schedule.scheduleJob(&#39;30 * * * * *&#39;,()=&gt;&#123;    init()&#125;); */console.log(process.argv.slice(-1)[0])try &#123;    if (process.argv.slice(-1)[0] == &#39;task&#39;) &#123;        // 每周-到周五 9:30执行        var rule = new schedule.RecurrenceRule();        rule.dayOfWeek = [0, new schedule.Range(1, 6)];        rule.hour = 9;        rule.minute = 30;        schedule.scheduleJob(rule, function () &#123;            init()        &#125;);    &#125;    if (process.argv.slice(-1)[0] == &#39;init&#39;) &#123;        init()    &#125;&#125; catch (error) &#123;        console.error(error)&#125;</code></pre><p><a href="https://github.com/gujinlonghaha/pupdaka">https://github.com/gujinlonghaha/pupdaka</a></p>]]></content>
     
     
     <categories>
       
-      <category>vpn</category>
+      <category>ikuuu</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>vpn</tag>
+      <tag>ikuuu</tag>
       
     </tags>
     
@@ -104,11 +104,11 @@
   
   
   <entry>
-    <title>团队代码段整合工具(国外) chacher</title>
-    <link href="/2021/11/24/coder/"/>
-    <url>/2021/11/24/coder/</url>
+    <title>还在为youtube 英文看不懂发愁吗？</title>
+    <link href="/2021/11/24/youtube/"/>
+    <url>/2021/11/24/youtube/</url>
     
-    <content type="html"><![CDATA[<p><img src="/2021/11/24/coder/1637745334948.png" alt="1637745334948"></p><p>地址需要fq 是国外的 </p><p>自己使用github 注册 效果如下</p><p><img src="/2021/11/24/coder/1637745354893.png" alt="1637745354893"></p><p> 生态链包含 subline vscode idea 的插件 也包含客户端exe 浏览器插件cache  </p><p> 商业付费方案 </p><p><img src="/2021/11/24/coder/1637745384290.png" alt="1637745384290"></p><p><img src="/2021/11/24/coder/1637745401629.png" alt="1637745401629"></p>]]></content>
+    <content type="html"><![CDATA[<p>英文视频看的昏昏欲睡和头大</p><p>作为头部视频公司youtube 早就做了解决方案 但是很多人还是不知道</p><p>再次记录下来</p><p><img src="/2021/11/24/youtube/1637744719191.png" alt="1637744719191"></p><p> 默认都是转换为英文但是你可以选择自动翻译 然后找到中文 </p><p><img src="/2021/11/24/youtube/1637744739623.png" alt="1637744739623"></p><p> 这样就打开了你的新世界  字母变为中文</p><p>当然有些人也可以使用第三方插件集成</p><p><img src="/2021/11/24/youtube/1637744762144.png" alt="1637744762144"></p><p><img src="/2021/11/24/youtube/1637744773315.png" alt="1637744773315"></p>]]></content>
     
     
     <categories>
@@ -129,11 +129,11 @@
   
   
   <entry>
-    <title>还在为youtube 英文看不懂发愁吗？</title>
-    <link href="/2021/11/24/youtube/"/>
-    <url>/2021/11/24/youtube/</url>
+    <title>团队代码段整合工具(国外) chacher</title>
+    <link href="/2021/11/24/coder/"/>
+    <url>/2021/11/24/coder/</url>
     
-    <content type="html"><![CDATA[<p>英文视频看的昏昏欲睡和头大</p><p>作为头部视频公司youtube 早就做了解决方案 但是很多人还是不知道</p><p>再次记录下来</p><p><img src="/2021/11/24/youtube/1637744719191.png" alt="1637744719191"></p><p> 默认都是转换为英文但是你可以选择自动翻译 然后找到中文 </p><p><img src="/2021/11/24/youtube/1637744739623.png" alt="1637744739623"></p><p> 这样就打开了你的新世界  字母变为中文</p><p>当然有些人也可以使用第三方插件集成</p><p><img src="/2021/11/24/youtube/1637744762144.png" alt="1637744762144"></p><p><img src="/2021/11/24/youtube/1637744773315.png" alt="1637744773315"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/2021/11/24/coder/1637745334948.png" alt="1637745334948"></p><p>地址需要fq 是国外的 </p><p>自己使用github 注册 效果如下</p><p><img src="/2021/11/24/coder/1637745354893.png" alt="1637745354893"></p><p> 生态链包含 subline vscode idea 的插件 也包含客户端exe 浏览器插件cache  </p><p> 商业付费方案 </p><p><img src="/2021/11/24/coder/1637745384290.png" alt="1637745384290"></p><p><img src="/2021/11/24/coder/1637745401629.png" alt="1637745401629"></p>]]></content>
     
     
     <categories>
