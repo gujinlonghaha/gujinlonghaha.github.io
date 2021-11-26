@@ -25,7 +25,7 @@ categories: pupeteer
 
 ![1617851125113](1617851125113.png)
 
-那个就是版本号 其实你发现和咱们版本号不一样 后来我研究发现是这样的   [地址](https://omahaproxy.appspot.com/)   需要fq
+那个就是版本号 其实你发现和咱们版本号不一样 后来我研究发现是这样的   [地址](https://omahaproxy.appspot.com/)   
 
 ![1617851262264](1617851262264.png)
 
