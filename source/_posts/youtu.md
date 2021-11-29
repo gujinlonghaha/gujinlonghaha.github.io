@@ -1,14 +1,14 @@
 ---
-title: 还在为youtube 英文看不懂发愁吗？
+title: 还在为youtu 英文看不懂发愁吗？
 date: 2021-11-24 10:20:00
-index_img: img/youtube.png
-tags: youtube 
-categories: youtube 
+index_img: img/youtu.png
+tags: youtu
+categories: youtu
 ---
 
 英文视频看的昏昏欲睡和头大
 
-作为头部视频公司youtube 早就做了解决方案 但是很多人还是不知道
+作为头部视频公司  早就做了解决方案 但是很多人还是不知道
 
 再次记录下来
 
