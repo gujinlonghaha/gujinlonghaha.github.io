@@ -1,5 +1,5 @@
 ---
-title: vscode 启动越来越慢排查插件元凶
+title: vscode 启动越来越慢排查插件启动时间
 date: 2021-11-25 11:15:10
 index_img: /img/slow.png
 tags: vscode 
