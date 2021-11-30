@@ -8,9 +8,9 @@ categories:
 
 
 
-直接git 走起
+直接git 走起  某种原因使用短网址  要不被feng
 
-https://github.com/Fndroid/clash_for_windows_pkg/releases
+https://t.hk.uy/VW4
 
 
 
@@ -20,7 +20,7 @@ https://github.com/Fndroid/clash_for_windows_pkg/releases
 
 ![1637910239956](1637910239956.png)
 
-https://github.com/BoyceLig/Clash_Chinese_Patch/releases
+https://t.hk.uy/a4j7
 
 
 ### 注意一个是window 安装包 一个是汉化文件   汉化我当时不知道搜了半天 原来才知道就在这
