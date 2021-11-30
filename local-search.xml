@@ -33,7 +33,7 @@
     <link href="/2021/11/26/cla/"/>
     <url>/2021/11/26/cla/</url>
     
-    <content type="html"><![CDATA[<p>由于某种原因 cla 后面加sh  ss</p><p>直接github 走起</p><p><a href="https://github.com/Fndroid/cla_for_windows_pkg/releases">https://github.com/Fndroid/cla_for_windows_pkg/releases</a></p><p><img src="/2021/11/26/cla/1637910260505.png" alt="1637910260505"></p><p>汉化包地址</p><p><img src="/2021/11/26/cla/1637910239956.png" alt="1637910239956"></p><p><a href="https://github.com/BoyceLig/Cla_Chinese_Patch/releases">https://github.com/BoyceLig/Cla_Chinese_Patch/releases</a></p><h3 id="注意一个是window-安装包-一个是汉化文件-汉化我当时不知道搜了半天-原来才知道就在这"><a href="#注意一个是window-安装包-一个是汉化文件-汉化我当时不知道搜了半天-原来才知道就在这" class="headerlink" title="注意一个是window 安装包 一个是汉化文件   汉化我当时不知道搜了半天 原来才知道就在这"></a>注意一个是window 安装包 一个是汉化文件   汉化我当时不知道搜了半天 原来才知道就在这</h3><p>汉化文件 在软件关闭情况下 直接替换</p><p><img src="/2021/11/26/cla/1637909775879.png" alt="1637909775879"></p><p><img src="/2021/11/26/cla/1637909817141.png" alt="1637909817141">重启</p>]]></content>
+    <content type="html"><![CDATA[<p>直接git 走起  某种原因使用短网址  要不被feng</p><p><a href="https://t.hk.uy/VW4">https://t.hk.uy/VW4</a></p><p><img src="/2021/11/26/cla/1637910260505.png" alt="1637910260505"></p><p>汉化包地址</p><p><img src="/2021/11/26/cla/1637910239956.png" alt="1637910239956"></p><p><a href="https://t.hk.uy/a4j7">https://t.hk.uy/a4j7</a></p><h3 id="注意一个是window-安装包-一个是汉化文件-汉化我当时不知道搜了半天-原来才知道就在这"><a href="#注意一个是window-安装包-一个是汉化文件-汉化我当时不知道搜了半天-原来才知道就在这" class="headerlink" title="注意一个是window 安装包 一个是汉化文件   汉化我当时不知道搜了半天 原来才知道就在这"></a>注意一个是window 安装包 一个是汉化文件   汉化我当时不知道搜了半天 原来才知道就在这</h3><p>汉化文件 在软件关闭情况下 直接替换</p><p><img src="/2021/11/26/cla/1637909775879.png" alt="1637909775879"></p><p><img src="/2021/11/26/cla/1637909817141.png" alt="1637909817141">重启</p>]]></content>
     
     
     
@@ -122,31 +122,6 @@
     <tags>
       
       <tag>youtu</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>团队代码段整合工具 chacher</title>
-    <link href="/2021/11/24/coder/"/>
-    <url>/2021/11/24/coder/</url>
-    
-    <content type="html"><![CDATA[<p><img src="/2021/11/24/coder/1637745334948.png" alt="1637745334948"></p><p>地址需要  </p><p>自己使用github 注册 效果如下</p><p><img src="/2021/11/24/coder/1637745354893.png" alt="1637745354893"></p><p> 生态链包含 subline vscode idea 的插件 也包含客户端exe 浏览器插件cache  </p><p> 商业付费方案 </p><p><img src="/2021/11/24/coder/1637745384290.png" alt="1637745384290"></p><p><img src="/2021/11/24/coder/1637745401629.png" alt="1637745401629"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>youtube</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>youtube</tag>
       
     </tags>
     
@@ -1041,31 +1016,6 @@
     <tags>
       
       <tag>vscode code</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>git优化工作流之别名</title>
-    <link href="/2019/08/01/gitbm/"/>
-    <url>/2019/08/01/gitbm/</url>
-    
-    <content type="html"><![CDATA[<p><img src="/2019/08/01/gitbm/git.gif" alt="1637807790323"></p><p> <strong>上面操作是不是很给力 一个小技巧可以使你的 Git 体验更简单、容易、熟悉：别名</strong> </p><p> <strong>同事看到你的 Git 工作流时，总是充满了惊讶与好奇：</strong> </p><p>设置命令</p><pre><code>git config --global alias.co checkout</code></pre><p> 这意味着，当要输入 <code>git commit</code> 时，只需要输入 <code>git ci</code>。 随着你继续不断地使用 Git，可能也会经常使用其他命令，所以创建别名时不要犹豫。</p><p>当取消别名时可以  全局配置文件的目录 全局叫gitconfig</p><p><img src="/2019/08/01/gitbm/1637808629314.png" alt="1637808629314"></p><p><img src="/2019/08/01/gitbm/1637808684380.png" alt="1637808684380"></p><p>单个项目位置在这叫config  里面有一些核心信息</p><p><img src="/2019/08/01/gitbm/1637809849741.png" alt="1637809849741"></p><p>找到命令删掉即可</p><p>个人常用别名分享</p><p><img src="/2019/08/01/gitbm/1637809434803.png" alt="1637809434803"></p><pre><code>    i = init    cl = clone    a = add .    ca = commit -a    br = branch    co = checkout    cm = checkout master    st = status    ca = commit -a</code></pre><p>这样就可以愉快玩耍了</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>git</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>git</tag>
       
     </tags>
     
