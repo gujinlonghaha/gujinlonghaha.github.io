@@ -6,11 +6,11 @@ tags:
 categories:  
 ---
 
-由于某种原因 cla 后面加sh  ss
 
-直接github 走起
 
-https://github.com/Fndroid/cla_for_windows_pkg/releases
+直接git 走起
+
+https://github.com/Fndroid/clash_for_windows_pkg/releases
 
 
 
@@ -20,7 +20,7 @@ https://github.com/Fndroid/cla_for_windows_pkg/releases
 
 ![1637910239956](1637910239956.png)
 
-https://github.com/BoyceLig/Cla_Chinese_Patch/releases
+https://github.com/BoyceLig/Clash_Chinese_Patch/releases
 
 
 ### 注意一个是window 安装包 一个是汉化文件   汉化我当时不知道搜了半天 原来才知道就在这
