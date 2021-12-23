@@ -13,10 +13,10 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="破而后立">
+  
+    <meta name="description" content="破而后立">
 <meta property="og:type" content="website">
 <meta property="og:title" content="一直闭眼看世界博客">
 <meta property="og:url" content="https://gujinlonghaha.github.io/page/2/index.html">
@@ -25,6 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="gjl">
 <meta name="twitter:card" content="summary_large_image">
+  
   
   <title>一直闭眼看世界博客</title>
 
@@ -48,7 +49,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -202,6 +203,59 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/04/25/pachong/" target="_self">
+          <img src="/img/1619768691307.png" srcset="/img/loading.gif" lazyload alt="前端不知道接口就不能爬到数据吗？直接爬html">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/25/pachong/" target="_self">
+          前端不知道接口就不能爬到数据吗？直接爬html
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/25/pachong/" target="_self">
+          
+          一般前端都是调用接口，但是有时候碰到服务端页面一展示就是页面没有接口，怎么办呢？直接爬今天的主角  比如随便找一个网站测试  分析html  编写代码 const axios &#x3D; require(&quot;axios&quot;); const cheerio &#x3D; require(&quot;cheerio&quot;); const fs &#x3D; require(&quot;fs&quot;);
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-25 14:45" pubdate>
+              2021-04-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/cheerio-html/">cheerio html</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/cheerio-html/">cheerio html</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2021/04/24/autojs/" target="_self">
           <img src="/img/1619421523059.png" srcset="/img/loading.gif" lazyload alt="淘宝auto抢购脚本的逆向解析尝试">
         </a>
@@ -218,20 +272,7 @@
       <p class="index-excerpt">
         <a href="/2021/04/24/autojs/" target="_self">
           
-          
-            
-          
-          从淘宝搜索抢购脚本发现很多黑产很多都是用auto开发的
-
-
-auto 的原理他是把js 打包成apk的  咱们可以破解以后二次修改吗?
-我搜索了很多方法摸索一些时间进行了尝试 （如果有更好的方法可以联系我（除了付费方案  付费方案一大堆没意义））
-1 先使用开发助手将安装的apk 反编译 （本人使用破解版）
-
-2 使用破解工具导入project目录  传送门
-
-结果我测试了两个软件
- 一个是基本版
+          从淘宝搜索抢购脚本发现很多黑产很多都是用auto开发的   auto 的原理他是把js 打包成apk的  咱们可以破解以后二次修改吗? 我搜索了很多方法摸索一些时间进行了尝试 （如果有更好的方法可以联系我（除了付费方案  付费方案一大堆没意义）） 1 先使用开发助手将安装的apk 反编译 （本人使用破解版）  2 使用破解工具导入project目录  传送门  结果我测试了两个软件  一个是基本版
         </a>
       </p>
 
@@ -284,14 +325,7 @@ auto 的原理他是把js 打包成apk的  咱们可以破解以后二次修改�
       <p class="index-excerpt">
         <a href="/2021/04/23/jsrun/" target="_self">
           
-          
-            
-          
-          有时候你想改一些网站的样式，当然这个网站不属于你。甚至还向操作一些js。但是大家操作完以后些给丢掉掉。那怎么办呢？ 其实有一款很好的插件已经解决了上述的问题，它可以安装别的依赖库，诸如代码读取页面上的变量。这样的话你就可以魔改任何网站了。当然你也可以发现更多的玩法，比如说演示类的网站在不不改源码的情况下，只对固定客户端页面的展示。
-
-  在线编写js  css 而且有代码提示 和网站过滤规则
-
-引
+          有时候你想改一些网站的样式，当然这个网站不属于你。甚至还向操作一些js。但是大家操作完以后些给丢掉掉。那怎么办呢？ 其实有一款很好的插件已经解决了上述的问题，它可以安装别的依赖库，诸如代码读取页面上的变量。这样的话你就可以魔改任何网站了。当然你也可以发现更多的玩法，比如说演示类的网站在不不改源码的情况下，只对固定客户端页面的展示。    在线编写js  css 而且有代码提示 和网站过滤规则  引
         </a>
       </p>
 
@@ -344,13 +378,7 @@ auto 的原理他是把js 打包成apk的  咱们可以破解以后二次修改�
       <p class="index-excerpt">
         <a href="/2021/04/20/ctxFile/" target="_self">
           
-          
-            
-          
-          虽然自己的电脑装了一大堆谷歌插件，之前也看过谷歌插件的部分文章，但是也没有真真切切的去搞过。当真正去去使用时候还是有很多问题，也花费了很多时间，摸索了。
-站在巨人肩膀上虽然资料不是很多常常比较划算的一种方式，毕竟生命有限，且用且珍贵。
-本人电脑插件如图：（有时候自己都不知道浏览器能不能抗住 目前我认识的人中还没有见到比我多的）
-为了展示全貌，我把它缩小了，看到右边的滚动条处，直到我电脑上装了的插件
+          虽然自己的电脑装了一大堆谷歌插件，之前也看过谷歌插件的部分文章，但是也没有真真切切的去搞过。当真正去去使用时候还是有很多问题，也花费了很多时间，摸索了。 站在巨人肩膀上虽然资料不是很多常常比较划算的一种方式，毕竟生命有限，且用且珍贵。 本人电脑插件如图：（有时候自己都不知道浏览器能不能抗住 目前我认识的人中还没有见到比我多的） 为了展示全貌，我把它缩小了，看到右边的滚动条处，直到我电脑上装了的插件
         </a>
       </p>
 
@@ -403,16 +431,7 @@ auto 的原理他是把js 打包成apk的  咱们可以破解以后二次修改�
       <p class="index-excerpt">
         <a href="/2021/04/18/ctx/" target="_self">
           
-          
-            
-          
-          当你需要给被人ctx谷歌拓展的时候怎么办   众所周知原因一般人上不去谷歌商店，同时大家也不会保存ctx原文件怎么办？（大家也可以通过国内镜像网站下载）
-​    其实可以使用谷歌的逆向生成
-先打开谷歌已安装插件目录一般如下：（不对自行按照路径修改）
-C:\Users\user\AppData\Local\Google\Chrome\User Data\Default\Extensions
-
-
-这
+          当你需要给被人ctx谷歌拓展的时候怎么办   众所周知原因一般人上不去谷歌商店，同时大家也不会保存ctx原文件怎么办？（大家也可以通过国内镜像网站下载） ​    其实可以使用谷歌的逆向生成 先打开谷歌已安装插件目录一般如下：（不对自行按照路径修改） C:\Users\user\AppData\Local\Google\Chrome\User Data\Default\Extensions   这
         </a>
       </p>
 
@@ -465,11 +484,7 @@ C:\Users\user\AppData\Local\Google\Chrome\User Data\Default\Extensions
       <p class="index-excerpt">
         <a href="/2021/04/16/ntp/" target="_self">
           
-          
-            
-          
-          一、NTP 是什么？网络时间协议，英文名称：Network Time Protocol（NTP）是用来使计算机时间同步化的一种协议，它可以使计算机对其服务器或时钟源（如石英钟，GPS等等)做同步化，它可以提供高精准度的时间校正（LAN上与标准间差小于1毫秒，WAN上几十毫秒），且可介由加密确认的方式来防止恶毒的协议攻击。NTP的目的是在无序的Internet环境中提供精确和健壮的时间服务。 
-二、
+          一、NTP 是什么？网络时间协议，英文名称：Network Time Protocol（NTP）是用来使计算机时间同步化的一种协议，它可以使计算机对其服务器或时钟源（如石英钟，GPS等等)做同步化，它可以提供高精准度的时间校正（LAN上与标准间差小于1毫秒，WAN上几十毫秒），且可介由加密确认的方式来防止恶毒的协议攻击。NTP的目的是在无序的Internet环境中提供精确和健壮的时间服务。  二、
         </a>
       </p>
 
@@ -522,25 +537,7 @@ C:\Users\user\AppData\Local\Google\Chrome\User Data\Default\Extensions
       <p class="index-excerpt">
         <a href="/2021/04/16/xingcheng/" target="_self">
           
-          
-            
-          
-          探索地铁行程卡快速通过
- 程序是方法论的流程化 让你流出更多的时间做重要的事 拓展了生命长度
-**
-地铁入口前总是一堆人停下脚步做准备：
-
-低头拿出手机
-找到通信行程卡
-勾选同意授权
-点击查询
-走过去排队
-展示绿色行程卡
-
-整个过程持续一分钟左右
-有没有更好的办法呢 ？ 效果如下 只点击了一次通行图标（通行是自己写的脚本）其他都是自动化
-
- 这样你只需点一下不需要停下脚步就可以大步流星快速通过安检
+          探索地铁行程卡快速通过  程序是方法论的流程化 让你流出更多的时间做重要的事 拓展了生命长度 ** 地铁入口前总是一堆人停下脚步做准备：  低头拿出手机 找到通信行程卡 勾选同意授权 点击查询 走过去排队 展示绿色行程卡  整个过程持续一分钟左右 有没有更好的办法呢 ？ 效果如下 只点击了一次通行图标（通行是自己写的脚本）其他都是自动化   这样你只需点一下不需要停下脚步就可以大步流星快速通过安检
         </a>
       </p>
 
@@ -593,22 +590,7 @@ C:\Users\user\AppData\Local\Google\Chrome\User Data\Default\Extensions
       <p class="index-excerpt">
         <a href="/2021/04/12/bat/" target="_self">
           
-          
-            
-          
-          运维同事因为客户环境而发愁
-因为客户(政府 电信等)环境是内网，
-平时通信查问题是外网
-来回切换网线 切换网卡 
-
-我想在网上检索个工具应该能解决吧？ 结果却不尽人意  没有合适的工具
-
-不是根本不起作用就是只能切换ip 难道没有办法了吗？
-最终自己编写bat 解决 完美撒花汉字 专网  WLAN 分别是是网卡对应名称  记得修改
-
-@echo off
-title gjl切换网络脚本
-:still
+          运维同事因为客户环境而发愁 因为客户(政府 电信等)环境是内网， 平时通信查问题是外网 来回切换网线 切换网卡   我想在网上检索个工具应该能解决吧？ 结果却不尽人意  没有合适的工具  不是根本不起作用就是只能切换ip 难道没有办法了吗？ 最终自己编写bat 解决 完美撒花汉字 专网  WLAN 分别是是网卡对应名称  记得修改  @echo off title gjl切换网络脚本 :still
         </a>
       </p>
 
@@ -661,23 +643,7 @@ title gjl切换网络脚本
       <p class="index-excerpt">
         <a href="/2021/04/11/yuming/" target="_self">
           
-          
-            
-          
-          vercel传送门
-
-
-登陆完导入仓库就完事了
-
-效果地址  
-
-netlify
-
-效果地址
-
-说白了个gitee 差不多 只不过是的罢了 都是github 登录  然如导入仓库  next    毕竟多了两个选择彩蛋jsorg
-
-如果你的项目足够优秀可以使用jsorg
+          vercel传送门   登陆完导入仓库就完事了  效果地址    netlify  效果地址  说白了个gitee 差不多 只不过是的罢了 都是github 登录  然如导入仓库  next    毕竟多了两个选择彩蛋jsorg  如果你的项目足够优秀可以使用jsorg
         </a>
       </p>
 
@@ -730,17 +696,7 @@ netlify
       <p class="index-excerpt">
         <a href="/2021/04/09/imgurl/" target="_self">
           
-          
-            
-          
-          1. 什么是图床简单来说就是存储图片的服务器，将图片上传至该服务器中后，可以在公网中通过指定的URL获取此图片。
-2. 图床的意义
-减轻服务器带宽压力：图片资源可以由单独的服务器来存储、访问，例如腾讯云的COS、阿里云的OSS、七牛云等产品。
-提供CDN加速：可以通过CDN的就近访问原则加快图片的访问速度。
-第三条也就是最重要的一条，就是方便写文章。
-
-3. 搭建图床
-这里采用gitee作为图片仓
+          1. 什么是图床简单来说就是存储图片的服务器，将图片上传至该服务器中后，可以在公网中通过指定的URL获取此图片。 2. 图床的意义 减轻服务器带宽压力：图片资源可以由单独的服务器来存储、访问，例如腾讯云的COS、阿里云的OSS、七牛云等产品。 提供CDN加速：可以通过CDN的就近访问原则加快图片的访问速度。 第三条也就是最重要的一条，就是方便写文章。  3. 搭建图床 这里采用gitee作为图片仓
         </a>
       </p>
 
@@ -759,71 +715,6 @@ netlify
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/%E5%9B%BE%E5%BA%8A-%E5%9B%BE%E7%89%87-gitee/">图床 图片 gitee</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2021/04/06/chormeText/" target="_self">
-          <img src="/img/1618298516454.png" srcset="/img/loading.gif" lazyload alt="多端同步验证方案汇总">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/04/06/chormeText/" target="_self">
-          多端同步验证方案汇总
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/04/06/chormeText/" target="_self">
-          
-          
-            
-          
-          BrowserShots
-地址：
-http://browsershots.org
-作为首批跨浏览器测试网站之一，支持多种浏览器，包括一些旧浏览器，如 Lynx、Konqueror 和 Seamonkey。
-它会生成屏幕截图，显示你的网站在不同浏览器中的渲染表现，唯一的缺点是需要在线使用该工具。
-
-Browser Sandbox
-地址：
-https://turbo.net/browsers
-它是一款
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-04-06 15:13" pubdate>
-              2021-04-06
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E5%B1%95%E7%A4%BA-%E9%A2%84%E8%A7%88-%E6%B5%8F%E8%A7%88%E5%99%A8/">展示  预览  浏览器</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%B1%95%E7%A4%BA-%E9%A2%84%E8%A7%88-%E6%B5%8F%E8%A7%88%E5%99%A8/">展示  预览  浏览器</a>
             
           </div>
         
@@ -938,7 +829,7 @@ https://turbo.net/browsers
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

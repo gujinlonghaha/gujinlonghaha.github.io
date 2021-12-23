@@ -13,26 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="element 树形在做菜单权限逻辑的时候 1选择一个节点  递归所有父级让其选择上 2取消一个节点  递归所有子集节点让其取消 这样方便用户操作 但是  我之前也是 用  node-click   会导致点击checkbox 不触发 node click 事件 自定义节点 加click 事件也会多次触发（无解）  最终用checked 事件就好了 核心代码   enableParent(t)">
+  
+    <meta name="description" content="element 树形在做菜单权限逻辑的时候 1选择一个节点  递归所有父级让其选择上 2取消一个节点  递归所有子集节点让其取消 这样方便用户操作 但是  我之前也是 用  node-click   会导致点击checkbox 不触发 node click 事件 自定义节点 加click 事件也会多次触发（无解）  最终用checked 事件就好了 核心代码   enableParent(t)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="element树形造成的坑">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2019/04/01/treeCheck/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="element 树形在做菜单权限逻辑的时候 1选择一个节点  递归所有父级让其选择上 2取消一个节点  递归所有子集节点让其取消 这样方便用户操作 但是  我之前也是 用  node-click   会导致点击checkbox 不触发 node click 事件 自定义节点 加click 事件也会多次触发（无解）  最终用checked 事件就好了 核心代码   enableParent(t)">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/04/01/treeCheck/1635495503238.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/04/01/treeCheck/1635495713367.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/04/01/treeCheck/1635495744301.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/04/01/treeCheck/1635495799374.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/treeold.png">
 <meta property="article:published_time" content="2019-04-01T07:23:24.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.539Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.941Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="vue element">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2019/04/01/treeCheck/1635495503238.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/treeold.png">
+  
   
   <title>element树形造成的坑 - 一直闭眼看世界博客</title>
 
@@ -65,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -216,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3 分钟
+      9 分钟
     </span>
   
 
@@ -491,7 +489,7 @@
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

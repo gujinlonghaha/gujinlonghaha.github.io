@@ -13,33 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="朋友说他的首页需要20s 才能加载完 ， 我说怎么可能？  有图有真相   开搞 1现在白屏期间增加loading 增加好感不会让人感觉漫长（自我催眠）   源码  &lt;div class&#x3D;&quot;first-loading-wrp&quot;&gt;         &lt;div class&#x3D;&quot;loading-wrp&quot;&gt;           &lt;span">
+  
+    <meta name="description" content="朋友说他的首页需要20s 才能加载完 ， 我说怎么可能？  有图有真相   开搞 1现在白屏期间增加loading 增加好感不会让人感觉漫长（自我催眠）   源码  &lt;div class&#x3D;&quot;first-loading-wrp&quot;&gt;         &lt;div class&#x3D;&quot;loading-wrp&quot;&gt;           &lt;span">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记录一次单页面优化">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2019/08/01/speed/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="朋友说他的首页需要20s 才能加载完 ， 我说怎么可能？  有图有真相   开搞 1现在白屏期间增加loading 增加好感不会让人感觉漫长（自我催眠）   源码  &lt;div class&#x3D;&quot;first-loading-wrp&quot;&gt;         &lt;div class&#x3D;&quot;loading-wrp&quot;&gt;           &lt;span">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636001144066.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636001165505.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636001212826.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636001281138.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636001439190.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636001548554.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636001578906.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636001770542.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636001853392.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636002175817.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636002443044.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/speed.png">
 <meta property="article:published_time" content="2019-08-01T01:23:24.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.527Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.933Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="vue webpack">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2019/08/01/speed/1636001144066.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/speed.png">
+  
   
   <title>记录一次单页面优化 - 一直闭眼看世界博客</title>
 
@@ -72,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -223,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10 分钟
+      28 分钟
     </span>
   
 
@@ -515,7 +506,7 @@ import $ from &#39;jquery&#39;
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

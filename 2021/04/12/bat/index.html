@@ -13,26 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="运维同事因为客户环境而发愁 因为客户(政府 电信等)环境是内网， 平时通信查问题是外网 来回切换网线 切换网卡   我想在网上检索个工具应该能解决吧？ 结果却不尽人意  没有合适的工具  不是根本不起作用就是只能切换ip 难道没有办法了吗？ 最终自己编写bat 解决 完美撒花汉字 专网  WLAN 分别是是网卡对应名称  记得修改  @echo off title gjl切换网络脚本 :still">
+  
+    <meta name="description" content="运维同事因为客户环境而发愁 因为客户(政府 电信等)环境是内网， 平时通信查问题是外网 来回切换网线 切换网卡   我想在网上检索个工具应该能解决吧？ 结果却不尽人意  没有合适的工具  不是根本不起作用就是只能切换ip 难道没有办法了吗？ 最终自己编写bat 解决 完美撒花汉字 专网  WLAN 分别是是网卡对应名称  记得修改  @echo off title gjl切换网络脚本 :still">
 <meta property="og:type" content="article">
 <meta property="og:title" content="帮运维快速切换内外网(二网双选一) 另附bat 转exe">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2021/04/12/bat/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="运维同事因为客户环境而发愁 因为客户(政府 电信等)环境是内网， 平时通信查问题是外网 来回切换网线 切换网卡   我想在网上检索个工具应该能解决吧？ 结果却不尽人意  没有合适的工具  不是根本不起作用就是只能切换ip 难道没有办法了吗？ 最终自己编写bat 解决 完美撒花汉字 专网  WLAN 分别是是网卡对应名称  记得修改  @echo off title gjl切换网络脚本 :still">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/04/12/bat/1618388010418.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/04/12/bat/1618388625946.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/04/12/bat/1618388732373.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/04/12/bat/1618389340230.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/1618386156421.png">
 <meta property="article:published_time" content="2021-04-12T07:39:41.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.239Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.645Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="网卡 bat">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2021/04/12/bat/1618388010418.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/1618386156421.png">
+  
   
   <title>帮运维快速切换内外网(二网双选一) 另附bat 转exe - 一直闭眼看世界博客</title>
 
@@ -65,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -216,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      11 分钟
     </span>
   
 
@@ -479,7 +477,7 @@ exit
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

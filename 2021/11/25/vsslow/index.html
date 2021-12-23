@@ -13,23 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="vscode 用久了越来越慢  vscode 本身优化速度是可以的 不信全部关掉拓展试试 没有拓展没法干活  可以简单快速定位是哪个拓展耗时间 1 可以卸载它 2 可以更换它 3 可以给开发者提iisue 让他优化速度  启动后 在插件@enabled 来查看启动插件的启动耗时">
+  
+    <meta name="description" content="vscode 用久了越来越慢  vscode 本身优化速度是可以的 不信全部关掉拓展试试 没有拓展没法干活  可以简单快速定位是哪个拓展耗时间 1 可以卸载它 2 可以更换它 3 可以给开发者提iisue 让他优化速度  启动后 在插件@enabled 来查看启动插件的启动耗时">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vscode 启动越来越慢排查插件启动时间">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2021/11/25/vsslow/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="vscode 用久了越来越慢  vscode 本身优化速度是可以的 不信全部关掉拓展试试 没有拓展没法干活  可以简单快速定位是哪个拓展耗时间 1 可以卸载它 2 可以更换它 3 可以给开发者提iisue 让他优化速度  启动后 在插件@enabled 来查看启动插件的启动耗时">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/11/25/vsslow/1637909191344.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/slow.png">
 <meta property="article:published_time" content="2021-11-25T03:15:10.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.543Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.945Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="vscode">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2021/11/25/vsslow/1637909191344.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/slow.png">
+  
   
   <title>vscode 启动越来越慢排查插件启动时间 - 一直闭眼看世界博客</title>
 
@@ -62,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -213,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      2 分钟
     </span>
   
 
@@ -432,7 +433,7 @@
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

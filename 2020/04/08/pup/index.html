@@ -13,26 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="多版本谷歌测试如何进行没必要不更换谷歌浏览器吧？ 对答案是肯定的！今天主角帮你解决 puppeteerjs你可以在浏览器中手动执行的绝大多数操作都可以使用 Puppeteer 来完成！ 下面是一些示例：  生成页面 PDF。 抓取 SPA（单页应用）并生成预渲染内容（即“SSR”（服务器端渲染））。 自动提交表单，进行 UI 测试，键盘输入等。 创建一个时时更新的自动化测试环境。 使用最新的 Ja">
+  
+    <meta name="description" content="多版本谷歌测试如何进行没必要不更换谷歌浏览器吧？ 对答案是肯定的！今天主角帮你解决 puppeteerjs你可以在浏览器中手动执行的绝大多数操作都可以使用 Puppeteer 来完成！ 下面是一些示例：  生成页面 PDF。 抓取 SPA（单页应用）并生成预渲染内容（即“SSR”（服务器端渲染））。 自动提交表单，进行 UI 测试，键盘输入等。 创建一个时时更新的自动化测试环境。 使用最新的 Ja">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pupeteer自动化加版本测试">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2020/04/08/pup/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="多版本谷歌测试如何进行没必要不更换谷歌浏览器吧？ 对答案是肯定的！今天主角帮你解决 puppeteerjs你可以在浏览器中手动执行的绝大多数操作都可以使用 Puppeteer 来完成！ 下面是一些示例：  生成页面 PDF。 抓取 SPA（单页应用）并生成预渲染内容（即“SSR”（服务器端渲染））。 自动提交表单，进行 UI 测试，键盘输入等。 创建一个时时更新的自动化测试环境。 使用最新的 Ja">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/04/08/pup/1617851125113.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/04/08/pup/1617851262264.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/04/08/pup/1617851479500.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/04/08/pup/1617851464105.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/1617850474932.png">
 <meta property="article:published_time" content="2020-04-08T02:57:47.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.519Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.925Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="pupeteer">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2020/04/08/pup/1617851125113.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/1617850474932.png">
+  
   
   <title>pupeteer自动化加版本测试 - 一直闭眼看世界博客</title>
 
@@ -65,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -216,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5 分钟
+      13 分钟
     </span>
   
 
@@ -490,7 +488,7 @@ arr.forEach(t =&gt; &#123;
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

@@ -13,25 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="纸上得来终觉浅 绝知此事要躬行 备注：gjltestcli 是自己写的命令行工具demo  因为我没有全局安装gjltestcli 所以调用不了命令行 我使用npx gjltestcli 能成功是因为npx 临时安装gjltestcli （不会出现在当前目录nodemoudle） 再次使用gjltestcli 可以执行说明npx 是临时安装 没有全局安装所以不能执行    本地安装gjltestc">
+  
+    <meta name="description" content="纸上得来终觉浅 绝知此事要躬行 备注：gjltestcli 是自己写的命令行工具demo  因为我没有全局安装gjltestcli 所以调用不了命令行 我使用npx gjltestcli 能成功是因为npx 临时安装gjltestcli （不会出现在当前目录nodemoudle） 再次使用gjltestcli 可以执行说明npx 是临时安装 没有全局安装所以不能执行    本地安装gjltestc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="npx和cli的那些事">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2019/04/20/cli/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="纸上得来终觉浅 绝知此事要躬行 备注：gjltestcli 是自己写的命令行工具demo  因为我没有全局安装gjltestcli 所以调用不了命令行 我使用npx gjltestcli 能成功是因为npx 临时安装gjltestcli （不会出现在当前目录nodemoudle） 再次使用gjltestcli 可以执行说明npx 是临时安装 没有全局安装所以不能执行    本地安装gjltestc">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/04/20/cli/1618902764339.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/04/20/cli/1618903114752.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/04/20/cli/1618903384161.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/1618902265022.png">
 <meta property="article:published_time" content="2019-04-20T06:58:53.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.255Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.661Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="npm cli npx">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2019/04/20/cli/1618902764339.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/1618902265022.png">
+  
   
   <title>npx和cli的那些事 - 一直闭眼看世界博客</title>
 
@@ -64,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -215,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2 分钟
+      6 分钟
     </span>
   
 
@@ -457,7 +456,7 @@
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

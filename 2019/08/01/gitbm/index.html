@@ -13,27 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="上面操作是不是很给力 一个小技巧可以使你的命令  体验更简单、容易、熟悉：别名   同事看到你的命令 工作流时，总是充满了惊讶与好奇：  设置命令 git config --global alias.co checkout   这意味着，当要输入 git commit 时，只需要输入 git ci。 随着你继续不断地使用可能也会经常使用其他命令，所以创建别名时不要犹豫。 当取消别名时可以  全">
+  
+    <meta name="description" content="上面操作是不是很给力 一个小技巧可以使你的命令  体验更简单、容易、熟悉：别名   同事看到你的命令 工作流时，总是充满了惊讶与好奇：  设置命令 git config --global alias.co checkout   这意味着，当要输入 git commit 时，只需要输入 git ci。 随着你继续不断地使用可能也会经常使用其他命令，所以创建别名时不要犹豫。 当取消别名时可以  全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gitee命令优化工作流之别名">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2019/08/01/gitbm/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="上面操作是不是很给力 一个小技巧可以使你的命令  体验更简单、容易、熟悉：别名   同事看到你的命令 工作流时，总是充满了惊讶与好奇：  设置命令 git config --global alias.co checkout   这意味着，当要输入 git commit 时，只需要输入 git ci。 随着你继续不断地使用可能也会经常使用其他命令，所以创建别名时不要犹豫。 当取消别名时可以  全">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/gitbm/git.gif">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/gitbm/1637808629314.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/gitbm/1637808684380.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/gitbm/1637809849741.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/08/01/gitbm/1637809434803.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/git.png">
 <meta property="article:published_time" content="2019-08-01T03:15:10.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.447Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.853Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="gitee">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2019/08/01/gitbm/git.gif">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/git.png">
+  
   
   <title>gitee命令优化工作流之别名 - 一直闭眼看世界博客</title>
 
@@ -66,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -217,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      3 分钟
     </span>
   
 
@@ -455,7 +452,7 @@
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

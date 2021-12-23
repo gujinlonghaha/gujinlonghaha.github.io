@@ -13,29 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="大家开发都适用vue devtool  但是线上临时调试怎办呢  自己的代码可以启用后重新打包 记得在new 之前赋值  如果是别人的代码如何热操作呢？  1 先打开网站  f12 打开来源 ctrl+p 搜索app.js  然后格式化  2 搜索 el: “#app” 在new 处打断点（i[“default”].config.devtools&#x3D;flase 默认）  3刷新页面 进入断点后 控制">
+  
+    <meta name="description" content="大家开发都适用vue devtool  但是线上临时调试怎办呢  自己的代码可以启用后重新打包 记得在new 之前赋值  如果是别人的代码如何热操作呢？  1 先打开网站  f12 打开来源 ctrl+p 搜索app.js  然后格式化  2 搜索 el: “#app” 在new 处打断点（i[“default”].config.devtools&#x3D;flase 默认）  3刷新页面 进入断点后 控制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="生产环境启用devtool调方法论试">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2020/03/13/devtool/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="大家开发都适用vue devtool  但是线上临时调试怎办呢  自己的代码可以启用后重新打包 记得在new 之前赋值  如果是别人的代码如何热操作呢？  1 先打开网站  f12 打开来源 ctrl+p 搜索app.js  然后格式化  2 搜索 el: “#app” 在new 处打断点（i[“default”].config.devtools&#x3D;flase 默认）  3刷新页面 进入断点后 控制">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/03/13/devtool/1635826701342.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/03/13/devtool/1635826816232.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/03/13/devtool/1635826893932.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/03/13/devtool/1635826993030.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/03/13/devtool/1635827098751.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/03/13/devtool/1635827241539.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2020/03/13/devtool/1635827325490.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/devtool.png">
 <meta property="article:published_time" content="2020-03-13T06:27:43.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.291Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.697Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="vue js">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2020/03/13/devtool/1635826701342.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/devtool.png">
+  
   
   <title>生产环境启用devtool调方法论试 - 一直闭眼看世界博客</title>
 
@@ -68,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -219,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      3 分钟
     </span>
   
 
@@ -450,7 +445,7 @@
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

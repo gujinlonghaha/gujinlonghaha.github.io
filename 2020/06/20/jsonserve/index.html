@@ -13,23 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="为需要快速后端进行原型设计和模拟的前端开发人员创建  还在mockjson 吗? 其实还有更简单的方式 确实只需要30秒  一首歌的时间都不到 1 安装依赖 npm install -g json-server  2  建立db.json   &amp;#123;   &quot;posts&quot;: [     &amp;#123; &quot;id&quot;: 1, &quot;title&quot;">
+  
+    <meta name="description" content="为需要快速后端进行原型设计和模拟的前端开发人员创建  还在mockjson 吗? 其实还有更简单的方式 确实只需要30秒  一首歌的时间都不到 1 安装依赖 npm install -g json-server  2  建立db.json   &amp;#123;   &quot;posts&quot;: [     &amp;#123; &quot;id&quot;: 1, &quot;title&quot;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="30秒的时间内建立REST API">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2020/06/20/jsonserve/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="为需要快速后端进行原型设计和模拟的前端开发人员创建  还在mockjson 吗? 其实还有更简单的方式 确实只需要30秒  一首歌的时间都不到 1 安装依赖 npm install -g json-server  2  建立db.json   &amp;#123;   &quot;posts&quot;: [     &amp;#123; &quot;id&quot;: 1, &quot;title&quot;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/jsonserve/1638166081915.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/jsonsever.png">
 <meta property="article:published_time" content="2020-06-20T07:23:24.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.495Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.897Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="jsonsever">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/jsonserve/1638166081915.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/jsonsever.png">
+  
   
   <title>30秒的时间内建立REST API - 一直闭眼看世界博客</title>
 
@@ -62,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -213,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2 分钟
+      5 分钟
     </span>
   
 
@@ -460,7 +461,7 @@ DELETE /posts/1
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

@@ -13,30 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="nw 他不仅可以操作系统还可以操作node  生成exe 可视化   适合静态文件演示 一下亲测的打包demo 流程 https:&#x2F;&#x2F;nwjs.org.cn&#x2F;download.html  下载sdk 版本  步骤 1. 创建 package.json: &amp;#123;   &quot;name&quot;: &quot;helloworld&quot;,   &quot;main&quot;: &amp;q">
+  
+    <meta name="description" content="nw 他不仅可以操作系统还可以操作node  生成exe 可视化   适合静态文件演示 一下亲测的打包demo 流程 https:&#x2F;&#x2F;nwjs.org.cn&#x2F;download.html  下载sdk 版本  步骤 1. 创建 package.json: &amp;#123;   &quot;name&quot;: &quot;helloworld&quot;,   &quot;main&quot;: &amp;q">
 <meta property="og:type" content="article">
 <meta property="og:title" content="静态文件打包exe 全流程(nw)">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2021/11/29/nw/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="nw 他不仅可以操作系统还可以操作node  生成exe 可视化   适合静态文件演示 一下亲测的打包demo 流程 https:&#x2F;&#x2F;nwjs.org.cn&#x2F;download.html  下载sdk 版本  步骤 1. 创建 package.json: &amp;#123;   &quot;name&quot;: &quot;helloworld&quot;,   &quot;main&quot;: &amp;q">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/11/29/nw/1638164689398.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/11/29/nw/1638164854775.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/11/29/nw/1638165112149.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/11/29/nw/1638165216047.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/11/29/nw/1638165410299.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/11/29/nw/1638165443597.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/11/29/nw/1638165560689.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2021/11/29/nw/1638165626587.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/nw.png">
 <meta property="article:published_time" content="2021-11-29T07:39:41.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.511Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.913Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="nw">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2021/11/29/nw/1638164689398.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/nw.png">
+  
   
   <title>静态文件打包exe 全流程(nw) - 一直闭眼看世界博客</title>
 
@@ -69,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -220,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5 分钟
+      13 分钟
     </span>
   
 
@@ -360,6 +354,12 @@ document.body.addEventListener(&#39;contextmenu&#39;, function(ev) &#123;
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2021/12/23/zj/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">一年又过去了总想说点啥</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
@@ -501,7 +501,7 @@ document.body.addEventListener(&#39;contextmenu&#39;, function(ev) &#123;
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

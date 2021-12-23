@@ -13,21 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="注意：当location为正则表达式匹配模式时，proxy_pass中的url末尾是不允许有”&#x2F;“的，因此正则表达式匹配模式不在讨论范围内。 proxy_pass配置中url末尾带&#x2F;时，nginx转发时，会将原uri去除location匹配表达式后的内容拼接在proxy_pass中url之后。 测试地址：http:&#x2F;&#x2F;192.168.171.129&#x2F;test&#x2F;tes.jsp 场景一： locati">
+  
+    <meta name="description" content="注意：当location为正则表达式匹配模式时，proxy_pass中的url末尾是不允许有”&#x2F;“的，因此正则表达式匹配模式不在讨论范围内。 proxy_pass配置中url末尾带&#x2F;时，nginx转发时，会将原uri去除location匹配表达式后的内容拼接在proxy_pass中url之后。 测试地址：http:&#x2F;&#x2F;192.168.171.129&#x2F;test&#x2F;tes.jsp 场景一： locati">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx 带&#x2F; 的那点事(总是会忘)">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2020/04/01/xiegang/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="注意：当location为正则表达式匹配模式时，proxy_pass中的url末尾是不允许有”&#x2F;“的，因此正则表达式匹配模式不在讨论范围内。 proxy_pass配置中url末尾带&#x2F;时，nginx转发时，会将原uri去除location匹配表达式后的内容拼接在proxy_pass中url之后。 测试地址：http:&#x2F;&#x2F;192.168.171.129&#x2F;test&#x2F;tes.jsp 场景一： locati">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/nginx.png">
 <meta property="article:published_time" content="2020-04-01T02:23:24.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.551Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.953Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="nginx">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/nginx.png">
+  
   
   <title>nginx 带/ 的那点事(总是会忘) - 一直闭眼看世界博客</title>
 
@@ -60,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -211,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      12 分钟
     </span>
   
 
@@ -477,7 +480,7 @@ proxy_pass http://192.168.171.129:8080/server;
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>

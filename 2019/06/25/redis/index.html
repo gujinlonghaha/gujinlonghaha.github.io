@@ -13,28 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="破而后立">
   <meta name="author" content="gjl">
   <meta name="keywords" content="">
-  <meta name="description" content="redis 下载安装地址   https:&#x2F;&#x2F;github.com&#x2F;tporadowski&#x2F;releases。  安装时最后勾选环境变量 进入他的安装目录 C:\Program Files\Redis  执行命令  redis-cli.exe -h 127.0.0.1 -p 6379  设置数据 和获取数据效果如下  下面是 egg 操作 npm i egg-redis --save  &#x2F;&#x2F;Ch">
+  
+    <meta name="description" content="redis 下载安装地址   https:&#x2F;&#x2F;github.com&#x2F;tporadowski&#x2F;releases。  安装时最后勾选环境变量 进入他的安装目录 C:\Program Files\Redis  执行命令  redis-cli.exe -h 127.0.0.1 -p 6379  设置数据 和获取数据效果如下  下面是 egg 操作 npm i egg-redis --save  &#x2F;&#x2F;Ch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis mongdb 安装和操作 egg">
 <meta property="og:url" content="https://gujinlonghaha.github.io/2019/06/25/redis/index.html">
 <meta property="og:site_name" content="一直闭眼看世界博客">
 <meta property="og:description" content="redis 下载安装地址   https:&#x2F;&#x2F;github.com&#x2F;tporadowski&#x2F;releases。  安装时最后勾选环境变量 进入他的安装目录 C:\Program Files\Redis  执行命令  redis-cli.exe -h 127.0.0.1 -p 6379  设置数据 和获取数据效果如下  下面是 egg 操作 npm i egg-redis --save  &#x2F;&#x2F;Ch">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/06/25/redis/1637312809603.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/06/25/redis/1637312827039.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/06/25/redis/1637312179874.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/06/25/redis/1637312442087.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/06/25/redis/1637312606618.png">
-<meta property="og:image" content="https://gujinlonghaha.github.io/2019/06/25/redis/1637312681198.png">
+<meta property="og:image" content="https://gujinlonghaha.github.io/img/sjk.png">
 <meta property="article:published_time" content="2019-06-25T07:39:41.000Z">
-<meta property="article:modified_time" content="2021-11-30T09:19:51.523Z">
+<meta property="article:modified_time" content="2021-12-23T08:04:02.925Z">
 <meta property="article:author" content="gjl">
 <meta property="article:tag" content="egg js">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gujinlonghaha.github.io/2019/06/25/redis/1637312809603.png">
+<meta name="twitter:image" content="https://gujinlonghaha.github.io/img/sjk.png">
+  
   
   <title>redis mongdb 安装和操作 egg - 一直闭眼看世界博客</title>
 
@@ -67,7 +63,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"gujinlonghaha.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -218,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6 分钟
+      17 分钟
     </span>
   
 
@@ -546,7 +542,7 @@ exports.redis = &#123;
       var typing = Fluid.plugins.typing;
       var title = document.getElementById('subtitle').title;
       
-      typing(title)
+        typing(title);
       
     })(window, document);
   </script>
