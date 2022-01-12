@@ -203,6 +203,112 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/03/13/devtool/" target="_self">
+          <img src="/img/devtool.png" srcset="/img/loading.gif" lazyload alt="生产环境启用devtool调方法论试">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/03/13/devtool/" target="_self">
+          生产环境启用devtool调方法论试
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/03/13/devtool/" target="_self">
+          
+          大家开发都适用vue devtool  但是线上临时调试怎办呢  自己的代码可以启用后重新打包 记得在new 之前赋值  如果是别人的代码如何热操作呢？  1 先打开网站  f12 打开来源 ctrl+p 搜索app.js  然后格式化  2 搜索 el: “#app” 在new 处打断点（i[“default”].config.devtools&#x3D;flase 默认）  3刷新页面 进入断点后 控制
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-13 14:27" pubdate>
+              2020-03-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/vue-js/">vue js</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/vue-js/">vue js</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/11/20/plop/" target="_self">
+          <img src="/img/plop.png" srcset="/img/loading.gif" lazyload alt="plop 你值得拥有">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/11/20/plop/" target="_self">
+          plop 你值得拥有
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/11/20/plop/" target="_self">
+          
+          这时代连ctrl+c  ctrl+v 都已经是工作量了能不能简单点再简单点  基于 Vscode 的 Snippets 自定义代码块通过 Vscode 的 Snippets 我们可以自定义 Snippets，从而实现快捷生成代码片段。 打开 Vscode，依次点击文件——首选项——用户代码片段 prefix: 代码片段名字，即输入此名字就可以调用代码片段 body: 这个是代码段的主体.需要编写的
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-20 15:23" pubdate>
+              2019-11-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/vue-plop/">vue  plop</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/vue-plop/">vue  plop</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2019/11/10/vuepackage/" target="_self">
           <img src="/img/db.png" srcset="/img/loading.gif" lazyload alt="打包筛选无用文件和依赖">
         </a>
@@ -600,112 +706,6 @@
             <i class="iconfont icon-date"></i>
             <time datetime="2019-06-24 17:30" pubdate>
               2019-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/egg-js/">egg js</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/egg-js/">egg js</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/06/24/eggorm/" target="_self">
-          <img src="/img/egg.png" srcset="/img/loading.gif" lazyload alt="egg sequelize实现和自动从数据库生成model">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/06/24/eggorm/" target="_self">
-          egg sequelize实现和自动从数据库生成model
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/06/24/eggorm/" target="_self">
-          
-          官网看的有点绕其实不用这么复杂  这玩意其实感觉作用不大 梳理如下 实现model 的依赖 npm install --save egg-sequelize mysql2  配置 &#x2F;* egg_folder&#x2F;config&#x2F;config.default.js *&#x2F;   exports.sequelize &#x3D; &amp;#123;     dialect: &quot;mysql&quot;, &#x2F;&#x2F; 数据库
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-06-24 15:39" pubdate>
-              2019-06-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/egg-js/">egg js</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/egg-js/">egg js</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/06/23/eggqq/" target="_self">
-          <img src="/img/egg.png" srcset="/img/loading.gif" lazyload alt="自己搭建服务端egg请求那些事">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/06/23/eggqq/" target="_self">
-          自己搭建服务端egg请求那些事
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/06/23/eggqq/" target="_self">
-          
-          自己安装window mysql 和取款机一样next新建表 右键设计表 主键设置自增 这样post 新增请求就不用写唯一值了 mysql8 navcat 连接不上 ALTER USER ‘root‘@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘password’flush privileges执行这个就好了 当你手动还在增删改的时候
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-06-23 16:39" pubdate>
-              2019-06-23
             </time>
           </div>
         
